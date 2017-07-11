@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color:transparent;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #333;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+input{
+	border:none;
+	outline: none;
+	-webkit-appearance:none;
+}
+ul,ol{
+	list-style: none;
+}
+.box{
+	width:100%;
+	max-width:640px;
+	min-width:320px;
+	line-height: 60px;
+	text-align:center;
+	background-color:rgb(28,38,53);
+	display:flex;
+}
+.box>.head{
+	height:60px;
+	width:100%;
+	display:flex;
+}
+.box>.head>.title{
+	width:75px;
+	height:28px;
+	background-color:white;
+	background-image:url(../images/11.png);
+	margin:15px;
+}
+.box>.head>.search{
+	color:rgb(172,187,174);
+	font-size:18px;
+}
+.box>.head>.search>span{
+	margin-left:18px;
+}
+.box>.head>.titleone{
+	background-image:url(../images/15.png);
+	width:35px;
+	height:35px;
+	margin-top:14px;
+	margin-left:30px;
+}
+.box>.head>.search>.ticket{
+	font-weight:bolder;
+	color:rgb(255,255,255);
+	border-bottom:3px solid rgb(255,255,255);
+	/*width:100px;*/
+	padding-bottom:15px;
+}
+.shuffling{
+	background-color:rgb(246,246,246);
+	margin-top:15px;
+	padding-bottom:10px;
+	border-bottom:1px solid rgb(216,216,216);
+	display:flex;
+}
+.shuffling>span{
+	font-size:20px;
+	margin-left:10px;
+}
+.shuffling>a>select{
+	border-color:rgb(246,246,246);
+	margin-left:15px;
+}
+.shuffling>form{
+	position:relative;
+	display:flex;
+}
+.shuffling>form>.backdrop{
+	background-image:url(../images/14.png);
+	width:30px;
+	height:30px;
+	background-size:30px 30px;
+	display:inline-block;
+	/*padding:px;
+	/*margin:20px;*/
+	position:absolute;
+	top:4px;
+	left:27px;
+}
+.shuffling>form>.screen{
+	/*display:inline-block;*/
+	border:1px solid rgb(187,187,187);
+	width:80%;
+	height:40px;
+	border-radius:5px;
+	font-size:17px;
+	padding-left:32px;
+	margin-left:26px;
+}
+.shuffling>.choose{
+	margin-left:-5px;
+	background-color:rgb(255,255,255);
+	font-size:18px;
+}
+li{
+	float:left;
+	margin-left:10%;
+	margin-top:10px;
+	font-size:18px;
+	border-right:1px solid rgb(204,204,204);
+	padding-right:25px;
+}
+.jd_banner{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-top:45px;
+}
+.jd_banner>.image_box{
+	width:400%;
+	overflow: hidden;
+}
+.jd_banner>.image_box>li{
+	width: 100%;
+	float: left;
+	margin:0;
+	padding:0;
+}
+.jd_banner>.image_box>li>a,.jd_banner>.image_box>li>a>img{
+	width: 100%;
+	display: block;
+}
+
