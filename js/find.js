@@ -1,0 +1,3 @@
+$(".Cannes").mouseover = function () {
+	
+}
