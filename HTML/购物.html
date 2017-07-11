@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>购物</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/购物.css">
+	<script src="../js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../js/swiper.min.css">
+</head>
+<body>
+	<div class="box">
+		<header class="head">
+			<a href="#" class="title"></a>
+			<div class="search">
+				<span>首页</span>
+				<span class="ticket">购票</span>
+				<span>商城</span>
+				<span>发现</span>
+			</div>
+			<a href="" class="titleone"></a>
+		</header>
+	</div> 
+	<div class="shuffling">
+	<span>北京</span>
+	<a href="#"><select></select></a>
+	<form>
+	<span class="backdrop"></span>
+	<input type="text" placeholder="筛选影院" class="screen">
+	</form>
+	<input type="button" value="搜索" class="choose">
+	</div>
+	<ul>
+		<li>全部</li>
+		<li>附近</li>
+		<li>价格</li>
+		<li>筛选</li>
+	</ul>
+	<div class="jd_banner swiper-container">
+		<ul class="image_box swiper-wrapper">
+			<li class="swiper-slide"><a href=""><img src="../images/13.jpg"></a></li>
+			<li class="swiper-slide"><a href=""><img src="../images/12.jpg"></a></li>
+		</ul>
+		<div class="swiper-pagination" style="text-align:right;"></div>
+	</div>
+	<script>
+	var mySwiper = new Swiper('.jd_banner',{
+	pagination: '.swiper-pagination',
+	autoplay : 1000,
+	loop : true,
+	})
+	</script>
+</body>
+</html>
