@@ -121,4 +121,36 @@ ul,ol{
 	line-height: 40px;
 	font-size: 17px;
 	color: rgb(119,119,119);
+	background-image: url(../images/4Asearch.png);
+	background-size: 7% 25px;
+	background-repeat: no-repeat;
+	background-position: 3%;
+}
+.mall_subject>.subkect_search>.subject_search_box>.shopping_cart{
+	width: 10%;
+	height: 40px;
+	background-image: url(../images/4Ashopping.png);
+	background-size: 90% 30px;
+	background-repeat: no-repeat;
+	background-position: right;
+
+}
+.mall_banner{
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	overflow: hidden;
+}
+.mall_banner>.image_box{
+	width: 400%;
+	transform: translateX(-25%);
+	overflow: hidden;
+}
+.mall_banner>.image_box>li{
+	width: 25%;
+	float: left;
+}
+.jd_banner>.image_box>li>a,.jd_banner>.image_box>li>a>img{
+	width: 100%;
+	display: block;
 }
