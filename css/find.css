@@ -89,11 +89,12 @@ ul,ol{
 	color: rgb(30,125,215);
 	font-weight: bold;
 }
+/*获取戛纳图片*/
 .Cannes{
 	margin-top: 20px;
 	width: 100%;
 }
-/*获取戛纳图片*/
+
 .position{
 	width: 100%;
 	position: relative;
@@ -155,4 +156,22 @@ ul,ol{
 	font-size: 20px;
 	font-weight: bold;
 	margin-top: 20px;
+}
+.time{
+	margin-top: -50px;
+	margin-left: 110px;
+}
+.review{
+	margin-top: -47px;
+}
+#add1,#sorry{
+	display: none;
+}
+.position1>.many,.position1>#sorry{
+	background-color: white;
+	font-size: 20px;
+	color: rgb(30,125,215);
+}
+.a{
+	display: none;
 }
