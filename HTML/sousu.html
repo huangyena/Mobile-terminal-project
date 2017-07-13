@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nav</title>
+	<style>
+		.div{
+			width: 100%;
+			max-width: 640px;
+			min-width: 320px;
+			margin:0 auto;
+			background-color: rgb(246,246,246);
+			display: flex;
+			justify-content: space-around;
+			height: 30px;
+		}
+	/*	select{
+			border: none;
+			width: 15%;
+			background-color: rgb(246,246,246);
+		}*/
+		form{
+			width: 70%;
+		}
+		form>input{
+			width: 90%;
+			flex:1;
+			/*border:none;*/
+		}
+		.a1{
+			width: 50px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.a1>img{
+			width: 30%;
+		}
+		ul{
+			width: 100%;
+			list-style: none;
+			display: flex;
+			justify-content: space-around;
+		}
+		li{
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<!-- <select name="" id="">
+			<option value="">北京</option>
+			<option value="">济南</option>
+		</select>&nbsp;&nbsp; -->
+		<div class="a1">北京
+			<img src="../images/尖角箭头-上.png" alt="">
+		</div>
+		<form action="">
+		<!-- 	<span id = "search"></span> -->
+			<input type="text" placeholder="筛选影院" id = "a">
+		</form>
+		
+		<input type="button" value="搜索" class="input">
+	</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<!-- 数杠 -->
+	<div class="div">
+		<ul>
+			<li>济南<span>丨</span></li>
+			<li>青岛<span>丨</span></li>
+			<li>德州<span>丨</span></li>
+			<li>章丘<span>丨</span></li>
+		</ul>
+	</div>
+</body>
+</html>

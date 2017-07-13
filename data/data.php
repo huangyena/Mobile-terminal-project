@@ -2651,7 +2651,7 @@
     ]
 }
 ';
-	}elseif ($type = 'will_pub') {//即将上映
+	}elseif ($type == 'will_pub') {//即将上映
 		$str = '{
     "attention": [
         {
@@ -8493,5 +8493,5 @@
     }
 ]';
 	}
-
+echo $str;
  ?>

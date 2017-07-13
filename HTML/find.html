@@ -5,12 +5,17 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 	<title>find</title>
 	<link rel="stylesheet" href="../css/find.css">
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<!-- <script src = "../js/插件/angular.min.js"></script> -->
+	<!-- <script src = "../js/插件/angular-route.min.js"></script> -->
+	<!-- <script src = "../js/find.js"></script> -->
+	<script src = "../js/ajax.js"></script>
 </head>
-<body>
+<body ng-app = "app">
 	<div id = "body">
 		<header >
 			<div class="header_color">
-				<img src="../images/11.png" alt="">
+				<a href=""><img src="../images/11.png" alt=""></a>
 				<button class="remove_left">首页</button>
 				<button>购票</button>
 				<button>商城</button>
@@ -27,13 +32,19 @@
 			</ul>
 		</nav>
 		<div class="position">
-			<a href="戛纳.html"><img src="../images/2-戛纳.jpg" alt="" class="Cannes"></a>
-			<div class="Cannes_fover"></div>
-			<span>华语力量在戛纳的N种活法</span>
+			<a href="戛纳.html" id = "picture">
+				<div class="Cannes_fover"></div>
+				<span id="font"></span>
+			</a>
 		</div>
-		<div cl></div>
+		<div >
+			<ul class="position1">
+				<li  id = "add">
+					<!-- <span id = "span"></span> -->
+				</li>
+			</ul>
+		</div>
 	</div>
-	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
-	<script src = "../js/find.js"></script>
+	
 </body>
 </html>
