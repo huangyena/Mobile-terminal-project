@@ -4,14 +4,51 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+<<<<<<< HEAD
 </head>
 <body>
 	<div class="body">
+=======
+	<!-- <style>
+		ul{
+			list-style: none;
+		}
+		.body{
+			width: 100%;
+			min-width: 320px;
+			max-width: 640px;
+			margin:0 auto;
+			background-color: white;
+		}
+		ul{
+			width: 100%;
+		}
+		ul>li{
+			width: 100%;
+		}
+		.a{
+			width: 100%;
+			border-bottom: 1px solid red;
+			margin-top: 20px;
+		}
+		.b{
+			width: 100%;
+			height: 200px;
+		}
+	</style> -->
+</head>
+<body>
+<!-- 	<div class="body">
+>>>>>>> b38768773cee889eec041f7f8904723b84bebf0d
 		<ul>
 			<li id = "add"></li>
 		
 		</ul>
+<<<<<<< HEAD
 	</div>
+=======
+	</div> -->
+>>>>>>> b38768773cee889eec041f7f8904723b84bebf0d
 	
 	<script>
 		$.ajax({
@@ -19,6 +56,7 @@
 			url:"../data/data.php?type=now_list",
 			success:function(data){//判断是否成功，获取数据源
 				console.log(data);
+<<<<<<< HEAD
 				var obj = JSON.parse(data);
 				console.log(obj);
 				console.log(obj.ms[0].img);
@@ -32,6 +70,21 @@
 					$("#add").append(li);
 					$("#add").append(border);
 				/*}*/
+=======
+				// var obj = JSON.parse(data);
+				// console.log(obj);
+				// console.log(obj.ms[0].img);
+				// for (var i = 0; i < obj.ms.length; i++) {
+
+				// 	var li = $("<img class = 'b'>");
+				// 	li.attr("src",obj.ms[i].img);
+				// 	console.log(li);
+				// 	var border = $("<div class ='a'></div> ")
+
+				// 	$("#add").append(li);
+				// 	$("#add").append(border);
+				// }
+>>>>>>> b38768773cee889eec041f7f8904723b84bebf0d
 			}
 		})
 	</script>
