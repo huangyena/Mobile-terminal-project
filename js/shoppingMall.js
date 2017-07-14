@@ -1,3 +1,15 @@
+// var top = $("#top");
+// console.log(top);
+$(document).scroll(function(){
+	var top = $(window).scrollTop();
+	var top1 = $("#top");
+	if (top > 500) {
+		top1.css("display","block");
+	} else {
+		top1.css("display","none");
+	}
+});
+
 function swiper() {
 	var mySwiper = new Swiper ('.mall_banner',{
 		pagination : '.swiper-pagination',//是否显示小点点
@@ -99,5 +111,328 @@ $.ajax({
 		div.append(a2);
 		div.append(a3);
 		div.append(a4);
+	}
+})
+
+//box5S
+
+
+//box2
+$.ajax({
+	url:"../data/data.php?type=mall",
+	success:function (data) {
+		var obj = JSON.parse(data);
+		var objPic1 = obj.category[0];
+		var objPic2 = obj.category[0].subList[0];
+		var objPic3 = obj.category[0].subList[1];
+		var objPic4 = obj.category[0].subList[2];
+		var div1 = $("#mall_box2_title");
+		var div1_1 = $("<div class='box2_title_left'></div>");
+		var div1_2 = $("<div class='box2_title_right'></div>");
+		var div1_2_a = $("<a>更多</a>")
+		div1_1.html(objPic1.name);
+		console.log(objPic1.name);
+		div1_2_a.attr("src",objPic1.moreUrl);
+		div1_2.prepend(div1_2_a);
+		div1.append(div1_1);
+		div1.append(div1_2);
+		var div2 = $("#box2_main_top");
+		var div2_a = $("<a></a>");
+		var div2_img = $("<img>");
+		div2_a.attr("href",objPic1.imageUrl);
+		div2_img.attr("src",objPic1.image);
+		div2_a.prepend(div2_img);
+		div2.prepend(div2_a);
+		var div3 = $("#box2_main_down");
+		var ul = $("<ul></ul>");
+		var li1 = $("<li></li>");
+		var li1_a = $("<a></a>");
+		var li1_img = $("<img>");
+		var li1_p = $("<p></p>");
+		var li1_div = $("<div>￥1480</div>");
+		li1_img.attr("src",objPic2.image);
+		var textlength =  objPic2.title.length;
+		if (textlength > 7) {
+			objPic2.title = objPic2.title.slice(0,7)+"...";
+		}
+		li1_p.html(objPic2.title);
+		li1_a.prepend(li1_img);
+		li1.append(li1_a);
+		li1.append(li1_p);
+		li1.append(li1_div);
+		var li2 = $("<li></li>");
+		var li2_a = $("<a></a>");
+		var li2_img = $("<img>");
+		var li2_p = $("<p></p>");
+		var li2_div = $("<div>￥168</div>");
+		li2_img.attr("src",objPic3.image);
+		var textlength =  objPic3.title.length;
+		if (textlength > 7) {
+			objPic3.title = objPic3.title.slice(0,7)+"...";
+		}
+		li2_p.html(objPic3.title);
+		li2_a.prepend(li2_img);
+		li2.append(li2_a);
+		li2.append(li2_p);
+		li2.append(li2_div);
+		var li3 = $("<li></li>");
+		var li3_a = $("<a></a>");
+		var li3_img = $("<img>");
+		var li3_p = $("<p></p>");
+		var li3_div = $("<div>￥1580</div>");
+		li3_img.attr("src",objPic4.image);
+		var textlength =  objPic4.title.length;
+		if (textlength > 7) {
+			objPic4.title = objPic4.title.slice(0,7)+"...";
+		}
+		li3_p.html(objPic4.title);
+		li3_a.prepend(li3_img);
+		li3.append(li3_a);
+		li3.append(li3_p);
+		li3.append(li3_div);
+		ul.append(li1);
+		ul.append(li2);
+		ul.append(li3);
+		div3.prepend(ul);
+	}
+})
+
+//box3
+$.ajax({
+	url:"../data/data.php?type=mall",
+	success:function (data) {
+		var obj = JSON.parse(data);
+		var objPic1 = obj.category[1];
+		var objPic2 = obj.category[1].subList[0];
+		var objPic3 = obj.category[1].subList[1];
+		var objPic4 = obj.category[1].subList[2];
+		var div1 = $("#mall_box3_title");
+		var div1_1 = $("<div class='box3_title_left'></div>");
+		var div1_2 = $("<div class='box3_title_right'></div>");
+		var div1_2_a = $("<a>更多</a>")
+		div1_1.html(objPic1.name);
+		console.log(objPic1.name);
+		div1_2_a.attr("src",objPic1.moreUrl);
+		div1_2.prepend(div1_2_a);
+		div1.append(div1_1);
+		div1.append(div1_2);
+		var div2 = $("#box3_main_top");
+		var div2_a = $("<a></a>");
+		var div2_img = $("<img>");
+		div2_a.attr("href",objPic1.imageUrl);
+		div2_img.attr("src",objPic1.image);
+		div2_a.prepend(div2_img);
+		div2.prepend(div2_a);
+		var div3 = $("#box3_main_down");
+		var ul = $("<ul></ul>");
+		var li1 = $("<li></li>");
+		var li1_a = $("<a></a>");
+		var li1_img = $("<img>");
+		var li1_p = $("<p></p>");
+		var li1_div = $("<div>￥149</div>");
+		li1_img.attr("src",objPic2.image);
+		var textlength =  objPic2.title.length;
+		if (textlength > 7) {
+			objPic2.title = objPic2.title.slice(0,7)+"...";
+		}
+		li1_p.html(objPic2.title);
+		li1_a.prepend(li1_img);
+		li1.append(li1_a);
+		li1.append(li1_p);
+		li1.append(li1_div);
+		var li2 = $("<li></li>");
+		var li2_a = $("<a></a>");
+		var li2_img = $("<img>");
+		var li2_p = $("<p></p>");
+		var li2_div = $("<div>￥49</div>");
+		li2_img.attr("src",objPic3.image);
+		var textlength =  objPic3.title.length;
+		if (textlength > 7) {
+			objPic3.title = objPic3.title.slice(0,7)+"...";
+		}
+		li2_p.html(objPic3.title);
+		li2_a.prepend(li2_img);
+		li2.append(li2_a);
+		li2.append(li2_p);
+		li2.append(li2_div);
+		var li3 = $("<li></li>");
+		var li3_a = $("<a></a>");
+		var li3_img = $("<img>");
+		var li3_p = $("<p></p>");
+		var li3_div = $("<div>￥59</div>");
+		li3_img.attr("src",objPic4.image);
+		var textlength =  objPic4.title.length;
+		if (textlength > 7) {
+			objPic4.title = objPic4.title.slice(0,7)+"...";
+		}
+		li3_p.html(objPic4.title);
+		li3_a.prepend(li3_img);
+		li3.append(li3_a);
+		li3.append(li3_p);
+		li3.append(li3_div);
+		ul.append(li1);
+		ul.append(li2);
+		ul.append(li3);
+		div3.prepend(ul);
+	}
+})
+
+//box3
+$.ajax({
+	url:"../data/data.php?type=mall",
+	success:function (data) {
+		var obj = JSON.parse(data);
+		var objPic1 = obj.category[2];
+		var objPic2 = obj.category[2].subList[0];
+		var objPic3 = obj.category[2].subList[1];
+		var objPic4 = obj.category[2].subList[2];
+		var div1 = $("#mall_box4_title");
+		var div1_1 = $("<div class='box4_title_left'></div>");
+		var div1_2 = $("<div class='box4_title_right'></div>");
+		var div1_2_a = $("<a>更多</a>")
+		div1_1.html(objPic1.name);
+		console.log(objPic1.name);
+		div1_2_a.attr("src",objPic1.moreUrl);
+		div1_2.prepend(div1_2_a);
+		div1.append(div1_1);
+		div1.append(div1_2);
+		var div2 = $("#box4_main_top");
+		var div2_a = $("<a></a>");
+		var div2_img = $("<img>");
+		div2_a.attr("href",objPic1.imageUrl);
+		div2_img.attr("src",objPic1.image);
+		div2_a.prepend(div2_img);
+		div2.prepend(div2_a);
+		var div3 = $("#box4_main_down");
+		var ul = $("<ul></ul>");
+		var li1 = $("<li></li>");
+		var li1_a = $("<a></a>");
+		var li1_img = $("<img>");
+		var li1_p = $("<p></p>");
+		var li1_div = $("<div>￥399</div>");
+		li1_img.attr("src",objPic2.image);
+		var textlength =  objPic2.title.length;
+		if (textlength > 7) {
+			objPic2.title = objPic2.title.slice(0,7)+"...";
+		}
+		li1_p.html(objPic2.title);
+		li1_a.prepend(li1_img);
+		li1.append(li1_a);
+		li1.append(li1_p);
+		li1.append(li1_div);
+		var li2 = $("<li></li>");
+		var li2_a = $("<a></a>");
+		var li2_img = $("<img>");
+		var li2_p = $("<p></p>");
+		var li2_div = $("<div>￥1111</div>");
+		li2_img.attr("src",objPic3.image);
+		var textlength =  objPic3.title.length;
+		if (textlength > 7) {
+			objPic3.title = objPic3.title.slice(0,7)+"...";
+		}
+		li2_p.html(objPic3.title);
+		li2_a.prepend(li2_img);
+		li2.append(li2_a);
+		li2.append(li2_p);
+		li2.append(li2_div);
+		var li3 = $("<li></li>");
+		var li3_a = $("<a></a>");
+		var li3_img = $("<img>");
+		var li3_p = $("<p></p>");
+		var li3_div = $("<div>￥80</div>");
+		li3_img.attr("src",objPic4.image);
+		var textlength =  objPic4.title.length;
+		if (textlength > 7) {
+			objPic4.title = objPic4.title.slice(0,7)+"...";
+		}
+		li3_p.html(objPic4.title);
+		li3_a.prepend(li3_img);
+		li3.append(li3_a);
+		li3.append(li3_p);
+		li3.append(li3_div);
+		ul.append(li1);
+		ul.append(li2);
+		ul.append(li3);
+		div3.prepend(ul);
+	}
+})
+
+//box3
+$.ajax({
+	url:"../data/data.php?type=mall",
+	success:function (data) {
+		var obj = JSON.parse(data);
+		var objPic1 = obj.category[3];
+		var objPic2 = obj.category[3].subList[0];
+		var objPic3 = obj.category[3].subList[1];
+		var objPic4 = obj.category[3].subList[2];
+		var div1 = $("#mall_box5_title");
+		var div1_1 = $("<div class='box5_title_left'></div>");
+		var div1_2 = $("<div class='box5_title_right'></div>");
+		var div1_2_a = $("<a>更多</a>")
+		div1_1.html(objPic1.name);
+		console.log(objPic1.name);
+		div1_2_a.attr("src",objPic1.moreUrl);
+		div1_2.prepend(div1_2_a);
+		div1.append(div1_1);
+		div1.append(div1_2);
+		var div2 = $("#box5_main_top");
+		var div2_a = $("<a></a>");
+		var div2_img = $("<img>");
+		div2_a.attr("href",objPic1.imageUrl);
+		div2_img.attr("src",objPic1.image);
+		div2_a.prepend(div2_img);
+		div2.prepend(div2_a);
+		var div3 = $("#box5_main_down");
+		var ul = $("<ul></ul>");
+		var li1 = $("<li></li>");
+		var li1_a = $("<a></a>");
+		var li1_img = $("<img>");
+		var li1_p = $("<p></p>");
+		var li1_div = $("<div>￥72</div>");
+		li1_img.attr("src",objPic2.image);
+		var textlength =  objPic2.title.length;
+		if (textlength > 7) {
+			objPic2.title = objPic2.title.slice(0,7)+"...";
+		}
+		li1_p.html(objPic2.title);
+		li1_a.prepend(li1_img);
+		li1.append(li1_a);
+		li1.append(li1_p);
+		li1.append(li1_div);
+		var li2 = $("<li></li>");
+		var li2_a = $("<a></a>");
+		var li2_img = $("<img>");
+		var li2_p = $("<p></p>");
+		var li2_div = $("<div>￥68</div>");
+		li2_img.attr("src",objPic3.image);
+		var textlength =  objPic3.title.length;
+		if (textlength > 7) {
+			objPic3.title = objPic3.title.slice(0,7)+"...";
+		}
+		li2_p.html(objPic3.title);
+		li2_a.prepend(li2_img);
+		li2.append(li2_a);
+		li2.append(li2_p);
+		li2.append(li2_div);
+		var li3 = $("<li></li>");
+		var li3_a = $("<a></a>");
+		var li3_img = $("<img>");
+		var li3_p = $("<p></p>");
+		var li3_div = $("<div>￥49</div>");
+		li3_img.attr("src",objPic4.image);
+		var textlength =  objPic4.title.length;
+		if (textlength > 7) {
+			objPic4.title = objPic4.title.slice(0,7)+"...";
+		}
+		li3_p.html(objPic4.title);
+		li3_a.prepend(li3_img);
+		li3.append(li3_a);
+		li3.append(li3_p);
+		li3.append(li3_div);
+		ul.append(li1);
+		ul.append(li2);
+		ul.append(li3);
+		div3.prepend(ul);
 	}
 })
