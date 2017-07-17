@@ -65,6 +65,7 @@ $.ajax({
 			var a = $("<a href=''></a>");
 			var div1 = $("<div ></div>");
 			var div2 = $("<div ></div>");
+			var div3 = $("<div class='wire'></div>");
 
 			ul.append(li);
 			li.append(a);
@@ -72,6 +73,7 @@ $.ajax({
 			a.append(div2);
 			div1.prepend(img);
 			div2.append(z,z1,r);
+			a.append(div3);
 		}
 
 	}
