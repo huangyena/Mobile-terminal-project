@@ -59,22 +59,36 @@ $.ajax({
 		var obj = JSON.parse(data);
 		var objArr = obj.navigatorIcon;
 		console.log(objArr);
-		var ul = $("#mall_nav_box");
-		for (var i = 0; i < objArr.length; i++) {
-			var li = $('<li></li>');
+		var div1 = $("#mall_nav_first");
+		var div2 = $("#mall_nav_second");
+		for (var i = 0; i < 4; i++) {
+			var div1_1 = $('<div></div>');
 			var a = $('<a></a>');
 			var img = $('<img>');
 			var p = $('<p></p>');
 			a.attr('href',objArr[i].url);
 			img.attr('src',objArr[i].image);
-			p.html(objArr[i].iconTitle) ;
-			console.log(p);
+			p.html(objArr[i].iconTitle);
 			a.append(img);
 			a.append(p);
 			console.log(a);
-			li.append(a);
-			ul.append(li);
-		}
+			div1_1.append(a);
+			div1.append(div1_1);
+		};
+		for (var i = 4; i < 8; i++) {
+			var div2_1 = $('<div></div>');
+			var a = $('<a></a>');
+			var img = $('<img>');
+			var p = $('<p></p>');
+			a.attr('href',objArr[i].url);
+			img.attr('src',objArr[i].image);
+			p.html(objArr[i].iconTitle);
+			a.append(img);
+			a.append(p);
+			console.log(a);
+			div2_1.append(a);
+			div2.append(div2_1);
+		};
 	}
 })
 
@@ -115,7 +129,17 @@ $.ajax({
 })
 
 //box5S
-
+$.ajax({
+	url:"../data/data.php?type=mall",
+	soccess:function (data) {
+		var obj = JOSN.parse(data);
+		var objArr1 = obj.topic[0];
+		var objArr2 = obj.topic[1];
+		var objArr3 = obj.topic[2];
+		var objArr4 = obj.topic[3];
+		var objArr5 = obj.topic[4];
+	}
+})
 
 //box2
 $.ajax({
@@ -277,7 +301,7 @@ $.ajax({
 	}
 })
 
-//box3
+//box4
 $.ajax({
 	url:"../data/data.php?type=mall",
 	success:function (data) {
@@ -357,7 +381,7 @@ $.ajax({
 	}
 })
 
-//box3
+//box5
 $.ajax({
 	url:"../data/data.php?type=mall",
 	success:function (data) {
@@ -434,5 +458,42 @@ $.ajax({
 		ul.append(li2);
 		ul.append(li3);
 		div3.prepend(ul);
+	}
+})
+
+//recommend
+$.ajax({
+	url:"../data/data.php?type=interested",
+	success:function (data) {
+		var obj = JSON.parse(data);
+		var objArr = obj.goodsList;
+		console.log(objArr);
+		var ul = $("#recommendMain_box");
+		for (var i = 0; i < objArr.length; i++) {
+			var li = $("<li></li>");
+			var div_img = $("<div class='recmd_img'></div>")
+			var a = $("<a></a>");
+			var img = $("<img>");
+			var div_text = $("<div class='recmd_content'></div>");
+			var div_text1 = $("<div class='recmd_content_text1'></div>");
+			var div_text2 = $("<div class='recmd_content_text2'></div>");
+			img.attr("src",objArr[i].image);
+			a.attr("href",objArr[i].url);
+			// console.log(objArr[i].name);
+			var  textlength = objArr[i].name.length;
+			if (textlength > 7) {
+				objArr[i].name = objArr[i].name.slice(0,8)+"..."
+			}
+			// console.log(objArr[i].name);
+			div_text1.html(objArr[i].name);	
+			div_text2.html("￥"+objArr[i].minSalePrice);
+			a.prepend(img);
+			div_img.prepend(a);
+			li.append(div_img);
+			div_text.append(div_text1);
+			div_text.append(div_text2);
+			li.append(div_text);
+			ul.append(li);
+		}
 	}
 })
