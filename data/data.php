@@ -5044,7 +5044,7 @@
         "baiduLatitude": 39.92149, 
         "baiduLongitude": 116.36694, 
         "cinameName": "首都影院金融街店", 
-        "cinameMoney":"￥61起",
+        "cinameMoney":"￥60起",
         "cinemaId": 3194, 
         "couponActivityList": [
             {
