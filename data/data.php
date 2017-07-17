@@ -2651,7 +2651,7 @@
     ]
 }
 ';
-	}elseif ($type = 'will_pub') {//即将上映
+	}elseif ($type == 'will_pub') {//即将上映
 		$str = '{
     "attention": [
         {
@@ -4918,12 +4918,13 @@
 }
 ';
 	}elseif ($type == 'buy_tickets') {//购票-全部
-		$str = '{data:[
+		$str = '{"data":[
     {
         "address": "西城区西单北大街甲131号大悦城商场十层", 
         "baiduLatitude": 39.917507, 
         "baiduLongitude": 116.37897, 
-        "cinameName": "首都电影院（西单店）", 
+        "cinameName": "首都电影院（西单店）",
+        "cinameMoney":"￥45起",
         "cinemaId": 1815, 
         "couponActivityList": [
             {
@@ -4961,7 +4962,8 @@
         "address": "朝阳区建国路93号万达广场三层", 
         "baiduLatitude": 39.915833, 
         "baiduLongitude": 116.478516, 
-        "cinameName": "北京万达国际影城CBD店", 
+        "cinameName": "北京万达国际影城CBD店",
+        "cinameMoney":"￥50起", 
         "cinemaId": 1007, 
         "couponActivityList": [
             {
@@ -5000,6 +5002,7 @@
         "baiduLatitude": 40.005844, 
         "baiduLongitude": 116.40042, 
         "cinameName": "CGV星星影城（北京奥体店）", 
+        "cinameMoney":"￥55起",
         "cinemaId": 2618, 
         "couponActivityList": [
             {
@@ -5038,6 +5041,7 @@
         "baiduLatitude": 39.92149, 
         "baiduLongitude": 116.36694, 
         "cinameName": "首都影院金融街店", 
+        "cinameMoney":"￥60起",
         "cinemaId": 3194, 
         "couponActivityList": [
             {
@@ -5076,6 +5080,7 @@
         "baiduLatitude": 39.927555, 
         "baiduLongitude": 116.44598, 
         "cinameName": "北京博纳朝阳门旗舰店", 
+        "cinameMoney":"￥65起",
         "cinemaId": 2281, 
         "couponActivityList": [
             {
@@ -5114,6 +5119,7 @@
         "baiduLatitude": 39.97587, 
         "baiduLongitude": 116.49734, 
         "cinameName": "CGV星星影城（北京颐堤港店）", 
+        "cinameMoney":"￥65起",
         "cinemaId": 3091, 
         "couponActivityList": [
             {
@@ -5151,7 +5157,8 @@
         "address": "通州区新华西街58号万达广场一号楼5层", 
         "baiduLatitude": 39.912094, 
         "baiduLongitude": 116.64583, 
-        "cinameName": "北京万达通州店", 
+        "cinameName": "北京万达通州店",
+        "cinameMoney":"￥40起", 
         "cinemaId": 6387, 
         "couponActivityList": [
             {
@@ -5190,6 +5197,7 @@
         "baiduLatitude": 40.218002, 
         "baiduLongitude": 116.24633, 
         "cinameName": "首都电影院昌平店", 
+        "cinameMoney":"￥43起",
         "cinemaId": 4608, 
         "couponActivityList": [
             {
@@ -5228,6 +5236,7 @@
         "baiduLatitude": 39.90357, 
         "baiduLongitude": 116.42668, 
         "cinameName": "北京百老汇影城国瑞购物中心店", 
+        "cinameMoney":"￥48起",
         "cinemaId": 2271, 
         "couponActivityList": [
             {
@@ -5265,7 +5274,8 @@
         "address": "北京石景山区 石景山路乙18号万达广场3层", 
         "baiduLatitude": 39.911564, 
         "baiduLongitude": 116.23272, 
-        "cinameName": "北京万达国际影城石景山店", 
+        "cinameName": "北京万达国际影城石景山店",
+        "cinameMoney":"￥52起", 
         "cinemaId": 2148, 
         "couponActivityList": [
             {
@@ -5303,7 +5313,8 @@
         "address": "北京市朝阳区建国门外大街1号国贸商城区域三地下一层3B120", 
         "baiduLatitude": 39.91817, 
         "baiduLongitude": 116.466385, 
-        "cinameName": "北京百丽宫影城国贸店", 
+        "cinameName": "北京百丽宫影城国贸店",
+        "cinameMoney":"￥56起", 
         "cinemaId": 2929, 
         "couponActivityList": [
             {
@@ -5341,7 +5352,8 @@
         "address": "北京市王府井大街新东安广场6层", 
         "baiduLatitude": 39.92114, 
         "baiduLongitude": 116.41813, 
-        "cinameName": "北京百老汇影城apm购物中心店", 
+        "cinameName": "北京百老汇影城apm购物中心店",
+        "cinameMoney":"￥62起", 
         "cinemaId": 1004, 
         "couponActivityList": [
             {
@@ -8493,5 +8505,5 @@
     }
 ]';
 	}
-
+echo $str;
  ?>

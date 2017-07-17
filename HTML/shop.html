@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>购物</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/shop.css">
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../js/swiper.min.css">
+
+</head>
+<body>
+	<div class="box">
+		<header class="head">
+			<a href="#" class="title"></a>
+			<a href="#">首页</a>
+			<a href="" class="ticket">购票</a>
+			<a href="">商城</a>
+			<a href="">发现</a>
+			<a href="" class="titleone"></a>
+		</header>	
+	</div> 
+	<div class="shuffling">
+		<div class="capital">
+			<a href="">北京</a>
+			<a href="">
+				<img src="../images/1-箭头.png" alt="" class="arrows">
+			</a>
+		</div>
+		<form>
+			<span class="backdrop"></span>
+			<input type="text" placeholder="筛选影院" class="screen">
+		</form>
+		<input type="button" value="搜索" class="choose">
+	</div>
+	<ul class="filtrate">
+		<li>全部
+			<span>丨</span>
+		</li>
+		<li>附近
+			<span>丨</span>
+		</li>
+		<li>价格
+			<div>
+			<img src="../images/1-三角箭头上.png">
+			<br>
+			<img src="../images/1-三角箭头下.png" class="img"></div>
+			<span>丨</span>
+		</li>
+		<li>
+			<img src="../images/1-过滤器.png">
+			筛选
+		</li>
+	</ul>
+		<div class="jd_banner swiper-container">
+			<ul class="image_box swiper-wrapper">
+				<li class="swiper-slide">
+					<a href="">
+						<img src="../images/1-3.jpg">
+					</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="">
+						<img src="../images/1-2.jpg">
+					</a>
+				</li>
+			</ul>
+		<div class="swiper-pagination"></div>
+	</div>
+	<a href="http://www.baidu.com">
+	<div class="list">
+		<div class="receive"></div>
+	</div></a>
+	<a href="#"><img src="../images/1-回到顶部.png" class="top"></a>
+	<script>
+	$.ajax({
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				var obj = JSON.parse(data);
+				for (var i = 0; i < obj.data.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(obj.data[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(obj.data[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(obj.data[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+					}
+				}
+			});
+			var mySwiper = new Swiper('.jd_banner',{
+			pagination: '.swiper-pagination',
+			autoplay : 1000,
+			loop : true,
+			});
+		
+	
+	</script>
+</body>
+</html>
