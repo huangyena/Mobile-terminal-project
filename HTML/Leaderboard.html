@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<title>Leaderboard</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<title>find</title>
-	<link rel="stylesheet" href="../css/find.css">
+	<link rel="stylesheet" href="../css/Leaderboard.css">
 	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
 	<script src = "../js/ajax.js"></script>
 </head>
-<body ng-app = "app">
+<body>
 	<div id = "body">
 		<header >
 			<div class="header_color">
@@ -22,24 +22,34 @@
 		</header>
 		<nav class="nav">
 			<ul>
-				<li><a href="新闻.html" class="news">新闻</a></li>
+				<li><a href="新闻.html" >新闻</a></li>
 				<li><a href="预告片.html">预告片</a></li>
-				<li><a href="排行榜.html">排行榜</a></li>
+				<li><a href="排行榜.html" class="news">排行榜</a></li>
 				<li><a href="影评.html">影评</a></li>
 			</ul>
 		</nav>
-		<div class="position">
-			<a href="戛纳.html" id = "picture">
-				<div class="Cannes_fover"></div>
-				<span id="font"></span>
+		<div class="positiones">
+			<a href="LGBT.html" id = "picturees">
+				<div class="Cannes_foveres"></div>
+				<span id="fontes"></span>
 			</a>
 		</div>
-		<div >
-			<ul class="position1">
-				<li  id = "add"></li>
-				<button onclick ="fun()" class="many">查看更多</button>
-				<li id = "add1"></li>
-				<div id = "sorry">抱歉，没有了呦</div>
+		<div class = "top_picture">
+			<a href=""><img src="../images/top01.png" alt=""></a>
+			<a href=""><img src="../images/top02.png" alt=""></a>
+			<a href=""><img src="../images/top03.png" alt=""></a>
+		</div>
+		<div class="top_font">
+			<a href="" class="top_blue">时光Top 100</a>
+			<a href="" class="top_green">华语Top 100</a>
+			<a href="" class="top_yellow">全球票房榜</a>
+		</div>
+		<div>
+			<ul class="position2">
+				<li id = "movie"></li>
+				<button onclick ="fun1()" class="many1">查看更多</button>
+				<li id = "movie1"></li>
+				<div id = "sorry1">抱歉，没有了呦</div>
 			</ul>
 		</div>
 		<div class="border-footer"></div>
@@ -66,6 +76,5 @@
 			<div class="copy">Copyright 2006-2017 Mtime.com Inc.All rights reserved</div>
 		</div>
 	</div>
-	
 </body>
 </html>
