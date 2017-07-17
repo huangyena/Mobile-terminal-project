@@ -1,4 +1,3 @@
-/*全局*/
 *{
 	margin:0px;
 	padding: 0px;
@@ -89,91 +88,154 @@ ul,ol{
 	color: rgb(30,125,215);
 	font-weight: bold;
 }
-/*获取戛纳图片*/
+/*获取LGBT图片*/
 .Cannes{
 	margin-top: 20px;
 	width: 100%;
 }
 
-.position{
+.positiones{
 	width: 100%;
 	position: relative;
 	/*display: flex;*/
 }
-.Cannes_fover{
+.Cannes_foveres{
 	width: 100%;
 	height: 60px;
 	/*border:1px solid red;*/
 	position: absolute;
-	top:79%;
+	top:81%;
 	background-color: #333;
 	opacity:0.5;
 	
 }
-#font{
+#fontes{
 	font-size: 20px;
 	position: absolute;
 	top:85%;
 	left:70px;
 	color: white;
 }
-/*获取下面多个图片*/
-.pictureLi{
-	display: block;
-	width: 100px;
-	height: 100px;
+/*获取top前100*/
+.top_picture{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.top_picture>a{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.top_picture>a>img{
+	width: 40%;
+	height: 80%;
+	margin-top: 15px;
+}
+.top_font{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+.top_blue{
+	color: rgb(20,152,201);
+}
+.top_green{
+	color: rgb(59,199,194);
+}
+.top_yellow{
+	color: rgb(255,193,45);
+}
+/*获取系列列表*/
+#movie{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#movie>a{
+	width: 100%;
+	display: flex;
+	/*justify-content: space-around;*/
+	flex-wrap: wrap;
+}
+#movie>a>.borderTop{
+	width: 100%;
+	border-top: 1px solid rgb(216,216,216);
 	margin-top: 20px;
-	/*margin-left: 20px;*/
-	margin-bottom: 20px;
+
 }
-.borderBottom{
-	width: 90%;
-	/*align-self: center;*/
-	border-bottom: 1px solid rgb(221,221,221);
-	margin:auto;
-}
-.position1{
+#movie>a>.top_ten{
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	
-}
-.position1>#add{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-.href{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-.span{
-	width: 60%;
-	font-size: 20px;
+	font-size: 18px;
+	margin-left: 20px;
 	font-weight: bold;
+	margin-top: 15px;
+}
+#movie>a>.topFont{
+	width: 70%;
+	margin-left: 18px;
 	margin-top: 20px;
 }
-.time{
-	margin-top: -50px;
-	margin-left: 110px;
+#movie>a>.circle{
+	width: 25%;
+	margin-top: 15px;
+	/*margin-left: 10px;*/
 }
-.review{
-	margin-top: -47px;
+/**/
+#movie1{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
-#add1,#sorry{
-	display: none;
+#movie1>a{
+	width: 100%;
+	display: flex;
+	/*justify-content: space-around;*/
+	flex-wrap: wrap;
 }
-.position1>.many,.position1>#sorry{
+#movie1>a>.borderTop{
+	width: 100%;
+	border-top: 1px solid rgb(216,216,216);
+	margin-top: 20px;
+
+}
+#movie1>a>.top_ten{
+	width: 100%;
+	font-size: 18px;
+	margin-left: 20px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+#movie1>a>.topFont{
+	width: 70%;
+	margin-left: 18px;
+	margin-top: 20px;
+}
+#movie1>a>.circle{
+	width: 25%;
+	margin-top: 15px;
+	/*margin-left: 10px;*/
+}
+.position2{
+	width: 100%;
+	/*display: flex;*/
+	/*justify-content: center;*/
+}
+.many1,#sorry1{
 	background-color: white;
 	font-size: 20px;
 	color: rgb(30,125,215);
-	margin-top: 10px;
+	margin-top: 15px;
+	/*text-align: center;*/
+	margin-left: 160px;
 }
-.a{
+#movie1,#sorry1{
+	display: none;
+}
+.show{
 	display: none;
 }
 /*结尾*/
