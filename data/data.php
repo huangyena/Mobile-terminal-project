@@ -5122,7 +5122,7 @@
         "baiduLatitude": 39.97587, 
         "baiduLongitude": 116.49734, 
         "cinameName": "CGV星星影城（北京颐堤港店）", 
-        "cinameMoney":"￥65起",
+        "cinameMoney":"￥67起",
         "cinemaId": 3091, 
         "couponActivityList": [
             {

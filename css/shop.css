@@ -209,6 +209,7 @@ li{
 	min-width:320px;
 	max-width:640px;
 	width:100%;
+	/*margin-bottom:10px;*/
 	/*display:flex; 
 	justify-content:space-around;*/
 	/*margin-left:20px;*/
@@ -218,17 +219,19 @@ li{
 	font-weight:bolder;
 	font-size:18px;
 	display:inline-block;
+	margin-top:15px;
 }	
 .list>.receive{
 	/*width: 100%;*/
 	margin-left:20px;
+	/*margin-top:15px;*/
 	/*text-align:right;*/
 	/*display:flex; */
 	/*flex-wrap: wrap;*/
 	/*justify-content:space-between;*/	
 }
 .list>.receive>.money{
-	width: 15%;
+	width: 18%;
 	/*display: flex;*/
 	display:inline-block;
 	text-align:right;
@@ -237,7 +240,7 @@ li{
 	color:rgb(255,134,0);
 }
 .top{
-	width:40px; 
+	width:40px;
 	height:40px;
 	position:fixed;
 	top:85%;
@@ -248,4 +251,12 @@ li{
 	background-size:170px 35px;
 	width:170px;
 	height:35px;
+}
+.filtrate>li{
+	position:relative;
+}
+.filtrate>li>.down{
+	position:absolute;
+	top:12px;
+	left:47px;
 }
