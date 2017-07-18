@@ -34,17 +34,18 @@
 		<input type="button" value="搜索" class="choose">
 	</div>
 	<ul class="filtrate">
-		<li>全部
+		<li><span class="all" onclick="funtwo()">全部</span>
 			<span>丨</span>
 		</li>
 		<li>附近
 			<span>丨</span>
 		</li>
-		<li>价格
-			<div>
-			<img src="../images/1-三角箭头上.png">
+		<li>
+			<span class="color">价格</span>
+			<div style="width:0px;height:0px; border-left:10px solid white;border-bottom:11px solid rgb(187,187,187);border-right:10px solid white;" class="up" onclick="fun()"></div>
 			<br>
-			<img src="../images/1-三角箭头下.png" class="img"></div>
+			<div style="width:0px;height:0px; border-left:10px solid white;border-top:11px solid rgb(184,187,187);border-right:10px solid white;" class="down" onclick="funone()"></div>
+			</div>
 			<span>丨</span>
 		</li>
 		<li>
@@ -67,17 +68,25 @@
 			</ul>
 		<div class="swiper-pagination"></div>
 	</div>
-	<a href="http://www.baidu.com">
 	<div class="list">
-		<div class="receive"></div>
-	</div></a>
+		<div class="receive" onclick="funthree()"></div>
+		<!-- <div class="receiveone"></div>
+		<div class="receivetwo"></div> -->
+	</div>
 	<a href="#"><img src="../images/1-回到顶部.png" class="top"></a>
 	<script>
-	$.ajax({
+ 	// function getDate() {
+ 		var mySwiper = new Swiper('.jd_banner',{
+			pagination: '.swiper-pagination',
+			autoplay : 1000,
+			loop : true,
+			});
+		$.ajax({
 			//获取文件路径
 			url:"../data/data.php?type=buy_tickets",
 			success:function(data){//判断是否成功，获取数据源
 				var obj = JSON.parse(data);
+				array = obj.data;
 				for (var i = 0; i < obj.data.length; i++) {
 					var li = $("<div class ='designation'></div>");
 					li.html(obj.data[i].cinameName);
@@ -95,22 +104,109 @@
 					}
 				}
 			});
-			var mySwiper = new Swiper('.jd_banner',{
-			pagination: '.swiper-pagination',
-			autoplay : 1000,
-			loop : true,
-			});
-			var arr=[3,1,4,7,5,9,6,2,0,8];
-			for(var i=1;i<10;i++){
-				for(var j=0;j<10-i;j++){
-					if(arr[j]>arr[j+1]){
-						var tmp=arr[j];
-						arr[j]=arr[j+1];
-						arr[j+1]=tmp;
+	var array = [];
+	function fun() {
+		$(".receive").empty();
+		$(".color").css("color","rgb(30,125,222)")
+		$(".up").css("border-bottom","10px solid rgb(30,125,222)");
+		$(".down").css("border-top","10px solid rgb(187,187,187)");
+		$(".all").css("color","rgb(51,51,51)");
+		for(var i = 0; i < array.length; i++) {
+			for (var j = 0; j < array.length-i-1; j++) {
+				if (array[j].cinameMoney > array[j+1].cinameMoney) {
+					var tem = array[j];
+					array[j] = array[j+1];
+					array[j+1] = tem;
+				}
+			}	
+		}
+		for (var i = 0; i < array.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(array[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(array[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(array[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+					}					
+				}
+	function funone() {
+		$(".receive").empty();
+		$(".color").css("color","rgb(30,125,222)");
+		$(".up").css("border-bottom","10px solid rgb(187,187,187)");
+		$(".down").css("border-top","10px solid rgb(30,125,222)");
+		$(".all").css("color","rgb(51,51,51)");
+		for(var i = 0; i < array.length; i++) {
+			for (var j = 0; j < array.length-i-1; j++) {
+				if (array[j].cinameMoney < array[j+1].cinameMoney) {
+					var tem = array[j];
+					array[j] = array[j+1];
+					array[j+1] = tem;
+				}
+			}	
+		}
+		for (var i = 0; i < array.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(array[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(array[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(array[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+					}					
+				}
+		function funtwo(){
+			$(".receive").empty();
+			$(".all").css("color","rgb(30,125,222)");
+			$(".color").css("color","rgb(51,51,51)");
+			$(".up").css("border-bottom","10px solid rgb(187,187,187)");
+			$(".down").css("border-top","10px solid rgb(187,187,187)");
+			$.ajax({
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				var obj = JSON.parse(data);
+				array = obj.data;
+				for (var i = 0; i < obj.data.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(obj.data[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(obj.data[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(obj.data[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
 					}
 				}
+			});
+		}
+		function funthree(){
+			$.ajax({
+			url:"../data/data.php?type=buy_tickets",
+			success:function(da){
+				var hk=JSON.parse(da);
+				ok=hk.data[0].couponActivityList[0].url;
+				console.log(ok);
 			}
-			console.log(arr);
-	</script>
+			})
+		}
+		</script>
 </body>
 </html>
