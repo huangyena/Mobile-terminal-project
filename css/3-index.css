@@ -18,7 +18,7 @@ input,button{
 	outline: none;
 	-webkit-appearance:none;
 }
-/* ?????? */
+
 #body{
 	width: 100%;
 	max-width: 640px;
@@ -61,7 +61,7 @@ input,button{
 
 
 
-/* Ò³Î² */
+
 .footer>.footer_nav>ul{
 	width: 100%;
 	height: 40px;
@@ -120,7 +120,7 @@ input,button{
 	color: rgb(205,205,205);
 }
 
-/* ???? */
+
 
 section>.seek{
 	width: 100%;
@@ -148,15 +148,16 @@ section>.seek>a>input{
 	border-radius: 5px;
 	border:1px solid rgb(187,187,187);
 	padding-left: 40px; 
-	background-image: url(../images/3-?Å´?jpg);
+	background-image: url(../images/3-fangdajing.jpg);
 	background-repeat: no-repeat;
 	background-size:20px 20px;
 	background-position: 10px;
 }
-/* ???Ó³ */
+
 section>.hot_showing{
 	width: 100%;
 	padding: 10px;
+	position: relative;
 
 }
 section>.hot_showing>a>h2>span>img{
@@ -173,11 +174,7 @@ section>.hot_showing>a>h2{
 }
 
 
-/*????Í¼Æ¬*/
-.hot_showing{
-	width: 100%;
 
-}
 ..hot_showing>nav{
 	width: 100%;
 	display: flex;
@@ -245,8 +242,6 @@ section>.hot_showing>a>h2{
 	color: rgb(255,255,255);
 	text-align: center;
 	position: absolute;
-	margin-top: 1%;
-	margin-left: 7%; 	
 }
 .hot_showing>nav>.nav_second>.a1>.lijie>p{
 	width: 30px;
@@ -255,8 +250,7 @@ section>.hot_showing>a>h2{
 	color: rgb(255,255,255);
 	text-align: center;
 	position: absolute;
-	margin-top: 1%;
-	margin-left: 7%; 
+
 }
 
 
