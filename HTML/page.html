@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title></title>
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+
+	<style>
+		body{
+			width: 100%;
+			min-width: 320px;
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		ul{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="搜索" name="text" id = "text" oninput = "fun()">
+	 <!-- <input type="button" value="按钮" onclick="fun()"> -->
+	<ul>
+		<li id = "aa"></li>
+	</ul>
+	<script>
+		function fun(){
+		
+			$("#aa").empty();
+			var content = $("input").val();
+			var aa = $("#aa");
+			$.ajax({
+
+				url:"../data/3-search.php?keyword="+content,
+				success:function(data){
+					console.log(data);
+					aa.text(data);
+					// var obj = JSON.parse(data);
+					// console.log(obj);
+					// console.log(obj.suggestions[0].titlecn);
+					// console.log(obj.suggestions[0].cover);
+					// for (var i = 0; i < obj.suggestions.length; i++) {
+					// 	var b = $("<div class = 'a1'></div>");
+					// 	b.html(obj.suggestions[i].titlecn);
+
+					// 	var img = $("<img class = 'img' />");
+					// 	img.attr("src",obj.suggestions[i].cover);
+					// 	$("#aa").append(img);
+					// 	$("#aa").append(b);
+					// }
+					// aa.text(obj);
+					// console.log(aa);
+					
+				}
+
+			})
+		}
+			
+
+			
+	
+		
+	</script>
+</body>
+</html>

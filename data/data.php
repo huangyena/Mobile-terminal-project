@@ -4918,13 +4918,14 @@
 }
 ';
 	}elseif ($type == 'buy_tickets') {//购票-全部
-		$str = '{data:[
+		$str = '{"data":[
     {
         "address": "西城区西单北大街甲131号大悦城商场十层", 
         "baiduLatitude": 39.917507, 
         "baiduLongitude": 116.37897, 
         "cinameName": "首都电影院（西单店）", 
         "cinemaId": 1815, 
+        "cinameMoney":"￥45",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -4962,7 +4963,8 @@
         "baiduLatitude": 39.915833, 
         "baiduLongitude": 116.478516, 
         "cinameName": "北京万达国际影城CBD店", 
-        "cinemaId": 1007, 
+        "cinemaId": 1007,
+         "cinameMoney":"￥43", 
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5001,6 +5003,7 @@
         "baiduLongitude": 116.40042, 
         "cinameName": "CGV星星影城（北京奥体店）", 
         "cinemaId": 2618, 
+         "cinameMoney":"￥40",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5039,6 +5042,7 @@
         "baiduLongitude": 116.36694, 
         "cinameName": "首都影院金融街店", 
         "cinemaId": 3194, 
+         "cinameMoney":"￥30",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5077,6 +5081,7 @@
         "baiduLongitude": 116.44598, 
         "cinameName": "北京博纳朝阳门旗舰店", 
         "cinemaId": 2281, 
+        "cinameMoney":"￥39",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5115,6 +5120,7 @@
         "baiduLongitude": 116.49734, 
         "cinameName": "CGV星星影城（北京颐堤港店）", 
         "cinemaId": 3091, 
+         "cinameMoney":"￥60",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5153,6 +5159,7 @@
         "baiduLongitude": 116.64583, 
         "cinameName": "北京万达通州店", 
         "cinemaId": 6387, 
+         "cinameMoney":"￥25",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5191,6 +5198,7 @@
         "baiduLongitude": 116.24633, 
         "cinameName": "首都电影院昌平店", 
         "cinemaId": 4608, 
+         "cinameMoney":"￥55",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5229,6 +5237,7 @@
         "baiduLongitude": 116.42668, 
         "cinameName": "北京百老汇影城国瑞购物中心店", 
         "cinemaId": 2271, 
+         "cinameMoney":"￥22",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5267,6 +5276,7 @@
         "baiduLongitude": 116.23272, 
         "cinameName": "北京万达国际影城石景山店", 
         "cinemaId": 2148, 
+         "cinameMoney":"￥17",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5305,6 +5315,7 @@
         "baiduLongitude": 116.466385, 
         "cinameName": "北京百丽宫影城国贸店", 
         "cinemaId": 2929, 
+         "cinameMoney":"￥67",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5343,6 +5354,7 @@
         "baiduLongitude": 116.41813, 
         "cinameName": "北京百老汇影城apm购物中心店", 
         "cinemaId": 1004, 
+          "cinameMoney":"￥45",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 

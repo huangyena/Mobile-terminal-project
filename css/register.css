@@ -1,0 +1,134 @@
+*{
+	margin:0px;
+	padding: 0px;
+	-webkit-tap-highlight-color:transparent;
+	font-family: "微软雅黑";
+	box-sizing: border-box;
+}
+input,button{
+	border:none;
+	outline: none;
+	-webkit-appearance:none;
+}
+#body{
+	width: 100%;
+	height: 736px;
+	max-width: 640px;
+	min-width: 320px;
+	margin:0 auto;
+	background-color: rgb(246,246,246);
+}
+.nav_header{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(28,38,53);
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+}
+.arrows{
+	color:white;
+	width: 5%;
+	margin-left: 10px;
+}
+.index{
+	width: 45%;
+	color: white;
+}
+.nav_header>img{
+	width: 13%;
+}
+form{
+	width: 100%;
+	/*height: 200px;*/
+	background-color: white;
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top:0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.head{
+	width: 8%;
+	height: 8%;
+	color: rgb(215,215,215);
+}
+.bor_top{
+	width: 90%;
+	border-bottom:1px solid rgb(215,215,215);
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+}
+form>.text{
+	width: 80%;
+	font-size: 20px;
+}
+.lock{
+	width: 8%;
+	height: 8%;
+	color: rgb(215,215,215);
+}
+.pwd{
+	width: 54%;
+	font-size: 20px;
+}
+form>span{
+	width: 25%;
+	color: rgb(30,125,215);
+}
+#btn{
+	width: 80%;
+	height:7%;
+	border-radius: 25px;
+	background-color: rgb(30,125,215);
+	color: white;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-left: 11%;
+}
+#regbtn{
+	width: 100%;
+	display: flex;
+	justify-content:space-around;
+	margin-top: 20px;
+	
+}
+#regbtn>input{
+	border:none;
+	font-size: 20px;
+	/*width: 80%;*/
+	background-color: rgb(246,246,246);
+}
+.reg{
+	color: rgb(30,125,215);
+}
+.findbtn{
+	color: rgb(125,125,125);
+}
+#bor{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.bot_b{
+	width: 30%;
+	border-top: 1px solid rgb(153,153,153);
+	margin-top: 10px;
+}
+.bor_font{
+	color: rgb(153,153,153);
+}
+#img{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+#img>img{
+	width: 20%;
+	height: 20%;
+}
