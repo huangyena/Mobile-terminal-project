@@ -18,6 +18,7 @@ $.ajax({
 			/*console.log(fontDiv);*/
 			aa.append(li);
 			aa.append(fontDiv);
+			aa.append(li);
 			aa.append(em);
 			$(".a0").append(aa);
 		}

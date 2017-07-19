@@ -9,59 +9,6 @@
     "lid": 290,
     "ms": [
         {
-            "NearestCinemaCount": 158,
-            "NearestDay": 1499673600,
-            "NearestShowtimeCount": 2395,
-            "aN1": "史蒂夫·卡瑞尔",
-            "aN2": "克里斯汀·韦格",
-            "actors": "史蒂夫·卡瑞尔 / 克里斯汀·韦格 / 崔·帕克 / 妮芙·沙瑞尔",
-            "cC": 159,
-            "commonSpecial": "格鲁带小黄人重走“坏蛋”老路",
-            "d": "96",
-            "dN": "凯尔·巴尔达",
-            "def": 0,
-            "id": 208828,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F06%2F28%2F102059.84589245_1280X720X2.jpg&width=130&height=195&clipType=4",
-            "is3D": true,
-            "isDMAX": true,
-            "isFilter": false,
-            "isHasTrailer": true,
-            "isHot": true,
-            "isIMAX": false,
-            "isIMAX3D": true,
-            "isNew": false,
-            "isTicket": true,
-            "m": "",
-            "movieType": "动画 / 冒险 / 喜剧",
-            "p": [
-                "动画冒险喜剧"
-            ],
-            "r": 7.2,
-            "rc": 0,
-            "rd": "20170707",
-            "rsC": 0,
-            "sC": 6854,
-            "t": "悟空传",
-            "tCn": "神偷奶爸3",
-            "tEn": "Despicable Me 3",
-            "ua": -1,
-            "versions": [
-                {
-                    "enum": 2,
-                    "version": "3D"
-                },
-                {
-                    "enum": 4,
-                    "version": "IMAX3D"
-                },
-                {
-                    "enum": 6,
-                    "version": "中国巨幕"
-                }
-            ],
-            "wantedCount": 6805
-        },
-        {
             "NearestCinemaCount": 156,
             "NearestDay": 1499673600,
             "NearestShowtimeCount": 947,
@@ -388,7 +335,7 @@
             "rd": "20170629",
             "rsC": 0,
             "sC": 419,
-            "t": "大护法",
+            "t": "绝世高手",
             "tCn": "逆时营救",
             "tEn": "Reset",
             "ua": -1,

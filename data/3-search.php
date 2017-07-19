@@ -1,7 +1,7 @@
 <?php 
 	//传入keyword（搜索的关键字）
 	$keyword = $_REQUEST['keyword'];
-	$data = array ("keyword"=>$keyword);
+	$data = array ("keyword"=>$keyword,"locationId"=>"290");
 	$data = http_build_query($data);
 	$opts = array (
 		'http' => array (

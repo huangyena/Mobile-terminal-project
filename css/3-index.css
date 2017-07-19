@@ -50,6 +50,7 @@ input,button{
 	padding-bottom: 15px;
 	margin-top: 10px; 
 	display: inline-block;
+	color: rgb(255,255,255);
 
 }
 .header_color>a>img{

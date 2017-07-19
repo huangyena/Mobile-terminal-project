@@ -9,22 +9,64 @@
 <script src = "../js/插件/jquery-3.1.1.min.js"></script>
 <body>
 	<div class="city">
-		<div class="back"  onclick="jump()"><</div>
+		<div class="back" onclick="jump()"><</div>
 		<div class="subject"></div>
 	</div>
+	<ul class="list">
+	<li src="" class="receive" style="width:100%;"></li>
+	</ul>
 	<script>
 		function jump(){
 			window.open("shop.html");
 		}
-		var cId=$(".subject");
 		$.ajax({
-			url:"../data/buyTicket.php?type=getMovieList"+cId,
-			success:function(data){
-				var a=JSON.parse(data);
-				console.log(a);
-				
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				// console.log(data);
+				var obj = JSON.parse(data);
+				// console.log(obj);
+				// array = obj.data;
+				for (var i = 0; i < obj.data.length; i++) {
+					var con = obj.data[i].cinemaId;
+					// var com = obj.data[i].districtID;
+					// console.log(con);
+					// console.log(com);
+					}
+			// var li = $("<div class ='designation'></div>");
+			// 		li.html(array[i].cinameName);
+			$.ajax({
+				url:"../data/buyTicket.php?type=getMovieList&&cId="+con,
+				success:function(data){
+				console.log(data);
+				var obj = JSON.parse(data);
+				console.log(obj);
+				for (var i = 0; i <obj.movies.length; i++){
+					var a=obj.movies[i].img;
+					var li=$("<img class='img'>");
+					li.attr("src",a);
+					$(".receive").append(li);
+				}
 			}
-		})
+			})
+			}
+			});
+		// $.ajax({
+		// 	//获取文件路径
+		// 	url:"../data/data.php?type=trailer",
+		// 	success:function(data){//判断是否成功，获取数据源
+		// 		// console.log(data);
+		// 		var obj = JSON.parse(data);
+		// 		// console.log(obj);
+		// 		// array = obj.data;
+		// 		for (var i = 0; i < obj.trailers.length; i++) {
+		// 			// var con = obj.data[i].cinemaId;
+		// 			var com = obj.trailers[i].movieId;
+		// 			// console.log(con);
+		// 			console.log(com);
+		// 			}
+		// 		}
+		// 		});
 	</script>
 </body>
 </html>
