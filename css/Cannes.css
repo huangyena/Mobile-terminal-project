@@ -57,7 +57,7 @@ ul,ol{
 	max-width: 640px;
 	background-color: black;
 	opacity:0.6;
-	padding-top: 480px;
+	padding-top: 560px;
 	display: flex;
 }
 .bor_white{
@@ -67,6 +67,9 @@ ul,ol{
 	/*margin-top: 400px;*/
 	text-align: center;
 	/*display: flex;*/
+	padding-top: -10px;
+	position: absolute;
+	top:75.5%;
 }
 .bor_img{
 	width: 100%;

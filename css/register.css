@@ -44,7 +44,7 @@ form{
 	background-color: white;
 	margin-top: 20px;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	margin-top:0px;
@@ -81,14 +81,14 @@ form>span{
 	color: rgb(30,125,215);
 }
 #btn{
-	width: 80%;
-	height:7%;
+	width: 70%;
+/*	height:50%;*/
 	border-radius: 25px;
 	background-color: rgb(30,125,215);
 	color: white;
 	font-size: 20px;
 	margin-top: 20px;
-	margin-left: 11%;
+	/*margin-left: 11%;*/
 }
 #regbtn{
 	width: 100%;

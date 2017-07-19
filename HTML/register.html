@@ -3,13 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<title>register</title>
+	<title></title>
 	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
 	<script src = "../js/jquery.validate.min.js"></script>
 	<script src = "../js/messages_zh.min.js"></script>
-	<link rel="stylesheet" href="../css/register.css">
+	<link rel="stylesheet" href="../css/3-register.css">
 </head>
-	
 <body>
 	<div id = "body">
 		<div class = "nav_header">
@@ -19,26 +18,19 @@
 			<img src="../images/4Alogo.png" alt="">
 		</div>
 		<form action="">
-			<img src="../images/人头.png" alt="" class="head">&nbsp;<input type="text" placeholder="登录邮箱/手机号码" class = 'text'>
-			<div class="bor_top"></div>
-			<img src="../images/lock.png" alt="" class="lock">&nbsp;<input type="password" placeholder="密码" class= "pwd">
-			<span>显示密码</span>
+			手机号：<input type="text" placeholder="请输入手机号" class="text"> <span>获取验证码</span>
+			<br><br>
+			<div class="bot_top"></div>
+			验证码：<input type="text">
+			<br><br>
+			<div class="bot_top"></div>
+			密码：<input type="password" placeholder="6-20位字母、数字、符号组成" class="pwd">
+			<br>
+			<div class="bot_top"></div>
+			<input type="checkbox">我已阅读并同意《Mtime时光网服务》
+			<br><br>
+			<input type="submit" value="注册">
 		</form>
-		<input type="button" value = "登录" id = "btn">
-		<div id = 'regbtn'>
-			<input type="button" value = '免费注册' class = "reg">
-			<input type="button" value="找回密码" class="findbtn">
-		</div>
-		<div id = "bor">
-			<span class = 'bot_b'></span>
-			<span class = "bor_font">使用第三方登录</span>
-			<span class = 'bot_b'></span>
-		</div>
-		<div id = "img">
-			<img src="../images/o_sina.png" alt="">
-			<img src="../images/o_qq.png" alt="">
-		</div>
 	</div>
-	
 </body>
 </html>

@@ -23,34 +23,52 @@
 	 <!-- <input type="button" value="按钮" onclick="fun()"> -->
 	<ul>
 		<li id = "aa"></li>
+		<!-- <li id = "bb"></li> -->
 	</ul>
 	<script>
 		function fun(){
 		
 			$("#aa").empty();
-			var content = $("input").val();
+
+			var con = $("input").val();
 			var aa = $("#aa");
+			if(con .length == 0){
+				return;
+			}
 			$.ajax({
 
-				url:"../data/3-search.php?keyword="+content,
+				url:"../data/3-search.php?keyword="+con,
 				success:function(data){
 					console.log(data);
-					aa.text(data);
-					// var obj = JSON.parse(data);
-					// console.log(obj);
-					// console.log(obj.suggestions[0].titlecn);
-					// console.log(obj.suggestions[0].cover);
-					// for (var i = 0; i < obj.suggestions.length; i++) {
-					// 	var b = $("<div class = 'a1'></div>");
-					// 	b.html(obj.suggestions[i].titlecn);
+					// aa.text(data);
+					var obj = JSON.parse(data);
+					console.log(obj);
+					// var type = obj.suggestions[0].type;
+					// console.log(type);
+				for (var i = 0; i < obj.suggestions.length; i++) {
+						console.log(obj.suggestions[i].type);
+			
+				if(obj.suggestions[i].type =2){
 
-					// 	var img = $("<img class = 'img' />");
-					// 	img.attr("src",obj.suggestions[i].cover);
-					// 	$("#aa").append(img);
-					// 	$("#aa").append(b);
-					// }
-					// aa.text(obj);
-					// console.log(aa);
+						for (var i = 0; i < obj.suggestions.length; i++) {
+						var b = $("<div class = 'a1'></div>");
+						b.html(obj.suggestions[i].titlecn);
+
+						// var c = $("<span class = 'name1'></span>");
+						// c.html(obj.suggestions[i].name);
+
+						var img = $("<img class = 'img' />");
+						img.attr("src",obj.suggestions[i].cover);
+						$("#aa").append(img);
+						// $("#aa").append(b);
+						img.after(b);
+						// img.after(c);
+						}
+						// $("#aa").remove();
+				}else{
+					console.log("=========");
+				}
+				}	
 					
 				}
 
