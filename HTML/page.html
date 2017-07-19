@@ -12,6 +12,7 @@
 			min-width: 320px;
 			max-width: 640px;
 			margin: 0 auto;
+			background-image: url(../images/);
 		}
 		ul{
 			list-style: none;
@@ -19,8 +20,13 @@
 	</style>
 </head>
 <body>
-	<input type="text" placeholder="搜索" name="text" id = "text" oninput = "fun()">
-	 <!-- <input type="button" value="按钮" onclick="fun()"> -->
+
+	<input type="text" placeholder="搜索" name="text" id = "text">
+	 <input type="button" value="按钮" onclick="fun()">
+	 <ul>
+		<li><a href="">1</a></li>
+		<li><a href="">2</a></li>
+	 </ul>
 	<ul>
 		<li id = "aa"></li>
 		<!-- <li id = "bb"></li> -->
@@ -40,35 +46,35 @@
 				url:"../data/3-search.php?keyword="+con,
 				success:function(data){
 					console.log(data);
-					// aa.text(data);
-					var obj = JSON.parse(data);
-					console.log(obj);
+					aa.text(data);
+					// var obj = JSON.parse(data);
+					// console.log(obj);
 					// var type = obj.suggestions[0].type;
-					// console.log(type);
-				for (var i = 0; i < obj.suggestions.length; i++) {
-						console.log(obj.suggestions[i].type);
+				// 	// console.log(type);
+				// for (var i = 0; i < obj.suggestions.length; i++) {
+				// 		console.log(obj.suggestions[i].type);
 			
-				if(obj.suggestions[i].type =2){
+				// if(obj.suggestions[i].type =2){
 
-						for (var i = 0; i < obj.suggestions.length; i++) {
-						var b = $("<div class = 'a1'></div>");
-						b.html(obj.suggestions[i].titlecn);
+				// 		for (var i = 0; i < obj.suggestions.length; i++) {
+				// 		var b = $("<div class = 'a1'></div>");
+				// 		b.html(obj.suggestions[i].titlecn);
 
-						// var c = $("<span class = 'name1'></span>");
-						// c.html(obj.suggestions[i].name);
+				// 		// var c = $("<span class = 'name1'></span>");
+				// 		// c.html(obj.suggestions[i].name);
 
-						var img = $("<img class = 'img' />");
-						img.attr("src",obj.suggestions[i].cover);
-						$("#aa").append(img);
-						// $("#aa").append(b);
-						img.after(b);
-						// img.after(c);
-						}
-						// $("#aa").remove();
-				}else{
-					console.log("=========");
-				}
-				}	
+				// 		var img = $("<img class = 'img' />");
+				// 		img.attr("src",obj.suggestions[i].cover);
+				// 		$("#aa").append(img);
+				// 		// $("#aa").append(b);
+				// 		img.after(b);
+				// 		// img.after(c);
+				// 		}
+				// 		// $("#aa").remove();
+				// }else{
+				// 	console.log("=========");
+				// }
+				// }	
 					
 				}
 

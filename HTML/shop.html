@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>购物</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/shop.css">
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../js/swiper.min.css">
+</head>
+<body>
+	<div class="box">
+		<header class="head">
+			<a href="#" class="title"></a>
+			<a href="#">首页</a>
+			<a href="" class="ticket">购票</a>
+			<a href="">商城</a>
+			<a href="">发现</a>
+			<a href="" class="titleone"></a>
+		</header>	
+	</div> 
+	<div class="shuffling">
+		<div class="capital">
+			<a href="">北京</a>
+			<a href="">
+				<img src="../images/1-箭头.png" alt="" class="arrows">
+			</a>
+		</div>
+		<form>
+			<span class="backdrop"></span>
+			<input type="text" placeholder="筛选影院" class="screen" id="searchField">
+		</form>
+		<input type="button" value="搜索" class="choose" onclick="searchCinimal()">
+	</div>
+	<ul class="filtrate">
+		<li><span class="all" onclick="funtwo()">全部</span>
+			<span>丨</span>
+		</li>
+		<li>附近
+			<span>丨</span>
+		</li>
+		<li>
+			<span class="color">价格</span>
+			<div style="width:0px;height:0px; border-left:10px solid white;border-bottom:11px solid rgb(187,187,187);border-right:10px solid white;" class="up" onclick="fun()"></div>
+			<br>
+			<div style="width:0px;height:0px; border-left:10px solid white;border-top:11px solid rgb(184,187,187);border-right:10px solid white;" class="down" onclick="funone()"></div>
+			</div>
+			<span>丨</span>
+		</li>
+		<li>
+			<img src="../images/1-过滤器.png">
+			筛选
+		</li>
+	</ul>
+		<div class="jd_banner swiper-container">
+			<ul class="image_box swiper-wrapper">
+				<li class="swiper-slide">
+					<a href="">
+						<img src="../images/1-3.jpg">
+					</a>
+				</li>
+				<li class="swiper-slide">
+					<a href="">
+						<img src="../images/1-2.jpg">
+					</a>
+				</li>
+			</ul>
+		<div class="swiper-pagination"></div>
+	</div>
+	<div class="list">
+		<div class="receive" onclick="jump()"></div>
+		<!-- <div class="receiveone"></div>
+		<div class="receivetwo"></div> -->
+	</div>
+	<a href="#"><img src="../images/1-回到顶部.png" class="top"></a>
+	<script>
+ 	// function getDate() {
+ 		var mySwiper = new Swiper('.jd_banner',{
+			pagination: '.swiper-pagination',
+			autoplay : 1000,
+			loop : true,
+			});
+		$.ajax({
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				var obj = JSON.parse(data);
+				array = obj.data;
+				for (var i = 0; i < obj.data.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(obj.data[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(obj.data[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(obj.data[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+					// var link=$("<a>你好</a>");
+					// $(".list").append(link);
+					}
+				}
+			});
+	var array = [];
+	function fun() {
+		$(".receive").empty();
+		$(".color").css("color","rgb(30,125,222)")
+		$(".up").css("border-bottom","10px solid rgb(30,125,222)");
+		$(".down").css("border-top","10px solid rgb(187,187,187)");
+		$(".all").css("color","rgb(51,51,51)");
+		for(var i = 0; i < array.length; i++) {
+			for (var j = 0; j < array.length-i-1; j++) {
+				if (array[j].cinameMoney > array[j+1].cinameMoney) {
+					var tem = array[j];
+					array[j] = array[j+1];
+					array[j+1] = tem;
+				}
+			}	
+		}
+		for (var i = 0; i < array.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(array[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(array[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(array[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+					}					
+				}
+		function jump(){
+					window.open("introduce.html");
+			}
+	function funone() {
+		$(".receive").empty();
+		$(".color").css("color","rgb(30,125,222)");
+		$(".up").css("border-bottom","10px solid rgb(187,187,187)");
+		$(".down").css("border-top","10px solid rgb(30,125,222)");
+		$(".all").css("color","rgb(51,51,51)");
+		for(var i = 0; i < array.length; i++) {
+			for (var j = 0; j < array.length-i-1; j++) {
+				if (array[j].cinameMoney < array[j+1].cinameMoney) {
+					var tem = array[j];
+					array[j] = array[j+1];
+					array[j+1] = tem;
+				}
+			}	
+		}
+		for (var i = 0; i < array.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(array[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(array[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(array[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+					}					
+				}
+		function funtwo(){
+			$(".receive").empty();
+			$(".all").css("color","rgb(30,125,222)");
+			$(".color").css("color","rgb(51,51,51)");
+			$(".up").css("border-bottom","10px solid rgb(187,187,187)");
+			$(".down").css("border-top","10px solid rgb(187,187,187)");
+			$.ajax({
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				var obj = JSON.parse(data);
+				array = obj.data;
+				for (var i = 0; i < array.length; i++) {
+					var li = $("<div class ='designation'></div>");
+					li.html(array[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(array[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(array[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+					}					
+				}
+			});
+		}
+		function searchCinimal(){
+			$(".receive").empty();
+			var keyword = $("#searchField").val();
+			for(var i = 0; i < array.length; i++){
+				if (array[i].cinameName.indexOf(keyword) != -1) {
+					// var title=array[i].address;
+					// console.log(title);
+					var li = $("<div class ='designation'></div>");
+					li.html(array[i].cinameName);
+					$(".receive").append(li);
+					var lo = $("<div class ='money'></div>");
+					lo.html(array[i].cinameMoney);
+					$(".receive").append(lo);
+					var ll = $("<div class = 'site'></div>");
+					ll.html(array[i].address);
+					$(".receive").append(ll);
+					var img = $("<div class='img'></div>");
+					$(".receive").append(img);
+					var bor = $("<div class='bor'></div>");
+					$(".receive").append(bor);
+				}
+			}
+		}
+		</script>
+</body>
+</html>
+<!--  朝阳 1362   -->
+<!-- 通州 3582 -->
+<!-- 昌平1361 -->
+<!-- 崇文区  1363-->
+<!-- 石景山 1372 -->
+<!-- 王府井 1365 -->
+<!-- 西城 1372 -->

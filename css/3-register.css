@@ -54,7 +54,7 @@ form{
 	width: 40%;
 	font-size: 20px;
 }
-form>span{
+form>#span{
 	display: inline-block;
 	width: 120px;
 	height: 40px;
@@ -74,4 +74,25 @@ form>span{
 	width:70%;
 	font-size: 20px;
 	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.check{
+	width:20px;
+	height: 20px;
+	/*border:none;*/
+	border-radius: 20px/20px;
+}
+.copy{
+	text-decoration: none;
+	color: rgb(30,125,215);
+}
+.register{
+	width: 80%;
+	height: 50px;
+	border-radius: 20px;
+	font-size: 20px;
+	margin-left: 7%;
+	border:1px solid rgb(30,125,215);
+	background-color: rgb(30,125,215);
+	color: white;
 }
