@@ -31,7 +31,7 @@ $.ajax({
 		// console.log(obj);
 		
 		var objArr = obj.scrollImg;
-		console.log(objArr);
+		// console.log(objArr);
 		var ul = $('#image_box');
 		// var li = $('<li></li>');
 		// var a = $('<a></a>');
@@ -58,7 +58,7 @@ $.ajax({
 	success:function (data) {
 		var obj = JSON.parse(data);
 		var objArr = obj.navigatorIcon;
-		console.log(objArr);
+		// console.log(objArr);
 		var div1 = $("#mall_nav_first");
 		var div2 = $("#mall_nav_second");
 		for (var i = 0; i < 4; i++) {
@@ -71,7 +71,7 @@ $.ajax({
 			p.html(objArr[i].iconTitle);
 			a.append(img);
 			a.append(p);
-			console.log(a);
+			// console.log(a);
 			div1_1.append(a);
 			div1.append(div1_1);
 		};
@@ -85,7 +85,7 @@ $.ajax({
 			p.html(objArr[i].iconTitle);
 			a.append(img);
 			a.append(p);
-			console.log(a);
+			// console.log(a);
 			div2_1.append(a);
 			div2.append(div2_1);
 		};
@@ -131,21 +131,996 @@ $.ajax({
 //box5S
 $.ajax({
 	url:"../data/data.php?type=mall",
-	soccess:function (data) {
-		var obj = JOSN.parse(data);
+	success:function (data) {
+		var obj = JSON.parse(data);
 		var objArr1 = obj.topic[0];
 		var objArr2 = obj.topic[1];
 		var objArr3 = obj.topic[2];
 		var objArr4 = obj.topic[3];
 		var objArr5 = obj.topic[4];
+		var divOne = $("#mall_boxS5_bg");
+		// var divTwo = $("#mall_boxS5_scroll");
+		var divThree = $("#mall_boxS5_main");
+		//divOne
+		var bg1 = $("<img class='bg1'>");
+		var bg2 = $("<img class='bg2'>");
+		var bg3 = $("<img class='bg3'>");
+		var bg4 = $("<img class='bg4'>");
+		var bg5 = $("<img class='bg5'>");
+		bg1.attr("src",objArr1.backgroupImage);
+		bg2.attr("src",objArr2.backgroupImage);
+		bg3.attr("src",objArr3.backgroupImage);
+		bg4.attr("src",objArr4.backgroupImage);
+		bg5.attr("src",objArr5.backgroupImage);
+		divOne.append(bg1);
+		divOne.append(bg2);
+		divOne.append(bg3);
+		divOne.append(bg4);
+		divOne.append(bg5);
+		
+		//divTwo
+		// var scroll_box = $("<div class='scroll_box'></div>");
+		// var scroll_part1 = $("<div class='scroll_part' onclick='changeOne()'></div>");
+		// var scroll_part2 = $("<div class='scroll_part' onclick='changeTwo()'></div>");
+		// var scroll_part3 = $("<div class='scroll_part' onclick='changeThree()'></div>");
+		// var scroll_part4 = $("<div class='scroll_part' onclick='changeFour()'></div>");
+		// var scroll_part5 = $("<div class='scroll_part' onclick='changeFive()'></div>");
+		// var part1 = $("<img>");
+		// var part2 = $("<img>");
+		// var part3 = $("<img>");
+		// var part4 = $("<img>");
+		// var part5 = $("<img>");
+		// part1.attr("src",objArr1.uncheckImage);
+		// part2.attr("src",objArr2.uncheckImage);
+		// part3.attr("src",objArr3.uncheckImage);
+		// part4.attr("src",objArr4.uncheckImage);
+		// part5.attr("src",objArr5.uncheckImage);
+		// scroll_part1.prepend(part1);
+		// scroll_part2.prepend(part2);
+		// scroll_part3.prepend(part3);
+		// scroll_part4.prepend(part4);
+		// scroll_part5.prepend(part5);
+		// scroll_box.append(scroll_part1);
+		// scroll_box.append(scroll_part2);
+		// scroll_box.append(scroll_part3);
+		// scroll_box.append(scroll_part4);
+		// scroll_box.append(scroll_part5);
+		// divTwo.prepend(scroll_box);
+		
+		//divThree
+		var main_title1 = $("<div class='boxS5_main_title1'></div>");
+		var main_title2 = $("<div class='boxS5_main_title2'></div>");
+		var main_title3 = $("<div class='boxS5_main_title3'></div>");
+		var main_title4 = $("<div class='boxS5_main_title4'></div>");
+		var main_title5 = $("<div class='boxS5_main_title5'></div>");
+
+		var main_title1_1 = $("<div class='main_title1_1'></div>");
+		var main_title2_1 = $("<div class='main_title2_1'></div>");
+		var main_title3_1 = $("<div class='main_title3_1'></div>");
+		var main_title4_1 = $("<div class='main_title4_1'></div>");
+		var main_title5_1 = $("<div class='main_title5_1'></div>");
+
+		var main_title1_2 = $("<div class='main_title1_2'></div>");
+		var main_title2_2 = $("<div class='main_title2_2'></div>");
+		var main_title3_2 = $("<div class='main_title3_2'></div>");
+		var main_title4_2 = $("<div class='main_title4_2'></div>");
+		var main_title5_2 = $("<div class='main_title5_2'></div>");
+
+		main_title1_1.html(objArr1.titleEn);
+		main_title2_1.html(objArr2.titleEn);
+		main_title3_1.html(objArr3.titleEn);
+		main_title4_1.html(objArr4.titleEn);
+		main_title5_1.html(objArr5.titleEn);
+
+		main_title1_2.html(objArr1.titleCn);
+		main_title2_2.html(objArr2.titleCn);
+		main_title3_2.html(objArr3.titleCn);
+		main_title4_2.html(objArr4.titleCn);
+		main_title5_2.html(objArr5.titleCn);
+
+		main_title1.append(main_title1_1);
+		main_title2.append(main_title2_1);
+		main_title3.append(main_title3_1);
+		main_title4.append(main_title4_1);
+		main_title5.append(main_title5_1);
+
+		main_title1.append(main_title1_2);
+		main_title2.append(main_title2_2);
+		main_title3.append(main_title3_2);
+		main_title4.append(main_title4_2);
+		main_title5.append(main_title5_2);
+
+		var main_box1 = $("<div class='boxS5_main_box1'></div>");
+		var main_box2 = $("<div class='boxS5_main_box2'></div>");
+		var main_box3 = $("<div class='boxS5_main_box3'></div>");
+		var main_box4 = $("<div class='boxS5_main_box4'></div>");
+		var main_box5 = $("<div class='boxS5_main_box5'></div>");
+
+		var box_floor1_1 = $("<div class='main_box_floor'></div>");
+		var box_floor2_1 = $("<div class='main_box_floor'></div>");
+		var box_floor3_1 = $("<div class='main_box_floor'></div>");
+		var box_floor4_1 = $("<div class='main_box_floor'></div>");
+		var box_floor5_1 = $("<div class='main_box_floor'></div>");
+
+		var box_floor1_2 = $("<div class='main_box_floor'></div>");
+		var box_floor2_2 = $("<div class='main_box_floor'></div>");
+		var box_floor3_2 = $("<div class='main_box_floor'></div>");
+		var box_floor4_2 = $("<div class='main_box_floor'></div>");
+		var box_floor5_2 = $("<div class='main_box_floor'></div>");
+		//floor_ladder
+		var floor1_ladder1 = $("<div class='floor_ladder'></div>");
+		var floor1_ladder2 = $("<div class='floor_ladder'></div>");
+		var floor1_ladder3 = $("<div class='floor_ladder'></div>");
+		var floor1_ladder4 = $("<div class='floor_ladder'></div>");
+		var floor1_ladder5 = $("<div class='floor_ladder'></div>");
+		var floor1_ladder6 = $("<div class='floor_ladder'></div>");
+		var floor2_ladder1 = $("<div class='floor_ladder'></div>");
+		var floor2_ladder2 = $("<div class='floor_ladder'></div>");
+		var floor2_ladder3 = $("<div class='floor_ladder'></div>");
+		var floor2_ladder4 = $("<div class='floor_ladder'></div>");
+		var floor2_ladder5 = $("<div class='floor_ladder'></div>");
+		var floor2_ladder6 = $("<div class='floor_ladder'></div>");
+		var floor3_ladder1 = $("<div class='floor_ladder'></div>");
+		var floor3_ladder2 = $("<div class='floor_ladder'></div>");
+		var floor3_ladder3 = $("<div class='floor_ladder'></div>");
+		var floor3_ladder4 = $("<div class='floor_ladder'></div>");
+		var floor3_ladder5 = $("<div class='floor_ladder'></div>");
+		var floor3_ladder6 = $("<div class='floor_ladder'></div>");
+		var floor4_ladder1 = $("<div class='floor_ladder'></div>");
+		var floor4_ladder2 = $("<div class='floor_ladder'></div>");
+		var floor4_ladder3 = $("<div class='floor_ladder'></div>");
+		var floor4_ladder4 = $("<div class='floor_ladder'></div>");
+		var floor4_ladder5 = $("<div class='floor_ladder'></div>");
+		var floor4_ladder6 = $("<div class='floor_ladder'></div>");
+		var floor5_ladder1 = $("<div class='floor_ladder'></div>");
+		var floor5_ladder2 = $("<div class='floor_ladder'></div>");
+		var floor5_ladder3 = $("<div class='floor_ladder'></div>");
+		var floor5_ladder4 = $("<div class='floor_ladder'></div>");
+		var floor5_ladder5 = $("<div class='floor_ladder'></div>");
+		var floor5_ladder6 = $("<div class='floor_ladder'></div>");
+		//img
+		var floor1_ladder1_img = $("<img>");
+		var floor1_ladder2_img = $("<img>");
+		var floor1_ladder3_img = $("<img>");
+		var floor1_ladder4_img = $("<img>");
+		var floor1_ladder5_img = $("<img>");
+		var floor1_ladder6_img = $("<img>");
+		var floor2_ladder1_img = $("<img>");
+		var floor2_ladder2_img = $("<img>");
+		var floor2_ladder3_img = $("<img>");
+		var floor2_ladder4_img = $("<img>");
+		var floor2_ladder5_img = $("<img>");
+		var floor2_ladder6_img = $("<img>");
+		var floor3_ladder1_img = $("<img>");
+		var floor3_ladder2_img = $("<img>");
+		var floor3_ladder3_img = $("<img>");
+		var floor3_ladder4_img = $("<img>");
+		var floor3_ladder5_img = $("<img>");
+		var floor3_ladder6_img = $("<img>");
+		var floor4_ladder1_img = $("<img>");
+		var floor4_ladder2_img = $("<img>");
+		var floor4_ladder3_img = $("<img>");
+		var floor4_ladder4_img = $("<img>");
+		var floor4_ladder5_img = $("<img>");
+		var floor4_ladder6_img = $("<img>");
+		var floor5_ladder1_img = $("<img>");
+		var floor5_ladder2_img = $("<img>");
+		var floor5_ladder3_img = $("<img>");
+		var floor5_ladder4_img = $("<img>");
+		var floor5_ladder5_img = $("<img>");
+		var floor5_ladder6_img = $("<img>");
+		//p1
+		var floor1_ladder1_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor1_ladder2_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor1_ladder3_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor1_ladder4_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor1_ladder5_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor1_ladder6_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor2_ladder1_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor2_ladder2_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor2_ladder3_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor2_ladder4_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor2_ladder5_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor2_ladder6_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor3_ladder1_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor3_ladder2_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor3_ladder3_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor3_ladder4_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor3_ladder5_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor3_ladder6_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor4_ladder1_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor4_ladder2_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor4_ladder3_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor4_ladder4_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor4_ladder5_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor4_ladder6_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor5_ladder1_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor5_ladder2_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor5_ladder3_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor5_ladder4_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor5_ladder5_p1 = $("<p class='floor_ladder_p1'></p>");
+		var floor5_ladder6_p1 = $("<p class='floor_ladder_p1'></p>");
+		//p2
+		var floor1_ladder1_p2 = $("<p class='floor_ladder_p2'>￥1330</p>");
+		var floor1_ladder2_p2 = $("<p class='floor_ladder_p2'>￥1480</p>");
+		var floor1_ladder3_p2 = $("<p class='floor_ladder_p2'>￥99</p>");
+		var floor1_ladder4_p2 = $("<p class='floor_ladder_p2'>￥259</p>");
+		var floor1_ladder5_p2 = $("<p class='floor_ladder_p2'>￥90</p>");
+		var floor1_ladder6_p2 = $("<p class='floor_ladder_p2'>￥399</p>");
+		var floor2_ladder1_p2 = $("<p class='floor_ladder_p2'>￥239</p>");
+		var floor2_ladder2_p2 = $("<p class='floor_ladder_p2'>￥499</p>");
+		var floor2_ladder3_p2 = $("<p class='floor_ladder_p2'>￥88</p>");
+		var floor2_ladder4_p2 = $("<p class='floor_ladder_p2'>￥269</p>");
+		var floor2_ladder5_p2 = $("<p class='floor_ladder_p2'>￥299</p>");
+		var floor2_ladder6_p2 = $("<p class='floor_ladder_p2'>￥239</p>");
+		var floor3_ladder1_p2 = $("<p class='floor_ladder_p2'>￥49</p>");
+		var floor3_ladder2_p2 = $("<p class='floor_ladder_p2'>￥99</p>");
+		var floor3_ladder3_p2 = $("<p class='floor_ladder_p2'>￥79</p>");
+		var floor3_ladder4_p2 = $("<p class='floor_ladder_p2'>￥79</p>");
+		var floor3_ladder5_p2 = $("<p class='floor_ladder_p2'>￥69</p>");
+		var floor3_ladder6_p2 = $("<p class='floor_ladder_p2'>￥2691</p>");
+		var floor4_ladder1_p2 = $("<p class='floor_ladder_p2'>￥4998</p>");
+		var floor4_ladder2_p2 = $("<p class='floor_ladder_p2'>￥149</p>");
+		var floor4_ladder3_p2 = $("<p class='floor_ladder_p2'>￥279</p>");
+		var floor4_ladder4_p2 = $("<p class='floor_ladder_p2'>￥440</p>");
+		var floor4_ladder5_p2 = $("<p class='floor_ladder_p2'>￥399</p>");
+		var floor4_ladder6_p2 = $("<p class='floor_ladder_p2'>￥103</p>");
+		var floor5_ladder1_p2 = $("<p class='floor_ladder_p2'>￥1530</p>");
+		var floor5_ladder2_p2 = $("<p class='floor_ladder_p2'>￥99</p>");
+		var floor5_ladder3_p2 = $("<p class='floor_ladder_p2'>￥118</p>");
+		var floor5_ladder4_p2 = $("<p class='floor_ladder_p2'>￥399</p>");
+		var floor5_ladder5_p2 = $("<p class='floor_ladder_p2'>￥45</p>");
+		var floor5_ladder6_p2 = $("<p class='floor_ladder_p2'>￥149</p>");
+
+		floor1_ladder1_img.attr("src",objArr1.subList[0].image);
+		floor1_ladder2_img.attr("src",objArr1.subList[1].image);
+		floor1_ladder3_img.attr("src",objArr1.subList[2].image);
+		floor1_ladder4_img.attr("src",objArr1.subList[3].image);
+		floor1_ladder5_img.attr("src",objArr1.subList[4].image);
+		floor1_ladder6_img.attr("src",objArr1.subList[5].image);
+		floor2_ladder1_img.attr("src",objArr2.subList[0].image);
+		floor2_ladder2_img.attr("src",objArr2.subList[1].image);
+		floor2_ladder3_img.attr("src",objArr2.subList[2].image);
+		floor2_ladder4_img.attr("src",objArr2.subList[3].image);
+		floor2_ladder5_img.attr("src",objArr2.subList[4].image);
+		floor2_ladder6_img.attr("src",objArr2.subList[5].image);
+		floor3_ladder1_img.attr("src",objArr3.subList[0].image);
+		floor3_ladder2_img.attr("src",objArr3.subList[1].image);
+		floor3_ladder3_img.attr("src",objArr3.subList[2].image);
+		floor3_ladder4_img.attr("src",objArr3.subList[3].image);
+		floor3_ladder5_img.attr("src",objArr3.subList[4].image);
+		floor3_ladder6_img.attr("src",objArr3.subList[5].image);
+		floor4_ladder1_img.attr("src",objArr4.subList[0].image);
+		floor4_ladder2_img.attr("src",objArr4.subList[1].image);
+		floor4_ladder3_img.attr("src",objArr4.subList[2].image);
+		floor4_ladder4_img.attr("src",objArr4.subList[3].image);
+		floor4_ladder5_img.attr("src",objArr4.subList[4].image);
+		floor4_ladder6_img.attr("src",objArr4.subList[5].image);
+		floor5_ladder1_img.attr("src",objArr5.subList[0].image);
+		floor5_ladder2_img.attr("src",objArr5.subList[1].image);
+		floor5_ladder3_img.attr("src",objArr5.subList[2].image);
+		floor5_ladder4_img.attr("src",objArr5.subList[3].image);
+		floor5_ladder5_img.attr("src",objArr5.subList[4].image);
+		floor5_ladder6_img.attr("src",objArr5.subList[5].image);
+
+		var textlength =  objArr1.subList[0].title.length;
+		if (textlength > 7) {
+			objArr1.subList[0].title = objArr1.subList[0].title.slice(0,6)+"...";
+		}
+		floor1_ladder1_p1.html(objArr1.subList[0].title);
+
+		var textlength =  objArr1.subList[1].title.length;
+		if (textlength > 7) {
+			objArr1.subList[1].title = objArr1.subList[1].title.slice(0,6)+"...";
+		}
+		floor1_ladder2_p1.html(objArr1.subList[1].title);
+
+		var textlength =  objArr1.subList[2].title.length;
+		if (textlength > 7) {
+			objArr1.subList[2].title = objArr1.subList[2].title.slice(0,6)+"...";
+		}
+		floor1_ladder3_p1.html(objArr1.subList[2].title);
+
+		var textlength =  objArr1.subList[3].title.length;
+		if (textlength > 7) {
+			objArr1.subList[3].title = objArr1.subList[3].title.slice(0,6)+"...";
+		}
+		floor1_ladder4_p1.html(objArr1.subList[3].title);
+
+		var textlength =  objArr1.subList[4].title.length;
+		if (textlength > 7) {
+			objArr1.subList[4].title = objArr1.subList[4].title.slice(0,6)+"...";
+		}
+		floor1_ladder5_p1.html(objArr1.subList[4].title);
+
+		var textlength =  objArr1.subList[5].title.length;
+		if (textlength > 7) {
+			objArr1.subList[5].title = objArr1.subList[5].title.slice(0,6)+"...";
+		}
+		floor1_ladder6_p1.html(objArr1.subList[5].title);
+
+
+		var textlength =  objArr2.subList[0].title.length;
+		if (textlength > 7) {
+			objArr2.subList[0].title = objArr2.subList[0].title.slice(0,6)+"...";
+		}
+		floor2_ladder1_p1.html(objArr2.subList[0].title);
+
+		var textlength =  objArr2.subList[1].title.length;
+		if (textlength > 7) {
+			objArr2.subList[1].title = objArr2.subList[1].title.slice(0,6)+"...";
+		}
+		floor2_ladder2_p1.html(objArr2.subList[1].title);
+
+		var textlength =  objArr2.subList[2].title.length;
+		if (textlength > 7) {
+			objArr2.subList[2].title = objArr2.subList[2].title.slice(0,6)+"...";
+		}
+		floor2_ladder3_p1.html(objArr2.subList[2].title);
+
+		var textlength =  objArr2.subList[3].title.length;
+		if (textlength > 7) {
+			objArr2.subList[3].title = objArr2.subList[3].title.slice(0,6)+"...";
+		}
+		floor2_ladder4_p1.html(objArr2.subList[3].title);
+
+		var textlength =  objArr2.subList[4].title.length;
+		if (textlength > 7) {
+			objArr2.subList[4].title = objArr2.subList[4].title.slice(0,6)+"...";
+		}
+		floor2_ladder5_p1.html(objArr2.subList[4].title);
+
+		var textlength =  objArr3.subList[0].title.length;
+		if (textlength > 7) {
+			objArr3.subList[0].title = objArr3.subList[0].title.slice(0,6)+"...";
+		}
+		floor2_ladder6_p1.html(objArr2.subList[5].title);
+
+
+		var textlength =  objArr3.subList[0].title.length;
+		if (textlength > 7) {
+			objArr3.subList[0].title = objArr3.subList[0].title.slice(0,6)+"...";
+		}
+		floor3_ladder1_p1.html(objArr3.subList[0].title);
+
+		var textlength =  objArr3.subList[1].title.length;
+		if (textlength > 7) {
+			objArr3.subList[1].title = objArr3.subList[1].title.slice(0,6)+"...";
+		}
+		floor3_ladder2_p1.html(objArr3.subList[1].title);
+
+		var textlength =  objArr3.subList[2].title.length;
+		if (textlength > 7) {
+			objArr3.subList[2].title = objArr3.subList[2].title.slice(0,6)+"...";
+		}
+		floor3_ladder3_p1.html(objArr3.subList[2].title);
+
+		var textlength =  objArr3.subList[3].title.length;
+		if (textlength > 7) {
+			objArr3.subList[3].title = objArr3.subList[3].title.slice(0,6)+"...";
+		}
+		floor3_ladder4_p1.html(objArr3.subList[3].title);
+
+		var textlength =  objArr3.subList[4].title.length;
+		if (textlength > 7) {
+			objArr3.subList[4].title = objArr3.subList[4].title.slice(0,6)+"...";
+		}
+		floor3_ladder5_p1.html(objArr3.subList[4].title);
+
+		var textlength =  objArr3.subList[5].title.length;
+		if (textlength > 7) {
+			objArr3.subList[5].title = objArr3.subList[5].title.slice(0,6)+"...";
+		}
+		floor3_ladder6_p1.html(objArr3.subList[5].title);
+
+
+		var textlength =  objArr4.subList[0].title.length;
+		if (textlength > 7) {
+			objArr4.subList[0].title = objArr4.subList[0].title.slice(0,6)+"...";
+		}
+		floor4_ladder1_p1.html(objArr4.subList[0].title);
+
+		var textlength =  objArr4.subList[1].title.length;
+		if (textlength > 7) {
+			objArr4.subList[1].title = objArr4.subList[1].title.slice(0,6)+"...";
+		}
+		floor4_ladder2_p1.html(objArr4.subList[1].title);
+
+		var textlength =  objArr4.subList[2].title.length;
+		if (textlength > 7) {
+			objArr4.subList[2].title = objArr4.subList[2].title.slice(0,6)+"...";
+		}
+		floor4_ladder3_p1.html(objArr4.subList[2].title);
+
+		var textlength =  objArr4.subList[3].title.length;
+		if (textlength > 7) {
+			objArr4.subList[3].title = objArr4.subList[3].title.slice(0,6)+"...";
+		}
+		floor4_ladder4_p1.html(objArr4.subList[3].title);
+
+		var textlength =  objArr4.subList[4].title.length;
+		if (textlength > 7) {
+			objArr4.subList[4].title = objArr4.subList[4].title.slice(0,6)+"...";
+		}
+		floor4_ladder5_p1.html(objArr4.subList[4].title);
+
+		var textlength =  objArr4.subList[5].title.length;
+		if (textlength > 7) {
+			objArr4.subList[5].title = objArr4.subList[5].title.slice(0,6)+"...";
+		}
+		floor4_ladder6_p1.html(objArr4.subList[5].title);
+
+
+		var textlength =  objArr5.subList[0].title.length;
+		if (textlength > 7) {
+			objArr5.subList[0].title = objArr5.subList[0].title.slice(0,6)+"...";
+		}
+		floor5_ladder1_p1.html(objArr5.subList[0].title);
+
+		var textlength =  objArr5.subList[1].title.length;
+		if (textlength > 7) {
+			objArr5.subList[1].title = objArr5.subList[1].title.slice(0,6)+"...";
+		}
+		floor5_ladder2_p1.html(objArr5.subList[1].title);
+
+		var textlength =  objArr5.subList[2].title.length;
+		if (textlength > 7) {
+			objArr5.subList[2].title = objArr5.subList[2].title.slice(0,6)+"...";
+		}
+		floor5_ladder3_p1.html(objArr5.subList[2].title);
+
+		var textlength =  objArr5.subList[3].title.length;
+		if (textlength > 7) {
+			objArr5.subList[3].title = objArr5.subList[3].title.slice(0,6)+"...";
+		}
+		floor5_ladder4_p1.html(objArr5.subList[3].title);
+
+		var textlength =  objArr5.subList[4].title.length;
+		if (textlength > 7) {
+			objArr5.subList[4].title = objArr5.subList[4].title.slice(0,6)+"...";
+		}
+		floor5_ladder5_p1.html(objArr5.subList[4].title);
+
+		var textlength =  objArr5.subList[5].title.length;
+		if (textlength > 7) {
+			objArr5.subList[5].title = objArr5.subList[5].title.slice(0,6)+"...";
+		}
+		floor5_ladder6_p1.html(objArr5.subList[5].title);
+		//img
+		floor1_ladder1.append(floor1_ladder1_img);
+		floor1_ladder2.append(floor1_ladder2_img);
+		floor1_ladder3.append(floor1_ladder3_img);
+		floor1_ladder4.append(floor1_ladder4_img);
+		floor1_ladder5.append(floor1_ladder5_img);
+		floor1_ladder6.append(floor1_ladder6_img);
+		floor2_ladder1.append(floor2_ladder1_img);
+		floor2_ladder2.append(floor2_ladder2_img);
+		floor2_ladder3.append(floor2_ladder3_img);
+		floor2_ladder4.append(floor2_ladder4_img);
+		floor2_ladder5.append(floor2_ladder5_img);
+		floor2_ladder6.append(floor2_ladder6_img);
+		floor3_ladder1.append(floor3_ladder1_img);
+		floor3_ladder2.append(floor3_ladder2_img);
+		floor3_ladder3.append(floor3_ladder3_img);
+		floor3_ladder4.append(floor3_ladder4_img);
+		floor3_ladder5.append(floor3_ladder5_img);
+		floor3_ladder6.append(floor3_ladder6_img);
+		floor4_ladder1.append(floor4_ladder1_img);
+		floor4_ladder2.append(floor4_ladder2_img);
+		floor4_ladder3.append(floor4_ladder3_img);
+		floor4_ladder4.append(floor4_ladder4_img);
+		floor4_ladder5.append(floor4_ladder5_img);
+		floor4_ladder6.append(floor4_ladder6_img);
+		floor5_ladder1.append(floor5_ladder1_img);
+		floor5_ladder2.append(floor5_ladder2_img);
+		floor5_ladder3.append(floor5_ladder3_img);
+		floor5_ladder4.append(floor5_ladder4_img);
+		floor5_ladder5.append(floor5_ladder5_img);
+		floor5_ladder6.append(floor5_ladder6_img);
+		//p1
+		floor1_ladder1.append(floor1_ladder1_p1);
+		floor1_ladder2.append(floor1_ladder2_p1);
+		floor1_ladder3.append(floor1_ladder3_p1);
+		floor1_ladder4.append(floor1_ladder4_p1);
+		floor1_ladder5.append(floor1_ladder5_p1);
+		floor1_ladder6.append(floor1_ladder6_p1);
+		floor2_ladder1.append(floor2_ladder1_p1);
+		floor2_ladder2.append(floor2_ladder2_p1);
+		floor2_ladder3.append(floor2_ladder3_p1);
+		floor2_ladder4.append(floor2_ladder4_p1);
+		floor2_ladder5.append(floor2_ladder5_p1);
+		floor2_ladder6.append(floor2_ladder6_p1);
+		floor3_ladder1.append(floor3_ladder1_p1);
+		floor3_ladder2.append(floor3_ladder2_p1);
+		floor3_ladder3.append(floor3_ladder3_p1);
+		floor3_ladder4.append(floor3_ladder4_p1);
+		floor3_ladder5.append(floor3_ladder5_p1);
+		floor3_ladder6.append(floor3_ladder6_p1);
+		floor4_ladder1.append(floor4_ladder1_p1);
+		floor4_ladder2.append(floor4_ladder2_p1);
+		floor4_ladder3.append(floor4_ladder3_p1);
+		floor4_ladder4.append(floor4_ladder4_p1);
+		floor4_ladder5.append(floor4_ladder5_p1);
+		floor4_ladder6.append(floor4_ladder6_p1);
+		floor5_ladder1.append(floor5_ladder1_p1);
+		floor5_ladder2.append(floor5_ladder2_p1);
+		floor5_ladder3.append(floor5_ladder3_p1);
+		floor5_ladder4.append(floor5_ladder4_p1);
+		floor5_ladder5.append(floor5_ladder5_p1);
+		floor5_ladder6.append(floor5_ladder6_p1);
+		//p2
+		floor1_ladder1.append(floor1_ladder1_p2);
+		floor1_ladder2.append(floor1_ladder2_p2);
+		floor1_ladder3.append(floor1_ladder3_p2);
+		floor1_ladder4.append(floor1_ladder4_p2);
+		floor1_ladder5.append(floor1_ladder5_p2);
+		floor1_ladder6.append(floor1_ladder6_p2);
+		floor2_ladder1.append(floor2_ladder1_p2);
+		floor2_ladder2.append(floor2_ladder2_p2);
+		floor2_ladder3.append(floor2_ladder3_p2);
+		floor2_ladder4.append(floor2_ladder4_p2);
+		floor2_ladder5.append(floor2_ladder5_p2);
+		floor2_ladder6.append(floor2_ladder6_p2);
+		floor3_ladder1.append(floor3_ladder1_p2);
+		floor3_ladder2.append(floor3_ladder2_p2);
+		floor3_ladder3.append(floor3_ladder3_p2);
+		floor3_ladder4.append(floor3_ladder4_p2);
+		floor3_ladder5.append(floor3_ladder5_p2);
+		floor3_ladder6.append(floor3_ladder6_p2);
+		floor4_ladder1.append(floor4_ladder1_p2);
+		floor4_ladder2.append(floor4_ladder2_p2);
+		floor4_ladder3.append(floor4_ladder3_p2);
+		floor4_ladder4.append(floor4_ladder4_p2);
+		floor4_ladder5.append(floor4_ladder5_p2);
+		floor4_ladder6.append(floor4_ladder6_p2);
+		floor5_ladder1.append(floor5_ladder1_p2);
+		floor5_ladder2.append(floor5_ladder2_p2);
+		floor5_ladder3.append(floor5_ladder3_p2);
+		floor5_ladder4.append(floor5_ladder4_p2);
+		floor5_ladder5.append(floor5_ladder5_p2);
+		floor5_ladder6.append(floor5_ladder6_p2);
+
+		box_floor1_1.append(floor1_ladder1);
+		box_floor2_1.append(floor2_ladder1);
+		box_floor3_1.append(floor3_ladder1);
+		box_floor4_1.append(floor4_ladder1);
+		box_floor5_1.append(floor5_ladder1);
+		box_floor1_1.append(floor1_ladder2);
+		box_floor2_1.append(floor2_ladder2);
+		box_floor3_1.append(floor3_ladder2);
+		box_floor4_1.append(floor4_ladder2);
+		box_floor5_1.append(floor5_ladder2);
+		box_floor1_1.append(floor1_ladder3);
+		box_floor2_1.append(floor2_ladder3);
+		box_floor3_1.append(floor3_ladder3);
+		box_floor4_1.append(floor4_ladder3);
+		box_floor5_1.append(floor5_ladder3);
+		box_floor1_2.append(floor1_ladder4);
+		box_floor2_2.append(floor2_ladder4);
+		box_floor3_2.append(floor3_ladder4);
+		box_floor4_2.append(floor4_ladder4);
+		box_floor5_2.append(floor5_ladder4);
+		box_floor1_2.append(floor1_ladder5);
+		box_floor2_2.append(floor2_ladder5);
+		box_floor3_2.append(floor3_ladder5);
+		box_floor4_2.append(floor4_ladder5);
+		box_floor5_2.append(floor5_ladder5);
+		box_floor1_2.append(floor1_ladder6);
+		box_floor2_2.append(floor2_ladder6);
+		box_floor3_2.append(floor3_ladder6);
+		box_floor4_2.append(floor4_ladder6);
+		box_floor5_2.append(floor5_ladder6);
+
+		main_box1.append(box_floor1_1);
+		main_box2.append(box_floor2_1);
+		main_box3.append(box_floor3_1);
+		main_box4.append(box_floor4_1);
+		main_box5.append(box_floor5_1);
+
+		main_box1.append(box_floor1_2);
+		main_box2.append(box_floor2_2);
+		main_box3.append(box_floor3_2);
+		main_box4.append(box_floor4_2);
+		main_box5.append(box_floor5_2);
+
+		var boxS5_more1 = $("<div class='mall_boxS5_more'></div>");
+		var boxS5_more2 = $("<div class='mall_boxS5_more'></div>");
+		var boxS5_more3 = $("<div class='mall_boxS5_more'></div>");
+		var boxS5_more4 = $("<div class='mall_boxS5_more'></div>");
+		var boxS5_more5 = $("<div class='mall_boxS5_more'></div>");
+
+		var boxS5_more1_a = $("<a></a>");
+		var boxS5_more2_a = $("<a></a>");
+		var boxS5_more3_a = $("<a></a>");
+		var boxS5_more4_a = $("<a></a>");
+		var boxS5_more5_a = $("<a></a>");
+
+		var boxS5_more1_img = $("<div class='boxS5_more_img'>更多商品</div>");
+		var boxS5_more2_img = $("<div class='boxS5_more_img'>更多商品</div>");
+		var boxS5_more3_img = $("<div class='boxS5_more_img'>更多商品</div>");
+		var boxS5_more4_img = $("<div class='boxS5_more_img'>更多商品</div>");
+		var boxS5_more5_img = $("<div class='boxS5_more_img'>更多商品</div>");
+
+		boxS5_more1_a.attr("href",objArr1.url);
+		boxS5_more2_a.attr("href",objArr2.url);
+		boxS5_more3_a.attr("href",objArr3.url);
+		boxS5_more4_a.attr("href",objArr4.url);
+		boxS5_more5_a.attr("href",objArr5.url);
+
+		boxS5_more1_a.append(boxS5_more1_img);
+		boxS5_more2_a.append(boxS5_more2_img);
+		boxS5_more3_a.append(boxS5_more3_img);
+		boxS5_more4_a.append(boxS5_more4_img);
+		boxS5_more5_a.append(boxS5_more5_img);
+
+		boxS5_more1.append(boxS5_more1_a);
+		boxS5_more2.append(boxS5_more2_a);
+		boxS5_more3.append(boxS5_more3_a);
+		boxS5_more4.append(boxS5_more4_a);
+		boxS5_more5.append(boxS5_more5_a);
+
+		main_box1.append(boxS5_more1);
+		main_box2.append(boxS5_more2);
+		main_box3.append(boxS5_more3);
+		main_box4.append(boxS5_more4);
+		main_box5.append(boxS5_more5);
+
+		divThree.append(main_title1);
+		divThree.append(main_box1);
+		divThree.append(main_title2);
+		divThree.append(main_box2);
+		divThree.append(main_title3);
+		divThree.append(main_box3);
+		divThree.append(main_title4);
+		divThree.append(main_box4);
+		divThree.append(main_title5);
+		divThree.append(main_box5);
 	}
 })
+
+		function changeOne() {
+			$('#mall_boxS5_scroll').scrollLeft(0);
+			var img = $(".scroll_part_img1");
+			img.css("box-shadow","5px 5px 5px 0 black");
+			var bg1 = $(".bg1");
+			var main_title1 = $(".boxS5_main_title1");
+			var main_title1_1 = $(".main_title1_1");
+			var main_title1_2 = $(".main_title1_2");
+			var main_box1 = $(".boxS5_main_box1");
+			bg1.css("display","block");
+			main_title1.css("display","block");
+			main_title1_1.css("display","block");
+			main_title1_2.css("display","block");
+			main_box1.css("display","block");
+
+			var img = $(".scroll_part_img2");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg2 = $(".bg2");
+			var main_title2 = $(".boxS5_main_title2");
+			var main_title2_1 = $(".main_title2_1");
+			var main_title2_2 = $(".main_title2_2");
+			var main_box2 = $(".boxS5_main_box2");
+			bg2.css("display","none");
+			main_title2.css("display","none");
+			main_title2_1.css("display","none");
+			main_title2_2.css("display","none");
+			main_box2.css("display","none");
+
+			var img = $(".scroll_part_img3");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg3 = $(".bg3");
+			var main_title3 = $(".boxS5_main_title3");
+			var main_title3_1 = $(".main_title3_1");
+			var main_title3_2 = $(".main_title3_2");
+			var main_box3 = $(".boxS5_main_box3");
+			bg3.css("display","none");
+			main_title3.css("display","none");
+			main_title3_1.css("display","none");
+			main_title3_2.css("display","none");
+			main_box3.css("display","none");
+
+			var img = $(".scroll_part_img4");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg4 = $(".bg4");
+			var main_title4 = $(".boxS5_main_title4");
+			var main_title4_1 = $(".main_title4_1");
+			var main_title4_2 = $(".main_title4_2");
+			var main_box4 = $(".boxS5_main_box4");
+			bg4.css("display","none");
+			main_title4.css("display","none");
+			main_title4_1.css("display","none");
+			main_title4_2.css("display","none");
+			main_box4.css("display","none");
+
+			var img = $(".scroll_part_img5");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg5 = $(".bg5");
+			var main_title5 = $(".boxS5_main_title5");
+			var main_title5_1 = $(".main_title5_1");
+			var main_title5_2 = $(".main_title5_2");
+			var main_box5 = $(".boxS5_main_box5");
+			bg5.css("display","none");
+			main_title5.css("display","none");
+			main_title5_1.css("display","none");
+			main_title5_2.css("display","none");
+			main_box5.css("display","none");
+			
+		}
+		function changeTwo() {
+			$('#mall_boxS5_scroll').scrollLeft(0);
+			var img = $(".scroll_part_img1");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg1 = $(".bg1");
+			var main_title1 = $(".boxS5_main_title1");
+			var main_title1_1 = $(".main_title1_1");
+			var main_title1_2 = $(".main_title1_2");
+			var main_box1 = $(".boxS5_main_box1");
+			bg1.css("display","none");
+			main_title1.css("display","none");
+			main_title1_1.css("display","none");
+			main_title1_2.css("display","none");
+			main_box1.css("display","none");
+
+			var img = $(".scroll_part_img2");
+			img.css("box-shadow","5px 5px 5px 0 black");
+			var bg2 = $(".bg2");
+			var main_title2 = $(".boxS5_main_title2");
+			var main_title2_1 = $(".main_title2_1");
+			var main_title2_2 = $(".main_title2_2");
+			var main_box2 = $(".boxS5_main_box2");
+			bg2.css("display","block");
+			main_title2.css("display","block");
+			main_title2_1.css("display","block");
+			main_title2_2.css("display","block");
+			main_box2.css("display","block");
+
+			var img = $(".scroll_part_img3");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg3 = $(".bg3");
+			var main_title3 = $(".boxS5_main_title3");
+			var main_title3_1 = $(".main_title3_1");
+			var main_title3_2 = $(".main_title3_2");
+			var main_box3 = $(".boxS5_main_box3");
+			bg3.css("display","none");
+			main_title3.css("display","none");
+			main_title3_1.css("display","none");
+			main_title3_2.css("display","none");
+			main_box3.css("display","none");
+
+			var img = $(".scroll_part_img4");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg4 = $(".bg4");
+			var main_title4 = $(".boxS5_main_title4");
+			var main_title4_1 = $(".main_title4_1");
+			var main_title4_2 = $(".main_title4_2");
+			var main_box4 = $(".boxS5_main_box4");
+			bg4.css("display","none");
+			main_title4.css("display","none");
+			main_title4_1.css("display","none");
+			main_title4_2.css("display","none");
+			main_box4.css("display","none");
+
+			var img = $(".scroll_part_img5");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg5 = $(".bg5");
+			var main_title5 = $(".boxS5_main_title5");
+			var main_title5_1 = $(".main_title5_1");
+			var main_title5_2 = $(".main_title5_2");
+			var main_box5 = $(".boxS5_main_box5");
+			bg5.css("display","none");
+			main_title5.css("display","none");
+			main_title5_1.css("display","none");
+			main_title5_2.css("display","none");
+			main_box5.css("display","none");
+		}
+		function changeThree() {
+			$('#mall_boxS5_scroll').scrollLeft(60);
+			var img = $(".scroll_part_img1");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg1 = $(".bg1");
+			var main_title1 = $(".boxS5_main_title1");
+			var main_title1_1 = $(".main_title1_1");
+			var main_title1_2 = $(".main_title1_2");
+			var main_box1 = $(".boxS5_main_box1");
+			bg1.css("display","none");
+			main_title1.css("display","none");
+			main_title1_1.css("display","none");
+			main_title1_2.css("display","none");
+			main_box1.css("display","none");
+
+			var img = $(".scroll_part_img2");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg2 = $(".bg2");
+			var main_title2 = $(".boxS5_main_title2");
+			var main_title2_1 = $(".main_title2_1");
+			var main_title2_2 = $(".main_title2_2");
+			var main_box2 = $(".boxS5_main_box2");
+			bg2.css("display","none");
+			main_title2.css("display","none");
+			main_title2_1.css("display","none");
+			main_title2_2.css("display","none");
+			main_box2.css("display","none");
+
+			var img = $(".scroll_part_img3");
+			img.css("box-shadow","5px 5px 5px 0 black");
+			var bg3 = $(".bg3");
+			var main_title3 = $(".boxS5_main_title3");
+			var main_title3_1 = $(".main_title3_1");
+			var main_title3_2 = $(".main_title3_2");
+			var main_box3 = $(".boxS5_main_box3");
+			bg3.css("display","block");
+			main_title3.css("display","block");
+			main_title3_1.css("display","block");
+			main_title3_2.css("display","block");
+			main_box3.css("display","block");
+
+			var img = $(".scroll_part_img4");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg4 = $(".bg4");
+			var main_title4 = $(".boxS5_main_title4");
+			var main_title4_1 = $(".main_title4_1");
+			var main_title4_2 = $(".main_title4_2");
+			var main_box4 = $(".boxS5_main_box4");
+			bg4.css("display","none");
+			main_title4.css("display","none");
+			main_title4_1.css("display","none");
+			main_title4_2.css("display","none");
+			main_box4.css("display","none");
+
+			var img = $(".scroll_part_img5");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg5 = $(".bg5");
+			var main_title5 = $(".boxS5_main_title5");
+			var main_title5_1 = $(".main_title5_1");
+			var main_title5_2 = $(".main_title5_2");
+			var main_box5 = $(".boxS5_main_box5");
+			bg5.css("display","none");
+			main_title5.css("display","none");
+			main_title5_1.css("display","none");
+			main_title5_2.css("display","none");
+			main_box5.css("display","none");
+		}
+		function changeFour() {
+			$('#mall_boxS5_scroll').scrollLeft(130);
+			var img = $(".scroll_part_img1");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg1 = $(".bg1");
+			var main_title1 = $(".boxS5_main_title1");
+			var main_title1_1 = $(".main_title1_1");
+			var main_title1_2 = $(".main_title1_2");
+			var main_box1 = $(".boxS5_main_box1");
+			bg1.css("display","none");
+			main_title1.css("display","none");
+			main_title1_1.css("display","none");
+			main_title1_2.css("display","none");
+			main_box1.css("display","none");
+
+			var img = $(".scroll_part_img2");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg2 = $(".bg2");
+			var main_title2 = $(".boxS5_main_title2");
+			var main_title2_1 = $(".main_title2_1");
+			var main_title2_2 = $(".main_title2_2");
+			var main_box2 = $(".boxS5_main_box2");
+			bg2.css("display","none");
+			main_title2.css("display","none");
+			main_title2_1.css("display","none");
+			main_title2_2.css("display","none");
+			main_box2.css("display","none");
+
+			var img = $(".scroll_part_img3");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg3 = $(".bg3");
+			var main_title3 = $(".boxS5_main_title3");
+			var main_title3_1 = $(".main_title3_1");
+			var main_title3_2 = $(".main_title3_2");
+			var main_box3 = $(".boxS5_main_box3");
+			bg3.css("display","none");
+			main_title3.css("display","none");
+			main_title3_1.css("display","none");
+			main_title3_2.css("display","none");
+			main_box3.css("display","none");
+
+			var img = $(".scroll_part_img4");
+			img.css("box-shadow","5px 5px 5px 0 black");
+			var bg4 = $(".bg4");
+			var main_title4 = $(".boxS5_main_title4");
+			var main_title4_1 = $(".main_title4_1");
+			var main_title4_2 = $(".main_title4_2");
+			var main_box4 = $(".boxS5_main_box4");
+			bg4.css("display","block");
+			main_title4.css("display","block");
+			main_title4_1.css("display","block");
+			main_title4_2.css("display","block");
+			main_box4.css("display","block");
+
+			var img = $(".scroll_part_img5");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg5 = $(".bg5");
+			var main_title5 = $(".boxS5_main_title5");
+			var main_title5_1 = $(".main_title5_1");
+			var main_title5_2 = $(".main_title5_2");
+			var main_box5 = $(".boxS5_main_box5");
+			bg5.css("display","none");
+			main_title5.css("display","none");
+			main_title5_1.css("display","none");
+			main_title5_2.css("display","none");
+			main_box5.css("display","none");
+		}
+		function changeFive() {
+			$('#mall_boxS5_scroll').scrollLeft(130);
+			var img = $(".scroll_part_img1");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg1 = $(".bg1");
+			var main_title1 = $(".boxS5_main_title1");
+			var main_title1_1 = $(".main_title1_1");
+			var main_title1_2 = $(".main_title1_2");
+			var main_box1 = $(".boxS5_main_box1");
+			bg1.css("display","none");
+			main_title1.css("display","none");
+			main_title1_1.css("display","none");
+			main_title1_2.css("display","none");
+			main_box1.css("display","none");
+
+			var img = $(".scroll_part_img2");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg2 = $(".bg2");
+			var main_title2 = $(".boxS5_main_title2");
+			var main_title2_1 = $(".main_title2_1");
+			var main_title2_2 = $(".main_title2_2");
+			var main_box2 = $(".boxS5_main_box2");
+			bg2.css("display","none");
+			main_title2.css("display","none");
+			main_title2_1.css("display","none");
+			main_title2_2.css("display","none");
+			main_box2.css("display","none");
+
+			var img = $(".scroll_part_img3");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg3 = $(".bg3");
+			var main_title3 = $(".boxS5_main_title3");
+			var main_title3_1 = $(".main_title3_1");
+			var main_title3_2 = $(".main_title3_2");
+			var main_box3 = $(".boxS5_main_box3");
+			bg3.css("display","none");
+			main_title3.css("display","none");
+			main_title3_1.css("display","none");
+			main_title3_2.css("display","none");
+			main_box3.css("display","none");
+
+			var img = $(".scroll_part_img4");
+			img.css("box-shadow","5px 5px 5px 0 grey");
+			var bg4 = $(".bg4");
+			var main_title4 = $(".boxS5_main_title4");
+			var main_title4_1 = $(".main_title4_1");
+			var main_title4_2 = $(".main_title4_2");
+			var main_box4 = $(".boxS5_main_box4");
+			bg4.css("display","none");
+			main_title4.css("display","none");
+			main_title4_1.css("display","none");
+			main_title4_2.css("display","none");
+			main_box4.css("display","none");
+
+			var img = $(".scroll_part_img5");
+			img.css("box-shadow","5px 5px 5px 0 black");
+			var bg5 = $(".bg5");
+			var main_title5 = $(".boxS5_main_title5");
+			var main_title5_1 = $(".main_title5_1");
+			var main_title5_2 = $(".main_title5_2");
+			var main_box5 = $(".boxS5_main_box5");
+			bg5.css("display","block");
+			main_title5.css("display","block");
+			main_title5_1.css("display","block");
+			main_title5_2.css("display","block");
+			main_box5.css("display","block");
+		}
 
 //box2
 $.ajax({
 	url:"../data/data.php?type=mall",
 	success:function (data) {
 		var obj = JSON.parse(data);
+		console.log(obj);
 		var objPic1 = obj.category[0];
 		var objPic2 = obj.category[0].subList[0];
 		var objPic3 = obj.category[0].subList[1];
@@ -155,7 +1130,7 @@ $.ajax({
 		var div1_2 = $("<div class='box2_title_right'></div>");
 		var div1_2_a = $("<a>更多</a>")
 		div1_1.html(objPic1.name);
-		console.log(objPic1.name);
+		// console.log(objPic1.name);
 		div1_2_a.attr("src",objPic1.moreUrl);
 		div1_2.prepend(div1_2_a);
 		div1.append(div1_1);
@@ -235,7 +1210,7 @@ $.ajax({
 		var div1_2 = $("<div class='box3_title_right'></div>");
 		var div1_2_a = $("<a>更多</a>")
 		div1_1.html(objPic1.name);
-		console.log(objPic1.name);
+		// console.log(objPic1.name);
 		div1_2_a.attr("src",objPic1.moreUrl);
 		div1_2.prepend(div1_2_a);
 		div1.append(div1_1);
@@ -315,7 +1290,7 @@ $.ajax({
 		var div1_2 = $("<div class='box4_title_right'></div>");
 		var div1_2_a = $("<a>更多</a>")
 		div1_1.html(objPic1.name);
-		console.log(objPic1.name);
+		// console.log(objPic1.name);
 		div1_2_a.attr("src",objPic1.moreUrl);
 		div1_2.prepend(div1_2_a);
 		div1.append(div1_1);
@@ -395,7 +1370,7 @@ $.ajax({
 		var div1_2 = $("<div class='box5_title_right'></div>");
 		var div1_2_a = $("<a>更多</a>")
 		div1_1.html(objPic1.name);
-		console.log(objPic1.name);
+		// console.log(objPic1.name);
 		div1_2_a.attr("src",objPic1.moreUrl);
 		div1_2.prepend(div1_2_a);
 		div1.append(div1_1);
@@ -467,7 +1442,7 @@ $.ajax({
 	success:function (data) {
 		var obj = JSON.parse(data);
 		var objArr = obj.goodsList;
-		console.log(objArr);
+		// console.log(objArr);
 		var ul = $("#recommendMain_box");
 		for (var i = 0; i < objArr.length; i++) {
 			var li = $("<li></li>");
