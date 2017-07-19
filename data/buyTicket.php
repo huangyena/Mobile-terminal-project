@@ -20,6 +20,13 @@
 	}elseif ($type == 'MovieComments') {//网友短评
 		$mid = $_REQUEST['mid'];
 		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/Showtime/MovieComments.api?movieId='.$mId.'&pageIndex=1&t='.$showtime);
+	}elseif ($type == 'MovieShowtimeDates') {//查影讯/购票
+		$mid = $_REQUEST['mid'];
+		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/Showtime/LocationMovieShowtimeDates.api?movieId='.$mId.'&locationId=290&t='.$showtime);
+	}elseif ($type = 'LocationMovieShowtimes') {//根据时间获取影院列表
+		$mid = $_REQUEST['mid'];
+		$d=$_REQUEST['date'];//时间
+		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/Showtime/LocationMovieShowtimeDates.api?movieId='.$mId.'&locationId=290&t='.$showtime.'&date='.$d);
 	}
 	echo "$str";
 ?>
