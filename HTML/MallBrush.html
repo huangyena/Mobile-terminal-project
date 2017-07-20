@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+	<link rel="stylesheet" href="../css/MallBrush.css">
+	<title>刷选搜索</title>
+	<script type="text/javascript" src="../js/插件/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div class="MallSearch_container">
+		<div class="header">
+			<div class="header_box">
+				<img src="../images/4leftArrow.png" class="header_box_back" onclick="window.history.back(-1)">
+				<input type="text" class="header_box_search" placeholder="搜索正版电影周边" oninput="searchText()">
+				<input type="submit" value="搜索" class="header_box_submit" oninput="searchPro()">
+			</div>
+		</div>
+		<div class="Brush">
+			<div class="brush_nav">
+				<div onclick="brushOne()">
+					<div class="brush_title">综合排序</div>
+					<div class="down_arrow1"></div>
+				</div>
+				<span>|</span>
+				<div>
+					<div class="brush_title">主题角色</div>
+					<div class="down_arrow2"></div>
+				</div>
+				<span>|</span>
+				<div>
+					<div class="brush_title">全部分类</div>
+					<div class="down_arrow3"></div>
+				</div>
+			</div>
+			<div id="brush_sort">
+				<ul id="brush_sort_box">
+					<li class="sort1" onclick="getData()">综合排序</li>
+					<li class="sort2" onclick="order(1)">价格从低到高</li>
+					<li class="sort3" onclick="order(2)">价格从高到低</li>
+					<li class="sort4" onclick="order(3)">好评率从高到低</li>
+					<li class="sort5" onclick="">销量从高到低</li>
+				</ul>
+			</div>
+			<div id="brush_theme">
+				<div class="brush_theme_left">
+					<ul id="theme_left_box">
+						
+					</ul>
+				</div>
+				<div class="brush_theme_right">
+					<ul id="theme_right_box">
+						
+					</ul>
+				</div>
+			</div>
+			<div id="brush_classify">
+
+			</div>
+			<div id="product_list">
+				<ul id="product_list_box">
+
+				</ul>
+			</div>
+		</div>
+
+		<footer class="mall_footer">
+			<div class="mall_footer_box">
+				<nav class="footer_nav">
+					<a href="" class="footer_nav_a">首页</a>
+					<a href="" class="footer_nav_a">购票</a>
+					<a href="" class="footer_nav_a">商城</a>
+					<a href="" class="footer_nav_a">发现</a>
+					<a href="" class="footer_nav_a">我的</a>
+				</nav>
+				<div class="footlink">
+					<a href="">PC版</a>
+					<span>|</span>
+					<a href="">客户端下载</a>
+					<span>|</span>
+					<a href="">意见反馈</a>
+					<span>|</span>
+					<a href="">帮助中心</a>
+				</div>
+				<div class="copy">
+					<p class="copy_logo"></p>
+					<div class="copy_down">Copyright 2006-2017 Mtime.com Inc. All rights reserved</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript" src="../js/MallBrush.js"></script>
+</body>
+</html>
