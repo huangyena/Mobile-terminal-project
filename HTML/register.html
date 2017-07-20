@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title></title>
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<script src = "../js/jquery.validate.min.js"></script>
+	<script src = "../js/messages_zh.min.js"></script>
+	<link rel="stylesheet" href="../css/3-register.css">
+</head>
+<body>
+	<div id = "body">
+		<div class = "nav_header">
+			<a href="index.html" class = 'index'>
+				<img src="../images/2-left.png" alt="" class="arrows">
+			</a>
+			<img src="../images/4Alogo.png" alt="">
+		</div>
+		<form action="">
+			手机号：<input type="text" placeholder="请输入手机号" class="text" name="name"> <input type = "button" value="获取验证码" id = "span" onclick="fun(this)" >
+			<br><br>
+			<div class="bot_top"></div>
+			验证码：<input type="text">
+			<br><br>
+			<div class="bot_top"></div>
+			密&nbsp;&nbsp;&nbsp;码：<input type="password" placeholder="6-20位字母、数字、符号组成" class="pwd" name="password">
+			<br>
+			<div class="bot_top"></div>
+			<br>
+			<input type="checkbox" class="check" checked="">&nbsp;&nbsp;我已阅读并同意<a href="http://m.mtime.cn/#!/help/policy" class="copy">《Mtime时光网服务》</a>
+			<br><br>
+			<input type="submit" value="注册" class = "register">
+		</form>
+	</div>
+	<script>
+		var time;
+		function fun(ele){
+			// var span = $("#span");
+			if(ele.value == "获取验证码" || ele.value == "重新获取验证码"){
+				time = setInterval(fun1,1000);
+				ele.setAttribute("disabled","");
+			}
+		}
+		var num = 60;
+		function fun1(){
+			var span = $("#span");
+			if(num==0){
+				clearInterval(time);
+				span.value="重新获取验证码";
+				num=60;
+				span.removeAttribute("disabled");
+			}else{
+				num--;
+				span.value = "重新发送（"+num+"s）";
+			}
+		}
+		// $("form").validate({
+		// 	submitHandler:function(){
+		// 		var data = new FormData($("#form"[0]));
+		// 		$.ajax({
+		// 			url:"http://192.168.1.250/aja/regist.php",
+		// 			data:data,
+		// 			type:"post",
+		// 			processData:false,
+		// 			contentType:false,
+		// 			success:function(data){
+		// 				console.log(data);
+		// 			}
+		// 		})
+		// 	}
+		// })
+	</script>
+</body>
+</html>

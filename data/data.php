@@ -4912,6 +4912,8 @@
         "address": "朝阳区建国路93号万达广场三层", 
         "baiduLatitude": 39.915833, 
         "baiduLongitude": 116.478516, 
+        "cinameName": "北京万达国际影城CBD店", 
+        "cinemaId": 1007, 
         "cinameName": "北京万达国际影城CBD店",
         "cinameMoney":"￥50起", 
         "cinemaId": 1007, 

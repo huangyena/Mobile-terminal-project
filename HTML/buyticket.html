@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>buyticket</title>
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<style>
+		#body{
+			width: 100%;
+			min-width: 320px;
+			max-width: 640px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id = "#body">
+		
+		<div id = "add1"></div>
+	</div>
+	<script>
+		$.ajax({
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){
+				// console.log(data);
+				var obj = JSON.parse(data);
+				console.log(obj);
+				console.log(obj.data[0].cinemaId);
+				for (var i = 0; i < obj.data.length; i++) {
+					// console.log( obj.data[i].cinemaId);
+					var	array = obj.data[i].cinemaId;
+					console.log(array);
+				}
+				$.ajax({
+					url:"../data/buyticket.php?type=getMovieList&&cId="+array,
+					success:function(da){
+						// console.log(da);
+						var a = JSON.parse(da);
+						console.log(a);
+					}
+				})
+			}
+		})
+	
+		
+
+	
+	</script>
+</body>
+</html>

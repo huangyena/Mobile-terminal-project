@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title></title>
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div class="con2">1</div>
+	 <ul>
+		<li onclick="fun(1)">1<span class="con" ></span></li>
+		<li onclick="fun(2)">2<span class="con1" ></span></li>
+	 </ul>
+	 <script>
+	 	
+	 	function fun(index){
+	 		
+	 		//可以动态获取数字，形成一个数字，比如var array= obj.data[i].number
+	 		// c.empty();
+		 	$.ajax({
+		 		url:"../data/3-search.php?keyword="+index,
+		 		success:function(data){
+		 			console.log(data);
+		 			var obj = JSON.parse(data);
+		 			console.log(obj)
+		 			if(index == 1){
+		 				$(".con").text(data);
+		 			}else if(index == 2){
+		 				$(".con1").text(data);
+		 			}
+		 			// console.log("==========");
+		 			// if(con == 1){
+		 			// 	console.log(data);
+		 			// }
+
+		 		}
+					
+		 		
+		 	})
+	 	}
+	 	// 
+	 </script>
+</body>
+</html>
