@@ -1,5 +1,5 @@
 $.ajax({
-	url:"../data/data.php?type=now_list",
+	url:"../data/3-data.php?type=now_list",
 	success:function(list){
 		/*console.log(list);*/
 		var obj = JSON.parse(list);
