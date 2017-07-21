@@ -2,7 +2,7 @@ var objArr = [];
 function getData(){
 	$.ajax({
 		url:"../data/Mall_search_data.php",
-		data:"type=searchDetail&keyword=1",
+		data:"type=productList&categoryId=25",
 		success:function (data) {
 			var obj = JSON.parse(data);
 			console.log(obj);
@@ -113,15 +113,15 @@ function setUlData(){
 			var textlength1 =  div2_2_1[0].innerHTML.length;
 			if (textlength1 == 7) {
 				div2_2_1[0].innerHTML = div2_2_1[0].innerHTML.slice(0,5);
-			}else if (textlength1 == 9) {
-				div2_2_1[0].innerHTML = div2_2_1[0].innerHTML.slice(0,7);
+			}else if (textlength1 == 6) {
+				div2_2_1[0].innerHTML = div2_2_1[0].innerHTML.slice(0,4);
 			}
 			div2_2_2.html("&yen;"+objArr[i].marketPrice);
 			var textlength2 =  div2_2_2[0].innerHTML.length;
 			if (textlength2 == 7) {
 				div2_2_2[0].innerHTML = div2_2_2[0].innerHTML.slice(0,5);
-			}else if (textlength2 == 9) {
-				div2_2_2[0].innerHTML = div2_2_2[0].innerHTML.slice(0,7);
+			}else if (textlength2 == 6) {
+				div2_2_2[0].innerHTML = div2_2_2[0].innerHTML.slice(0,4);
 			}
 			div2_2.append(div2_2_1);
 			div2_2.append(div2_2_2);
