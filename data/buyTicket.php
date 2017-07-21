@@ -13,10 +13,10 @@
 	}
 	elseif ($type == "getMovieDetail") {//电影详情
 		$mid = $_REQUEST['mid'];
-		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/movie/Detail.api?movieId='.$mId.'&locationId=290&t='.$showtime);
+		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/movie/Detail.api?movieId='.$mid.'&locationId=290&t='.$showtime);
 	}elseif ($type == "HotLongComments") {//精选影评
 		$mid = $_REQUEST['mid'];
-		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/Movie/HotLongComments.api?movieId='.$mId.'&pageIndex=1&t='.$showtime);
+		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/Movie/HotLongComments.api?movieId='.$mid.'&pageIndex=1&t='.$showtime);
 	}elseif ($type == 'MovieComments') {//网友短评
 		$mid = $_REQUEST['mid'];
 		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/Showtime/MovieComments.api?movieId='.$mId.'&pageIndex=1&t='.$showtime);

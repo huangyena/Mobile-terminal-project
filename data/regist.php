@@ -27,35 +27,35 @@
 		return;
 	}
 	$pwd = $_REQUEST["password"];
-	// $email = $_REQUEST["email"];
-	// $res1 = mysqli_query($link,"select * from userinfo where email='$email'");
-	// while ($row = mysqli_fetch_array($res1)) {
-	// 	echo '{"code":-1,"msg":"该邮箱已被注册！"}';
-	// 	return;
-	// }
-	// $age = $_REQUEST["age"];
+	$email = $_REQUEST["email"];
+	$res1 = mysqli_query($link,"select * from userinfo where email='$email'");
+	while ($row = mysqli_fetch_array($res1)) {
+		echo '{"code":-1,"msg":"该邮箱已被注册！"}';
+		return;
+	}
+	$age = $_REQUEST["age"];
 
-	// $array=$_FILES["file"]["type"];  
- //    $array=explode("/",$array);  
- //    $newfilename=$name;//自定义文件名（测试的时候中文名会操作失败）  
- //    $_FILES["file"]["name"]=$newfilename.".".$array[1]; 
+	$array=$_FILES["file"]["type"];  
+    $array=explode("/",$array);  
+    $newfilename=$name;//自定义文件名（测试的时候中文名会操作失败）  
+    $_FILES["file"]["name"]=$newfilename.".".$array[1]; 
 
    if (!is_dir("upload"))//当路径不穿在  
     {  
         mkdir("upload");//创建路径  
     }  
     $url="upload/";//记录路径  
-    // if (file_exists($url.$_FILES["file"]["name"]))//当文件存在  
-    // {  
-    //     echo $_FILES["file"]["name"] . " already exists. ";  
-    // }else//当文件不存在  
-    // {  
-    //     $url=$url.$_FILES["file"]["name"];  
-    //     move_uploaded_file($_FILES["file"]["tmp_name"],$url);  
-    //     $url = "http://192.168.1.250/aja/" . $url;  
-    // }  
+    if (file_exists($url.$_FILES["file"]["name"]))//当文件存在  
+    {  
+        echo $_FILES["file"]["name"] . " already exists. ";  
+    }else//当文件不存在  
+    {  
+        $url=$url.$_FILES["file"]["name"];  
+        move_uploaded_file($_FILES["file"]["tmp_name"],$url);  
+        $url = "http://192.168.1.250/aja/" . $url;  
+    }  
 
-	$res2 = mysqli_query($link,"insert into userinfo (username,pwd,) values ('$name','$pwd','$url')");
+	$res2 = mysqli_query($link,"insert into userinfo (username,pwd,email,age,iconurl) values ('$name','$pwd','$email',$age,'$url')");
 	if (!$res2) {
 		echo '{"code":-1,"msg":"注册失败！"}';
 	}else{

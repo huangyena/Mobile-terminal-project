@@ -5,7 +5,7 @@ $.ajax({
 	// data:"newsList",
 	success:function(data){
 		var obj = JSON.parse(data);
-		console.log(obj);
+		// console.log(obj);
 		//发现-新闻：获取戛纳图片
 		// console.log(obj.news.imageUrl);
 		// console.log(obj.news.title);
@@ -21,20 +21,25 @@ $.ajax({
 		// console.log(obj.trailer.imageUrl);
 		// console.log(obj.trailer.mp4Url);
 		// console.log(obj.trailer.hightUrl);
-		var imgs = $("<img class = 'Cannes'>");
-		// console.log(img);
-		imgs.attr("src",obj.trailer.imageUrl);
-		var pictures = $("#pictures");
-		pictures.attr("href",obj.trailer.mp4Url);
-		pictures.prepend(imgs);
-		var fonta = $("#fonts");
-		fonta.prepend(obj.trailer.title);
+		var video_img = $("<img  class = 'video_img' />");
+		video_img.attr("src",obj.trailer.imageUrl);
+		var video = $("#video_add");
 
+		var video_font = $("<div class = 'video_font'></div>")
+		video_font.html(obj.trailer.title);
+
+		video.append(video_img);
+		video.append(video_font);
+
+		var play = $("#play");
+		play.attr("src",obj.trailer.mp4Url);
+
+		$(".play_font").html(obj.trailer.title);
 
 		//发现-排行榜：那些荣获奥斯卡的LGBT电影
 		// console.log(obj.topList.imageUrl);
 		// console.log(obj.topList.title);
-		var imges = $("<img class = 'Cannes'>");
+		var imges = $("<a class = 'Cannes' target='_self'></a>");
 		// console.log(img);
 		imges.attr("src",obj.topList.imageUrl);
 		var picturees = $("#picturees");
@@ -42,8 +47,8 @@ $.ajax({
 		$("#fontes").html(obj.topList.title);
 
 		//获取恶魔城图片
-		 console.log(obj.review.title);
-		 console.log(obj.review.posterUrl);
+		 // console.log(obj.review.title);
+		 // console.log(obj.review.posterUrl);
 		 var imgset = $("<img id = 'Cannesest'>");
 		 imgset.attr("src",obj.review.posterUrl);
 		 $("#pictureest").append(imgset);
@@ -56,8 +61,8 @@ $.ajax({
 	url:"../data/data.php?type=newsList",
 	success:function(data){
 		var arr = JSON.parse(data);
-		console.log(arr);
-		console.log(arr.newsList[0].image);
+		// console.log(arr);
+		// console.log(arr.newsList[0].image);
 		var newsList = arr.newsList;
 		for (var i = 0; i < arr.newsList.length/2; i++) {
 			var imgLi = $("<img class = 'pictureLi'>");
@@ -132,16 +137,16 @@ fun();
 
 
 
-// 发现-预告片
+
 //发现-排行榜
 $.ajax({
 	url:"../data/data.php?type=topList",
 	success:function(data){
 		// console.log(data);
 		var top = JSON.parse(data);
-		console.log(top);
-		console.log(top.topLists[0].topListNameCn);
-		console.log(top.topLists[0].summary);
+		// console.log(top);
+		// console.log(top.topLists[0].topListNameCn);
+		// console.log(top.topLists[0].summary);
 		for(var j = 0;j<top.topLists.length/2;j++){
 			var borderTop = $("<div class = 'borderTop'></div>")
 			var movie = $("#movie");
@@ -201,7 +206,7 @@ $.ajax({
 		// console.log(data);
 		var evaluate = JSON.parse(data);
 		// console.log(evaluate);
-		console.log(evaluate[0].relatedObj.title);
+		// console.log(evaluate[0].relatedObj.title);
 		for(var e = 0;e<evaluate.length;e++){
 			// console.log(evaluate[e].title);
 			var evaluate_font = $("<div class = 'evaluate_font'></div>")
@@ -225,5 +230,41 @@ $.ajax({
 			$("#eadd").append(evaluate_a);
 			$("#eadd").append(borderBottom1);
 		}
+	}
+})
+
+// 发现-预告片
+$.ajax({
+	url:"../data/data.php?type=trailer",
+	success:function(data){
+		// console.log(data);
+		var foreshow = JSON.parse(data);
+		console.log(foreshow);
+		// console.log(foreshow.trailers[0].summary)
+		for (var i = 0; i < foreshow.trailers.length; i++) {
+			var cover_img = $("<img class = 'cover_img' />")
+			cover_img.attr("src",foreshow.trailers[i].coverImg);
+			//var video_url = $("<video class = 'video_url'></video>")
+			//video_url.attr("src",foreshow.trailers[i].url);
+			var video_title = $("<div class = 'video_title' id='"+i+"'></div>");
+			video_title.html(foreshow.trailers[i].videoTitle);
+			var summary = $("<div class = 'summary'></div>");
+			summary.html(foreshow.trailers[i].summary);
+			var bor_bottom = $("<div class = 'bor_bottom'></div>")
+			var li = $("<li class = 'li' id='"+i+"'></li>");
+			li.append(cover_img);
+			//li.append(video_url);
+			li.append(video_title);
+			li.append(summary);
+			li.append(bor_bottom)
+			$(".receive").append(li);
+			li.on("click",function(){
+				$("#play").attr("src",foreshow.trailers[this.id].url);
+				video();
+				$(".play_font").text(foreshow.trailers[this.id].videoTitle);
+			})
+		
+		}
+		
 	}
 })

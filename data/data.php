@@ -4876,7 +4876,6 @@
         "cinameName": "首都电影院（西单店）",
         "cinameMoney":"￥45起",
         "cinemaId": 1815, 
-        "cinameMoney":"￥45",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -4913,15 +4912,11 @@
         "address": "朝阳区建国路93号万达广场三层", 
         "baiduLatitude": 39.915833, 
         "baiduLongitude": 116.478516, 
-<<<<<<< HEAD
         "cinameName": "北京万达国际影城CBD店", 
         "cinemaId": 1007,
          "cinameMoney":"￥43", 
-=======
         "cinameName": "北京万达国际影城CBD店",
-        "cinameMoney":"￥50起", 
         "cinemaId": 1007, 
->>>>>>> 20f068207a70f2210255a5487c668b3fd1dee5b4
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -4961,7 +4956,6 @@
         "cinameName": "CGV星星影城（北京奥体店）", 
         "cinameMoney":"￥55起",
         "cinemaId": 2618, 
-         "cinameMoney":"￥40",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5041,7 +5035,6 @@
         "cinameName": "北京博纳朝阳门旗舰店", 
         "cinameMoney":"￥65起",
         "cinemaId": 2281, 
-        "cinameMoney":"￥39",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5121,7 +5114,6 @@
         "cinameName": "北京万达通州店",
         "cinameMoney":"￥40起", 
         "cinemaId": 6387, 
-         "cinameMoney":"￥25",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5161,7 +5153,6 @@
         "cinameName": "首都电影院昌平店", 
         "cinameMoney":"￥43起",
         "cinemaId": 4608, 
-         "cinameMoney":"￥55",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5201,7 +5192,6 @@
         "cinameName": "北京百老汇影城国瑞购物中心店", 
         "cinameMoney":"￥48起",
         "cinemaId": 2271, 
-         "cinameMoney":"￥22",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5241,7 +5231,6 @@
         "cinameName": "北京万达国际影城石景山店",
         "cinameMoney":"￥52起", 
         "cinemaId": 2148, 
-         "cinameMoney":"￥17",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5281,7 +5270,6 @@
         "cinameName": "北京百丽宫影城国贸店",
         "cinameMoney":"￥56起", 
         "cinemaId": 2929, 
-         "cinameMoney":"￥67",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -5321,7 +5309,6 @@
         "cinameName": "北京百老汇影城apm购物中心店",
         "cinameMoney":"￥62起", 
         "cinemaId": 1004, 
-          "cinameMoney":"￥45",
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -6474,7 +6461,7 @@
             "id": 66404,
             "movieName": "《勇敢者的游戏》预告",
             "coverImg": "http://img5.mtime.cn/mg/2017/06/30/111434.76339580.jpg",
-            "movieId": 227232,
+            "   ": 227232,
             "url": "http://vfx.mtime.cn/Video/2017/06/30/mp4/170630091254559104.mp4",
             "hightUrl": "http://vfx.mtime.cn/Video/2017/06/30/mp4/170630091254559104.mp4",
             "videoTitle": "勇敢者的游戏 中文版预告片",

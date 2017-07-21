@@ -1,0 +1,290 @@
+*{
+	margin:0;
+	padding: 0;
+	color: #333;
+	-webkit-tap-highlight-color:transparent;
+	/*去除点击高亮效果，主要针对移动端*/
+	/*box-sizing: border-box;/*设计元素宽高的计算方式*/
+}
+body{
+	font-size: 14px;
+	font-family: "楷体";
+	color: #333;
+}
+a{
+	color: #333;
+	text-decoration: none;/*去除下划线*/
+}
+a:hover{
+	text-decoration: none;
+}
+input{
+	border:none;/*去除边框*/
+	outline: none;/*去除轮廓*/
+	-webkit-appearance:none;/*清除移动端默认的表单样式*/
+}
+ul,ol{
+	list-style-type: none;
+}
+/*头部*/
+.jd_home_page{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin:0 auto;
+	background-color: rgb(252,244,253);
+}
+/*header标记*/
+.jd_home_page>.jd_header{
+	position: fixed;
+	left:0px;
+	top:0px;
+	height: 44px;/*一般移动端头部的高度为44px*/
+	width: 100%;
+	z-index: 1000;
+
+}
+/*包裹其中内容的div*/
+.jd_home_page>.jd_header>.jd_header_div{
+	background-color: rgba(199,21,33,1);
+	max-width: 640px;
+	min-width: 320px;
+	height: 100%;
+	width: 100%;
+	margin:0 auto;
+	display: flex;
+	align-items: center;
+}
+/*logo*/
+.jd_home_page>.jd_header>.jd_header_div>.jd_logo{
+	width: 80px;
+	height: 30px;
+	background-image: url(../images/logo.jpg);
+	background-size: 80px 30px;
+	margin:0 5px;
+}
+/*搜索*/
+.jd_home_page>.jd_header>.jd_header_div>form{
+	flex: 1;
+	position: relative;
+}
+.jd_home_page>.jd_header>.jd_header_div>form>.jd_search{
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/search.png);
+	background-size: 20px 20px;
+	position: absolute;
+	left:5px;
+	top:5px;
+}
+.jd_header_div>form>input{
+	width: 95%;
+	height: 30px;
+	border-radius: 15px;
+	padding-left: 25px;
+}
+/*登录*/
+.jd_header_div>.jd_login{
+	width: 50px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+}
+/*轮播图*/
+.jd_pictures{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.jd_pictures>.image_box{
+	width: 1000%;
+	overflow: hidden;
+	/*transform: translateX(-10%);*/
+}
+.jd_pictures>.image_box>li{
+	width: 10%;
+	float: left;
+}
+.jd_pictures>.image_box>li>a>img{
+	width: 100%;
+	display: block;/*将图片设置为block的目的是去掉img下方的空隙*/
+}
+/*轮播图上的圆点*/
+.jd_pictures>.point{
+	width: 200px;
+	height: 12px;
+	/*border: 1px solid red;*/
+	position: absolute;
+	bottom: 5px;
+	left:230px;
+	overflow: hidden;
+}
+.jd_pictures>.point>li{
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	/*background-color: red;*/
+	float: left;
+	margin-left: 10px;
+}
+.jd_pictures>.point>.circle{
+	background-color: red;
+}
+.jd_pictures>.point>li:nth-child(1){
+	margin-left: 0;
+}
+/*导航栏-分类查询*/
+.jd_nav{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: white;
+}
+.jd_nav>.jd_nav_first,.jd_nav>.jd_nav_second{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.jd_nav>.jd_nav_first>div,.jd_nav>.jd_nav_second>div{
+	width: 60px;
+	height: 80px;
+/*	background-size: 60px 80px;*/
+}
+.jd_nav>.jd_nav_first>div>img,.jd_nav>.jd_nav_second>div>img{
+	width:100%;
+	display: block;
+}
+.jd_nav>.jd_nav_first>div>p,.jd_nav>.jd_nav_second>div>p{
+	text-align:center;
+	margin-top: 5px;
+	/*color: #333;*/
+}
+/*页面内容*/
+.jd_content{
+	padding: 5px;
+}
+/*页面内容-掌上秒杀*/
+.jd_content>.jd_content_seckill{
+	width: 100%;
+	background-color: white;
+	margin-top: 10px;
+	box-shadow: 0 0 1px #e0e0e0;
+}
+.jd_content>.jd_content_seckill>.jd_content_seckill_border{
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #e0e0e0;
+	padding: 0 5px;
+	/*溢出*/
+}
+.jd_content>.jd_content_seckill>.jd_content_seckill_wire{
+	border-bottom: none;
+}
+.jd_remove_left{
+	float: left;
+}
+.jd_content_picture{
+	width: 20px;
+	height: 20px;
+	/*display: inline-block;*/
+	background-image: url(../images/clock.png);
+	background-size: 20px 20px;
+	margin-top: 5px;
+	float: left;
+	margin-left: 10px;
+}
+.jd_content_finger{
+	color:rgba(199,21,33,1);
+	margin-left: 10px;
+	float: left;
+}
+.jd_remove_right{
+	float:right;
+	margin-right: 10px;
+}
+.jd_content_time{
+	float: left;
+	margin-left: 10px;
+
+}
+.jd_content_time>span{
+	margin-top: 8px;
+	width: 18px;
+	height: 15px;
+	text-align:center;
+	line-height: 15px;
+	background-color: #333;
+	color: white;
+	float: left;
+	margin-left: 4px;
+}
+.jd_content_time>.colon{
+	background-color: white;
+	color:black;
+	width: 2px;
+}
+.jd_content_product>ul{
+	width: 100%;
+	overflow: hidden;
+}
+.jd_content_product>ul>li{
+	float: left;
+	width: 33.33%;
+}
+.jd_content_product>ul>li>a{
+	display: block;	
+	width: 100%;
+	border-right: 1px solid #c0c0c0;
+}
+.jd_content_product>ul>li:last-child>a{
+	border-right: none;
+}
+.jd_content_product>ul>li>a>img{
+	width: 80%;
+	display: block;
+	margin-left: 20px;
+	margin:0 auto;
+	margin-top: 10px;
+}
+.jd_content_product>ul>li>p{
+	text-align:center;
+	margin-top: 8px;
+	color: rgb(199,21,33);
+}
+.jd_content_product>ul>li>p:last-child{
+	color: #333;
+	text-decoration: line-through;
+}
+/*内容中图片的通用属性*/
+.width_half{
+	width: 49%;
+	display: block;
+}
+.width_half>img{
+	width: 100%;
+	display: block;
+}
+.clear_float{
+	overflow: hidden;
+}
+.remove_left{
+	float: left;
+	margin-top: 10px;
+}
+.remove_right{
+	float:right;
+	margin-top: 10px;
+}
+.border_left{
+	border-left: 1px solid #e0e0e0;
+}
+.border_right{
+	border-right: 1px solid #e0e0e0;
+}
+.border_buttom{
+	border-bottom: 1px solid #e0e0e0;
+}
