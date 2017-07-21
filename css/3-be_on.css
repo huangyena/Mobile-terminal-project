@@ -36,9 +36,9 @@ input,button{
 	align-items: center;
 }
 .head>a{
-	display: inline-block;
 	width: 60px;
 	height: 60px;
+	display: inline-block;
 	background-image: url(../images/3-尖角.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -57,19 +57,22 @@ input,button{
 	width: 60px;
 	height: 60px;
 }
-.head>.oval>a>.be_being{
+.head>.oval>a>.about_to{
 	width: 50%;
 	height: 38px; 
-	display: inline-block;	
+	display: inline-block;
 	color: rgb(255,255,255);
 	text-align: center;
 	background-color: rgb(28,38,53);
 	border-radius: 50px;
+	/* margin-left: 50%; */ 
 }
-.head>.oval>a>.about_to{
+.head>.oval>a>.be_being{
 	color: white;
 	text-align: center;
 	margin-left: 10px; 
+	display: inline-block;
+	width: 42%;
 }
 
 
@@ -80,7 +83,7 @@ section>.seek{
 	background-color: rgb(246,246,246);
 	line-height: 60px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 
 }
 section>.seek>div{
@@ -166,13 +169,50 @@ section>.seek>a>input{
 	font-size: 10px;
 	color: rgb(205,205,205);
 }
+.imga{
+	width: 100%;
+
+}
+.imga>img{
+	width: 100%;
+	display: flex;
+}
+
+
+.background{
+	width: 100%;
+	height: 20px;
+	background-color: rgb(246,246,246);
+}
+
+
+
+.zui{
+	font-size: 19px;
+	font-weight: bold;
+	margin: 10px;
+}
+.zui>span{
+	color: rgb(153,153,153);
+}
+.date>.date1{
+	color: rgb(153,153,153);
+	margin-left: 10px; 
+	width: 10%;
+}
+.date>.date2{
+	width: 80%;
+	height: 5px;
+	border-top:1px solid rgb(153,153,153);
+	display: inline-block;
+	width: 75%;
+}
 
 
 
 .ul>li{
 	width: 100%;
 	display: flex;
-	border-bottom:  1px solid rgb(216,216,216);
 }
 .ul>li>a{
 	width: 25%;
@@ -187,77 +227,113 @@ section>.seek>a>input{
 .ul>li>a>.div1>img{
 	width: 100%;
 }
-.ul>li>.div2>.p>.span1{
+
+
+.ul>li>.div2>.p{
+	font-weight: bold; 
 	font-size: 19px;
-	font-weight: bold;
-	width: 80%;
-}
-.ul>li>.div2>.p>.span2{
-	display: inline-block;
-	width: 10%;
-	height: 25px;
-	font-weight: bold;
-	font-size: 13px;
-	margin-left: 10px;
-	text-align: center;
-	line-height: 25px;
-	background-color: rgb(101,157,14);
-	color: rgb(255,255,255);
 }
 .ul>li>.div2>.p1{
-	color: rgb(101,157,14);
-	margin-top:5px; 
-
+	margin-top: 10px;
 }
-.ul>li>.div2>.p2{
+.ul>li>.div2>.p1>.span{
+	color: rgb(255,134,0);
+}
+.ul>li>.div2>.p4{
 	width: 100%;
 	display: flex;
-	align-items: center;
-	margin-top:5px; 
+	justify-content: space-around;
+	margin-top:10px; 
 }
-.ul>li>.div2>.p2>.span2{
-	display: inline-block;
-	width: 25px;
-	height: 15px;
-	background-image: url(../images/3-3D.png);
-	background-size: 25px 15px;
-	background-position: center;
+.ul>li>.div2>.p4>a{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
 }
-.ul>li>.div2>.p2>.span3{
-	width: 60px;
-	height: 15px;
-	margin-left:10px;
-	display: inline-block;
-	background-image: url(../images/3-zhonguo.png);
-	background-size: 60px 15px;
-	background-position: center;
-
-}
-.ul>li>.div2>.p2>.span4{
-	display:0 inline-block;
-	width: 30px;
-	height: 15px;
-	background-image: url(../images/3-im.png);
-	background-size: 40px 15px;
-	background-position: center;
-}
-.ul>li>.div2>.p3{
-	color: rgb(153,153,153);
-	font-size: 13px;
-	margin-top:5px;
-
-}
-.ul>li>.div2>.p3>a>span{
-	display: inline-block;
-	width: 60px;
-	height: 30px;
-	margin-left: 20px;
-	line-height: 30px;
+.ul>li>.div2>.p4>a>span{
+	width: 90%;
+	height: 40px;
+	text-align: center;
 	border-radius: 20px;
+	line-height: 40px;
+}
+.ul>li>.div2>.p4>a>.span3{
 	background-color: rgb(255,134,0);
 	color: rgb(255,255,255);
-	text-align: center;
+}
+.ul>li>.div2>.p4>a>.span4{
+	border:1px solid rgb(101,156,13);
+	color: rgb(101,156,13);
 }
 
 
 
+.ji{
+	margin: 10px;
+	font-size: 20px;
+	font-weight: bold; 
+}
+.ji>span{
+	color: rgb(153,153,153);
+}
+.qi{
+	margin-left: 10px; 
+	margin-bottom: 10px;
+	font-size: 19px;
+}
+
+
+.ul1>li{
+	width: 100%;
+	display: flex;
+	border-top: 1px solid rgb(187,187,187);
+}
+.ul1>li>a{
+	width: 25%;
+	margin: 10px;
+}
+.ul1>li>.div4{
+	width: 70%;
+	margin: 10px;
+	padding: 10px;
+}
+
+.ul1>li>a>.div3>img{
+	width: 100%;
+}
+.p5{
+	font-weight: bold;
+	font-size: 20px;
+
+}
+.p6>.span6{
+	margin-top: 10px;
+	color:rgb(255,134,0); 
+}
+
+.ul1>li>.div4>.p8{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top:10px; 
+}
+.ul1>li>.div4>.p8>a{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+.ul1>li>.div4>.p8>a>span{
+	width: 90%;
+	height: 40px;
+	text-align: center;
+	border-radius: 20px;
+	line-height: 40px;
+}
+.ul1>li>.div4>.p8>a>.span8{
+	background-color: rgb(255,134,0);
+	color: rgb(255,255,255);
+}
+.ul1>li>.div4>.p8>a>.span9{
+	border:1px solid rgb(101,156,13);
+	color: rgb(101,156,13);
+}

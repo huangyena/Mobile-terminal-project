@@ -1,0 +1,40 @@
+webpack
+一、概念
+	webpack可以看成是一个模块打包工具，它主要用于分析我们的项目的架构，找到js模块等一些不能被浏览器直接运行的拓展语言（比如sass）,然后将其打包成浏览可以使用的格式
+
+二、使用原因
+	-模块化：可以把复杂的程序划分成不同的模块
+	-类似typescript种种在js的基础上拓展的语言，能够使用webpack转换成js
+	-对sass等css文件进行预处理
+三、与grunt、gulp的对比
+	webpack和这两个工具不是同一个类型，其主要功能是不一样的，grunt和gulp的主要作用在于优化程序的资源文件，而webpack是将项目模块化
+四、使用webpack
+	1、安装
+	使用cnpm进行安装
+	命令：cnpm install webpack -g   //全局安装
+	2、使用前的准备
+	-首先手动创建一个空文件夹，用于保存项目
+	-通过cd命令，进入该文件夹
+	-使用cnpm init命令创建package.json文件
+	-在项目中本地安装webpack的依赖包：cnpm install webpack --sav-dev
+	-在项目文件中创建需要用的空文件夹，文件夹名可自拟
+	-再app中创建两个js文件，一个main.js，用于引导项目的入口，再给一个setting.js用于返回包含html的函数
+	-在public文件夹中创建一个index.html，作为工程首页
+
+	3、配置webpack
+	-首先创建一个webpack的配置文件：webpack.config.js，改文件包含入口文件路径和存放打包后文件的路径
+五、Loaders
+	Loaders是webpack的核心功能，可以通过不同的loader，来对不同的文件进行处理，比如json、比如css等
+	Loaders需要单独安装在项目中，并且要在webpack.config.js文件下的modules属性下进行配置。loader的配置主要包含两个方面，一是test：匹配loaders所需要处理的文件扩展名，一是loader属性，用于设置loader的名字
+	1、处理json的loader
+	-先安装loader
+	cnpm install json-loader --save-dev
+	-创建一个json文件
+	-在webpack.config.js中配置loader
+	-修改setting.js，让其显示json文件中的内容
+
+	2、css的loader
+	-先安装css-loader
+	cnpm install style-loader css-loader --save-dev
+	-创建一个js文件
+	-配置webpack.config.js文件
