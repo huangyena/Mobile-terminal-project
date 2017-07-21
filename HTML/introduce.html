@@ -7,50 +7,99 @@
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
 <link rel="stylesheet" href="../css/introduce.css">
 <script src = "../js/插件/jquery-3.1.1.min.js"></script>
+<style type="text/css">
+	h2{
+		 margin-bottom: 40px;
+		 margin-top: 40px;
+	  }
+	  .vmc-centered{ padding: 10px 0; }
+	  .vmc-centered img { transition: all 0.3s ease; }
+	  .vmc-centered .vmc_active img { transform: scale(1.2); }
+	</style>
 <body>
 	<div class="city">
 		<div class="back" onclick="jump()"><</div>
 		<div class="subject"></div>
 	</div>
-	<ul class="list">
-	<li src="" class="receive" style="width:100%;"></li>
-	</ul>
+	<div id="scrollBox">
+		<ul class="list">
+		</ul>
+	</div>
 	<script>
 		function jump(){
 			window.open("shop.html");
 		}
+		// function fun(){
+		// 	alert("你好");
+		// }
 		$.ajax({
-			//获取文件路径
+			// 获取文件路径
 			url:"../data/data.php?type=buy_tickets",
 			success:function(data){//判断是否成功，获取数据源
-				// console.log(data);
 				var obj = JSON.parse(data);
-				// console.log(obj);
-				// array = obj.data;
+				array = obj.data;
+				console.log(array);
 				for (var i = 0; i < obj.data.length; i++) {
 					var con = obj.data[i].cinemaId;
-					// var com = obj.data[i].districtID;
-					// console.log(con);
-					// console.log(com);
 					}
 			// var li = $("<div class ='designation'></div>");
 			// 		li.html(array[i].cinameName);
 			$.ajax({
 				url:"../data/buyTicket.php?type=getMovieList&&cId="+con,
 				success:function(data){
-				console.log(data);
 				var obj = JSON.parse(data);
 				console.log(obj);
 				for (var i = 0; i <obj.movies.length; i++){
 					var a=obj.movies[i].img;
-					var li=$("<img class='img'>");
-					li.attr("src",a);
-					$(".receive").append(li);
+					var b=obj.movies[i].title;
+					console.log(b);
+					a = "http://imgproxy.mtime.cn/get.ashx?uri="+encodeURIComponent(a)+"&width=115&height=160&clipType=4"
+					var li=$("<li id='"+i+"'><img src='"+a+"'alt='' class='img'/><div class='character'>"+b+"</div></li>");
+					li.css("width",(100/obj.movies.length)+'%')
+					$(".list").append(li);
+					
+					// li.html(b);
+					$(".list li").append(li);
+					if (i == 0) {
+						li.children('img').addClass('border');
+						li.children('div').addClass('text_div');
+					}
+					li.on("click",function(){
+						$(".list").css("margin-left",(0.33-this.id*0.33)*100+"%");
+						$(".list li>img").removeClass('border');
+						$(".list li>div").removeClass('text_div');
+						$(this).children('img').addClass('border');
+						$(this).children('div').addClass('text_div');
+						// $(this).children('div').css('color',"rgb(130,130,130)");
+					});
 				}
-			}
+				$(".list").css({"width":(obj.movies.length/3*100)+"%","margin-left":'33.33%'});
+				}
 			})
 			}
 			});
+		// jQuery(function($){
+		//   $('.vmcarousel-centered').vmcarousel({
+		// 	 centered: true,
+		// 	 start_item: 2,
+		// 	 autoplay: false,
+		// 	 infinite: false
+		//   });
+
+		//   $('.vmcarousel-centered-infitine').vmcarousel({
+		// 	 centered: true,
+		// 	 start_item: 1,
+		// 	 autoplay: false,
+		// 	 infinite: true
+		//   });
+
+		//   $('.vmcarousel-normal').vmcarousel({
+		// 	 centered: false,
+		// 	 start_item: 0,
+		// 	 autoplay: false,
+		// 	 infinite: false
+		//   });
+	 //   });
 		// $.ajax({
 		// 	//获取文件路径
 		// 	url:"../data/data.php?type=trailer",

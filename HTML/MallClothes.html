@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+	<link rel="stylesheet" href="../css/MallClothes.css">
+	<title>服饰</title>
+	<script type="text/javascript" src="../js/插件/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div class="MallSearch_container">
+		<div class="header">
+			<div class="header_box">
+				<img src="../images/4leftArrow.png" class="header_box_back" onclick="window.history.back(-1)">
+				<input type="text" class="header_box_search" placeholder="搜索正版电影周边" oninput="searchText()">
+				<input type="submit" value="搜索" class="header_box_submit" oninput="searchPro()">
+			</div>
+		</div>
+		<div class="Brush">
+			<div class="brush_nav">
+				<div onclick="brushOne()">
+					<div class="brush_title">综合排序</div>
+					<div class="down_arrow1"></div>
+				</div>
+				<span>|</span>
+				<div onclick="brushTwo()">
+					<div class="brush_title">主题角色</div>
+					<div class="down_arrow2"></div>
+				</div>
+				<span>|</span>
+				<div onclick="brushThree()">
+					<div class="brush_title">全部分类</div>
+					<div class="down_arrow3"></div>
+				</div>
+			</div>
+			<div id="brush_sort">
+				<ul id="brush_sort_box">
+					<li class="sort1" onclick="getData()">综合排序</li>
+					<li class="sort2" onclick="order(1)">价格从低到高</li>
+					<li class="sort3" onclick="order(2)">价格从高到低</li>
+					<li class="sort4" onclick="order(3)">好评率从高到低</li>
+					<li class="sort5" onclick="">销量从高到低</li>
+				</ul>
+			</div>
+			<div id="brush_theme">
+				<div class="brush_theme_left">
+					<ul id="theme_left_box">
+						<li class="theme_leftLi1" onclick="themeLeftLi1()">
+							<div class="theme_leftLi_img"><img src="../images/4theme.png" alt=""></div>
+							<div class="theme_leftLi_text leftLi_text1">全部</div>
+						</li>
+						<li class="theme_leftLi2" onclick="themeLeftLi2()">
+							<div class="theme_leftLi_img"><img src="../images/4theme1.jpg" alt=""></div>
+							<div class="theme_leftLi_text leftLi_text2">变形金刚5</div>
+						</li>
+						<li class="theme_leftLi3" onclick="themeLeftLi3()">
+							<div class="theme_leftLi_img"><img src="../images/4theme2.jpg" alt=""></div>
+							<div class="theme_leftLi_text leftLi_text3">攻壳机动队</div>
+						</li>
+						<li class="theme_leftLi4" onclick="themeLeftLi4()">
+							<div class="theme_leftLi_img"><img src="../images/4theme3.jpg" alt=""></div>
+							<div class="theme_leftLi_text leftLi_text4">美女与野兽</div>
+						</li>
+						<li class="theme_leftLi5" onclick="themeLeftLi5()">
+							<div class="theme_leftLi_img"><img src="../images/4theme4.jpg" alt=""></div>
+							<div class="theme_leftLi_text leftLi_text5">速度与激情</div>
+						</li>
+						<li class="theme_leftLi6" onclick="themeLeftLi6()">
+							<div class="theme_leftLi_img"><img src="../images/4theme5.jpg" alt=""></div>
+							<div class="theme_leftLi_text leftLi_text6">银河护卫队</div>
+						</li>
+					</ul>
+				</div>
+				<div class="brush_theme_right">
+					<ul id="theme_right_box">
+						<li onclick="themeRightLi1()" class="rightLi1">全部</li>
+						<li onclick="themeRightLi2()" class="rightLi1_2">攻壳机动队</li>
+						<li onclick="themeRightLi3()" class="rightLi2">全部</li>
+						<li onclick="themeRightLi4()" class="rightLi2_2">美女与野兽</li>
+						<li onclick="themeRightLi5()" class="rightLi3">全部</li>
+						<li onclick="themeRightLi6()" class="rightLi3_2">银河护卫队</li>
+						<li onclick="themeRightLi7()" class="rightLi3_3">银河护卫队2</li>
+					</ul>
+				</div>
+			</div>
+			<div id="brush_classify">
+				<ul class="brush_classify_box">
+					<li class="classify_left">
+						<ul class="classify_leftUl">
+							<li onclick="classify_leftLi1()" class="classify_leftLi1">全部</li>
+							<li onclick="classify_leftLi2()" class="classify_leftLi2">玩具模型</li>
+							<li onclick="classify_leftLi3()" class="classify_leftLi3">服饰箱包</li>
+							<li onclick="classify_leftLi4()" class="classify_leftLi4">居家生活</li>
+							<li onclick="classify_leftLi5()" class="classify_leftLi5">数码周边</li>
+						</ul>
+					</li>
+					<li class="classify_right">
+						<ul class="classify_rightUl">
+							<li onclick="classify_rightLi1()" class="classify_rightLi1">全部</li>
+							<li onclick="classify_rightLi2()" class="classify_rightLi2">仿真收藏</li>
+							<li onclick="classify_rightLi3()" class="classify_rightLi3">模型公仔</li>
+							<li onclick="classify_rightLi4()" class="classify_rightLi4">变形金刚</li>
+							<li onclick="classify_rightLi5()" class="classify_rightLi5">益智拼插</li>
+							<li onclick="classify_rightLi6()" class="classify_rightLi6">全部</li>
+							<li onclick="classify_rightLi7()" class="classify_rightLi7">男装</li>
+							<li onclick="classify_rightLi8()" class="classify_rightLi8">女装</li>
+							<li onclick="classify_rightLi9()" class="classify_rightLi9">服饰配件</li>
+							<li onclick="classify_rightLi10()" class="classify_rightLi10">时尚包品</li>
+							<li onclick="classify_rightLi11()" class="classify_rightLi11">全部</li>
+							<li onclick="classify_rightLi12()" class="classify_rightLi12">汽车配件</li>
+							<li onclick="classify_rightLi13()" class="classify_rightLi13">餐饮具</li>
+							<li onclick="classify_rightLi14()" class="classify_rightLi14">家装服饰</li>
+							<li onclick="classify_rightLi15()" class="classify_rightLi15">灯具</li>
+							<li onclick="classify_rightLi16()" class="classify_rightLi16">创意文具</li>
+							<li onclick="classify_rightLi17()" class="classify_rightLi17">全部</li>
+							<li onclick="classify_rightLi18()" class="classify_rightLi18">手机配件</li>
+							<li onclick="classify_rightLi19()" class="classify_rightLi19">充电装备</li>
+							<li onclick="classify_rightLi20()" class="classify_rightLi20">电脑周边</li>
+							<li onclick="classify_rightLi21()" class="classify_rightLi21">车载用品</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="product_list">
+				<ul id="product_list_box">
+
+				</ul>
+			</div>
+		</div>
+
+		<footer class="mall_footer">
+			<div class="mall_footer_box">
+				<nav class="footer_nav">
+					<a href="" class="footer_nav_a">首页</a>
+					<a href="" class="footer_nav_a">购票</a>
+					<a href="" class="footer_nav_a">商城</a>
+					<a href="" class="footer_nav_a">发现</a>
+					<a href="" class="footer_nav_a">我的</a>
+				</nav>
+				<div class="footlink">
+					<a href="">PC版</a>
+					<span>|</span>
+					<a href="">客户端下载</a>
+					<span>|</span>
+					<a href="">意见反馈</a>
+					<span>|</span>
+					<a href="">帮助中心</a>
+				</div>
+				<div class="copy">
+					<p class="copy_logo"></p>
+					<div class="copy_down">Copyright 2006-2017 Mtime.com Inc. All rights reserved</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript" src="../js/MallClothes.js"></script>
+</body>
+</html>
