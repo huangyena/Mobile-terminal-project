@@ -22,7 +22,7 @@
 	</div> 
 	<div class="shuffling">
 		<div class="capital">
-			<a href="">北京</a>
+			<a href="selectedcity.html">北京</a>
 			<a href="">
 				<img src="../images/1-箭头.png" alt="" class="arrows">
 			</a>
@@ -131,29 +131,25 @@
 			}	
 		}
 		for (var i = 0; i < array.length; i++) {
-					// console.log(obj);
-					var outBox = $("<a href='introduce.html?mid="+obj.data[i].cinemaId+"'></a>");
+					var outBox = $("<a href='introduce.html?mid="+array[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
-					li.html(obj.data[i].cinameName);
+					li.html(array[i].cinameName);
 					outBox.append(li);
 					var lo = $("<div class ='money'></div>");
-					lo.html(obj.data[i].cinameMoney);
+					lo.html(array[i].cinameMoney);
 					outBox.append(lo);
 					var ll = $("<div class = 'site'></div>");
-					ll.html(obj.data[i].address);
+					ll.html(array[i].address);
 					outBox.append(ll);
 					var img = $("<div class='img'></div>");
 					outBox.append(img);
 					var bor = $("<div class='bor'></div>");
 					outBox.append(bor);
 					$(".receive").append(outBox);
-					}
+					}console.log(array);
 				}
 			})
 				}
-		function jump(){
-					window.open("introduce.html");
-			}
 	function funone() {
 		$(".receive").empty();
 		$(".color").css("color","rgb(30,125,222)");
@@ -175,15 +171,15 @@
 			success:function(data){//判断是否成功，获取数据源
 				var obj = JSON.parse(data);
 		for (var i = 0; i < array.length; i++) {
-					var outBox = $("<a href='introduce.html?mid="+obj.data[i].cinemaId+"'></a>");
+					var outBox = $("<a href='introduce.html?mid="+array[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
-					li.html(obj.data[i].cinameName);
+					li.html(array[i].cinameName);
 					outBox.append(li);
 					var lo = $("<div class ='money'></div>");
-					lo.html(obj.data[i].cinameMoney);
+					lo.html(array[i].cinameMoney);
 					outBox.append(lo);
 					var ll = $("<div class = 'site'></div>");
-					ll.html(obj.data[i].address);
+					ll.html(array[i].address);
 					outBox.append(ll);
 					var img = $("<div class='img'></div>");
 					outBox.append(img);
@@ -193,12 +189,12 @@
 					}
 				}
 			})				
-		}
+		} 
 		function funtwo(){
 			$(".receive").empty();
 			$(".all").css("color","rgb(30,125,222)");
 			$(".color").css("color","rgb(51,51,51)");
-			$(".up").css("border-bottom","10px solid rgb(187,187,187)");
+			$(".up").css("border-bottom","10px solid rgb(187,187,187)"); 
 			$(".down").css("border-top","10px solid rgb(187,187,187)");
 			$.ajax({
 			//获取文件路径
