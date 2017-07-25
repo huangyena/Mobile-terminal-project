@@ -1442,7 +1442,7 @@ $.ajax({
 	success:function (data) {
 		var obj = JSON.parse(data);
 		var objArr = obj.goodsList;
-		// console.log(objArr);
+		console.log(objArr);
 		var ul = $("#recommendMain_box");
 		for (var i = 0; i < objArr.length; i++) {
 			var li = $("<li></li>");
