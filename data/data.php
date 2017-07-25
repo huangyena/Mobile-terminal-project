@@ -4918,7 +4918,7 @@
 }
 ';
 	}elseif ($type == 'buy_tickets') {//购票-全部
-		$str = '{data:[
+		$str = '{"data":[
     {
         "address": "西城区西单北大街甲131号大悦城商场十层", 
         "baiduLatitude": 39.917507, 
