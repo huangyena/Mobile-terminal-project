@@ -7,14 +7,15 @@ $(document).scroll(function(){
 		top1.css("display","none");
 	}
 });
-
+var goodsId = location.href.split("=")[1];
 $.ajax({
 	url:"../data/Mall_search_data.php",
-	data:"type=productDetail&goodID=102086",
+	data:"type=productDetail&goodID="+goodsId,
 	success:function (data) {
 		var obj = JSON.parse(data);
 		var objArr = obj.data.productDetail.goods;
 		console.log(objArr);
+		$(".Comment_link").attr("href",'MallRatingSheet.html?goodId='+objArr.goodsId);
 		$("#PicShow").append($("<img/>").attr("src",objArr.image));
 		$("#mainTop_title").append($("<div class='title_top'></div>").html(objArr.longGoodsName)).append($("<div class='title_new'></div>").html(objArr.style.goodsTag));
 		var NewPrice = $("<div class='NewPrice'></div>");
@@ -35,11 +36,59 @@ $.ajax({
 		}
 		$("#Market_value").append("市场价").append(oldPrice);
 		$("#Free_freight").append("全场满99元免运费");
+		var objArr2 = objArr.reviewInfo.reviewInfos[0];
+		console.log(objArr2);
+		var haveRecommend = objArr.reviewInfo.reviewInfos.length;
+		console.log(haveRecommend);
+		if (haveRecommend == 0) {
+			$(".top_title_right").css("display","none");
+			$(".Review_main").css("display","none");
+			$(".totalCount").html("暂无评论");
+		} else if (haveRecommend == 1) {
+			$("#Head_portrait").append($("<img/>").attr("src",objArr2.headPic));
+			$("#name").append($("<div></div>").html(objArr2.nickName));
+			var star = $("#star");
+			var starLength = objArr2.stars;
+				// var havePic = objArr.imageUrls.length;
+				if (starLength == 1) {
+					star.append($("<img src='../images/4star-in.png' />"));
+					// console.log(starLength);
+				} else if (starLength == 2) {
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+				} else if (starLength == 3) {
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+				} else if (starLength == 4) {
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+				} else if (starLength == 5) {
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+					star.append($("<img src='../images/4star-in.png' />"));
+				}
+			$("#content").html(objArr2.content);
+			var img = $("<img/>");
+			var havePic = objArr2.imageUrls.length;
+			console.log(havePic);
+			if (havePic > 0) {
+				$("#Evaluation_content_img").append($("<img/>").attr("src",objArr2.imageUrls[0]));
+			}
+			var objArr3 = objArr.reviewInfo;
+			console.log(objArr3);
+			$(".totalCount").html(objArr3.totalCount+"人评论");
+			$(".Percentage").html(parseInt(objArr3.goodCount/objArr3.totalCount*100)+"%");
+		}
 	}
 })
 $.ajax({
 	url:"../data/Mall_search_data.php",
-	data:"type=productImgs&goodID=102086",
+	data:"type=productImgs&goodID="+goodsId,
 	success:function (data) {
 		var obj = JSON.parse(data);
 		var objArr = obj.contentList;
@@ -57,7 +106,7 @@ $.ajax({
 })
 $.ajax({
 	url:"../data/Mall_search_data.php",
-	data:"type=recommend&goodID=102086",
+	data:"type=recommend&goodID="+goodsId,
 	success:function (data) {
 		var obj = JSON.parse(data);
 		var objArr = obj.goodsList;

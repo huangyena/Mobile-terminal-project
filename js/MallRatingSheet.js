@@ -7,11 +7,14 @@ $(document).scroll(function(){
 		top1.css("display","none");
 	}
 });
+var goodsId = location.href.split("=")[1];
 $.ajax({
 	url:"../data/Mall_search_data.php",
-	data:"type=goodsReviews&goodID=102086",
+	data:"type=goodsReviews&goodID="+goodsId,
 	success:function (data) {
 		var obj = JSON.parse(data);
+		console.log(data);
+		console.log(obj);
 		var objArr = obj.list;
 		console.log(objArr);
 		var ul = $("#User_evaluation_ul");
@@ -33,7 +36,7 @@ $.ajax({
 			}
 			Review_date.html(getLocalTime(time));
 			li_main_title.append(User_name);
-			li_main_title.append(Review_date);
+			li_main_title.append(Review_date.text().slice(0,9));
 			User_li_main.append(li_main_title);
 			var Review_star = $("<div class='Review_star'></div>");
 			var starLength = objArr[i].stars;

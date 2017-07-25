@@ -188,12 +188,12 @@ ul,ol{
 	padding-top: 5%;
 }
 .top_title_left{
-	width: 80%;
+	width: 75%;
 	height: 15px;
 	line-height: 15px;
 }
 .top_title_right{
-	width: 20%;
+	width: 25%;
 	height: 15px;
 	line-height: 15px;
 	display: flex;
@@ -213,11 +213,11 @@ ul,ol{
 	display: flex;
 	padding-top: 5%;
 }
-.Head_portrait{
+#Head_portrait{
 	width: 13%;
 	
 }
-.Head_portrait>img{
+#Head_portrait>img{
 	width: 100%;
 	border-radius: 50%;
 }
@@ -226,20 +226,21 @@ ul,ol{
 	padding-top: 1%;
 	padding-left: 3%;
 }
-.Name_Evaluation>.name{
+.Name_Evaluation>#name{
 	font-size: 16px;
 	padding-bottom: 0.5%;
 }
-.Name_Evaluation img{
+#star{
 	width: 6%;
+	display: flex;
 }
 .Evaluation_content{
 	width: 100%;
 }
-.Evaluation_content_img{
+#Evaluation_content_img{
 	width: 30%;
 }
-.Evaluation_content_img>img{
+#Evaluation_content_img>img{
 	width: 100%;
 }
 .details{
