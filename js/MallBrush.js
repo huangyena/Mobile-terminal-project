@@ -98,7 +98,7 @@ function setUlData(){
 	var ul = $("#product_list_box");
 		for (var i = 0; i < objArr.length; i++) {
 			var li = $("<li></li>");
-			var a = $("<a></a>");
+			var a = $("<a href='MallDetails.html?goodId="+objArr[i].goodsId+"'></a>");
 			var div1 = $("<div class='img'></div>");
 			var div2 = $("<div class='main'></div>");
 			var div2_1 = $("<div class='main_div1'></div>");
@@ -106,7 +106,6 @@ function setUlData(){
 			var div2_2_1 = $("<div class='main_div2_1'></div>");
 			var div2_2_2 = $("<div class='main_div2_2'></div>");
 			var img = $("<img/>");
-			a.attr("href",objArr[i].url);
 			img.attr("src",objArr[i].imageSrc);
 			div2_1.html(objArr[i].name);
 			div2_2_1.html("&yen;"+objArr[i].minSalePrice);
