@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>SingleNews</title>
+	<link rel="stylesheet" href="../css/SingleNews.css">
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<script src = "../js/SingleNews.js"></script>
+</head>
+<body>
+	<script> 
+		
+		$.ajax({
+			url:"../data/data.php?type=newsList",
+			success:function(data){
+				// console.log(data);
+				var obj = JSON.parse(data);
+				console.log(obj);
+				// console.log(obj.newsList[0].id);
+				
+				for (var i = 0; i < obj.newsList.length; i++) {
+					// console.log(obj.newsList[i].id);
+					 array = obj.newsList[i].id;
+					 var type = obj.newsList[i].type;
+					 console.log(type);
+					
+
+				
+				// var a = 551100;
+				 if(type == 1){
+					 	$.ajax({
+						url:"../data/discovery.php?type=news_detail&newsID="+array,
+						success:function(data){
+							// console.log(data);
+							var arr = JSON.parse(data);
+							console.log(arr);
+						
+					}
+				})
+			 }
+			}
+			}
+		})
+		
+		
+	</script>
+</body>
+</html>

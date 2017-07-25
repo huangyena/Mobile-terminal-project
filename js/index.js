@@ -3,11 +3,14 @@ $.ajax({
 	success:function(list){
 		/*console.log(list);*/
 		var obj = JSON.parse(list);
+		
 		/*console.log(obj);*/
 	/*s*/
 		for (var i = 0;i<4;i++){
 			var li = $("<img class= 'img'>");
-			li.attr("src",obj.ms[i].img);   //图
+			var imgUrl = "http://imgproxy.mtime.cn/get.ashx?uri="+encodeURIComponent(obj.ms[i].img)+"&width=130&height=195&clipType=4"
+
+			li.attr("src",imgUrl);   //图
 /*			console.log(li);
 */			var aa = $("<a href='' class= 'lijie'></a>");
 			var em = $("<p>"+obj.ms[i].r+"</p>");
@@ -24,7 +27,9 @@ $.ajax({
 		}
 		for (var i = 4;i<8;i++){
 			var li = $("<img class= 'img'>");
-			li.attr("src",obj.ms[i].img);
+			var imgUrl = "http://imgproxy.mtime.cn/get.ashx?uri="+encodeURIComponent(obj.ms[i].img)+"&width=130&height=195&clipType=4"
+
+			li.attr("src",imgUrl);
 			/*console.log(li);*/
 			var aa = $("<a href='' class= 'lijie'></a>");
 			var fontDiv = $("<div class = 'fontDiv'></div>");

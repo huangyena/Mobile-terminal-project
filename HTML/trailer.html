@@ -12,11 +12,11 @@
 	<div id = "body">
 		<header >
 			<div class="header_color">
-				<a href=""><img src="../images/11.png" alt=""></a>
-				<button class="remove_left">首页</button>
-				<button>购票</button>
-				<button>商城</button>
-				<button class="white">发现</button>
+				<a href="index.html" class="index"><img src="../images/4Alogo.png" alt="" id = "header_logo"></a>
+				<a href=""><button class="remove_left">首页</button></a>
+				<a href=""><button>购票</button></a>
+				<a href=""><button>商城</button></a>
+				<a href=""><button class = "find">发现<span class="white"></span></button></a>
 				<a href=""><img src="../images/2-头像.png" alt=""></a>
 			</div>
 		</header>
@@ -29,14 +29,94 @@
 			</ul>
 		</nav>
 		<div class="positions">
-			<div id = "video_hide"></div>
-			<a id = "pictures" onclick="fun1()">
-				<button value = "×" id = "err"></button>
-				<div class="Cannes_fovers"></div>
-				<span id="fonts"></span>
-				<a  id = "video" ></a>
-			</a>
+			<div id = "video_add" onclick="video()">
+				<div id = "shadow" ></div>
+			</div>
+			<div class = play_shadow>
+				<input type="button"  class = "err" onclick="err()"> 
+				<span class="play_font"></span>
+				<img src="../images/img_share.png" alt="" class="img_share" onclick="fun()">
+			</div>
+		
+			<video  id = "play" ></video>
+			<div class="bor_shadow"  style="position: absolute;top:-120px;left:0;"></div>
+			<div class="bor_white"  >
+				<div class="bor_span">
+					<span class="bor_share">分享</span>
+					<img src="../images/2-close.png" alt="" class="bor_err" onclick="fun1()">
+				</div>
+				
+				<div class="bor_border"></div>
+
+				<div class="bor_img">
+					<a href="microblog.html">
+						<img src="../images/share06.png" alt="">
+						<span>新浪微博</span>
+					</a>
+					<a href="space.html">
+						<img src="../images/share09.png" alt="">
+						<span>QQ空间</span>
+					</a>
+					<a href="enter.html">
+						<img src="../images/share07.png" alt="">
+						<span>时光网</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="receive_div">
+			<ul class="receive">
+				<!-- <li class="receive"></li> -->
+			</ul>
+		</div>
+		<!-- 结尾 -->
+		<div class="border-footer"></div>
+		<ul class = "nav-footer">
+			<li><a href="">首页</a></li>
+			<li><a href="">购票</a></li>
+			<li><a href="">商城</a></li>
+			<li><a href="">发现</a></li>
+			<li><a href="">我的</a></li>
+		</ul>
+		<div id = footer>
+			<div>
+				<span>PC版</span>
+				<span class="poles">丨</span>
+				<span>客户端下载</span>
+				<span>丨</span>
+				<span>意见反馈</span>
+				<span>丨</span>
+				<span>帮助中心</span>
+			</div>
+			<div class="footer-logo">
+				<img src="../images/3-fot_logo.jpg" alt="">
+			</div>
+			<div class="copy">Copyright 2006-2017 Mtime.com Inc.All rights reserved</div>
 		</div>
 	</div>
+	<script>
+		var video_play = $("#play")[0];
+		function video (){
+			$("#play").css("display","block");
+			$(".play_shadow").css("display","block");
+			video_play.play();
+		}
+		function err(){
+			$("#play").css("display","none");
+			$(".play_shadow").css("display","none");
+			video_play.pause();
+		}
+		function fun(){
+			// $(".play_shadow").css("display","block");
+			$(".bor_shadow").css("display","block");
+			$(".bor_white").css("display","block");
+		
+		}
+		function fun1(){
+			$(".bor_shadow").css("display","none");
+			$(".bor_white").css("display","none");
+			
+		}
+	</script>
 </body>
 </html>
