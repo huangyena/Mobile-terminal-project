@@ -41,7 +41,7 @@ $.ajax({
 
 					var bor_bottom = $("<div class = 'bor_bottom'></div>")
 					
-					// $(".remark").html(mark);
+
 					li.append(num);
 					li.append(posterUrl);
 					li.append(name_one);

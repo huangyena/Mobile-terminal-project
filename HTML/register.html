@@ -17,59 +17,149 @@
 			</a>
 			<img src="../images/4Alogo.png" alt="">
 		</div>
-		<form action="">
-			手机号：<input type="text" placeholder="请输入手机号" class="text" name="name"> <input type = "button" value="获取验证码" id = "span" onclick="fun(this)" >
-			<br><br>
-			<div class="bot_top"></div>
-			验证码：<input type="text">
-			<br><br>
-			<div class="bot_top"></div>
-			密&nbsp;&nbsp;&nbsp;码：<input type="password" placeholder="6-20位字母、数字、符号组成" class="pwd" name="password">
-			<br>
-			<div class="bot_top"></div>
-			<br>
-			<input type="checkbox" class="check" checked="">&nbsp;&nbsp;我已阅读并同意<a href="http://m.mtime.cn/#!/help/policy" class="copy">《Mtime时光网服务》</a>
-			<br><br>
-			<input type="submit" value="注册" class = "register">
-		</form>
+		<form id = "form">
+		用 户 名：<input type="text" name = "name" placeholder="请输入手机号">
+		<span id = "span" onclick="fun(this)">获取验证码</span>
+		<br>
+
+		<div class="bot_top"></div>
+	
+		验证码：<input type="text">
+		<br>
+		<div class="bot_top"></div>
+		密&nbsp;&nbsp;&nbsp;&nbsp;码：&nbsp;&nbsp;<input type="password" name="password" id = "pwd" placeholder="6-20位字母、数组、符号组成">
+		<br>
+		<div class="bot_top"></div>
+
+		E - mail: &nbsp;&nbsp;<input type="email" name="email" >
+		<br>
+		<div class="bot_top"></div>
+
+		<input type="checkbox" checked="">我已阅读并同意<a href="http://m.mtime.cn/#!/help/policy" class="copy"> 《Mtime时光网服务条款》</a>
+		<br>
+		<br>
+		<!-- <input type="text" id = "aaa"> -->
+		<input type="submit" value="注册" class="register">
+	</form>
+	<div id = "aa"></div>
+		<div id = "top"></div>
+		<div class="border-footer"></div>
+		<ul class = "nav-footer">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="shop.html">购票</a></li>
+			<li><a href="shoppingMall.html">商城</a></li>
+			<li><a href="find.html">发现</a></li>
+			<li><a href="enter.html">我的</a></li>
+		</ul>
+		<div id = footer>
+			<div>
+				<a href = 'http://m.mtime.cn/?uf=m' >PC版</a>
+				<a href = '' class="poles">丨</a>
+				<a href = 'download.html' >客户端下载</a>
+				<a href = '' >丨</a>
+				<a href = 'feedback.html' >意见反馈</a>
+				<a href = '' >丨</a>
+				<a href = 'help_center.html' >帮助中心</a>
+			</div>
+			<div class="footer-logo">
+				<img src="../images/3-fot_logo.jpg" alt="">
+			</div>
+			<div class="copy">Copyright 2006-2017 Mtime.com Inc.All rights reserved</div>
+		</div>
 	</div>
 	<script>
 		var time;
 		function fun(ele){
-			// var span = $("#span");
 			if(ele.value == "获取验证码" || ele.value == "重新获取验证码"){
-				time = setInterval(fun1,1000);
-				ele.setAttribute("disabled","");
+				time = setInterval(fun1,10);
+				$("#span").attr("disabled","");
+				console.log($("#span"));
 			}
+			console.log("后台返回信息");
+			console.log($("#span"));//jquery
+			console.log($("#span")[0]);//dom
 		}
+		console.log("===========");
 		var num = 60;
 		function fun1(){
 			var span = $("#span");
+			console.log(span);
+			console.log("++++++++");
 			if(num==0){
 				clearInterval(time);
-				span.value="重新获取验证码";
+				$("#span")[0].value="重新获取验证码";
 				num=60;
-				span.removeAttribute("disabled");
+				$("#span").removeAttribute("disabled");
 			}else{
 				num--;
-				span.value = "重新发送（"+num+"s）";
+				$("#span")[0].value = "重新发送（"+num+"s）";
 			}
+			console.log("+++++++=");
 		}
-		// $("form").validate({
-		// 	submitHandler:function(){
-		// 		var data = new FormData($("#form"[0]));
-		// 		$.ajax({
-		// 			url:"http://192.168.1.250/aja/regist.php",
-		// 			data:data,
-		// 			type:"post",
-		// 			processData:false,
-		// 			contentType:false,
-		// 			success:function(data){
-		// 				console.log(data);
-		// 			}
-		// 		})
-		// 	}
-		// })
+
+
+		$("#form").validate({
+			submitHandler:function(){
+				// console.log("后台返回信息");
+				var data = new FormData($("#form")[0]);
+				// console.log(data);
+				$.ajax({
+					url:"../data/regist.php",
+					data:data,
+					type:"post",
+					processData:false,
+					contentType:false,
+					success:function(data){
+						console.log(data);
+						var aa = data.split("创建完成")[1];
+						console.log(aa);
+						var ss = JSON.parse(aa);
+						console.log(ss);
+						var dd = ss.msg;
+						console.log(dd);
+						alert(dd);
+						// if(ss.code == 1){
+						// 	location.href = "登录.html";
+						// }
+						}
+				})
+			},
+			rules:{
+				name:"required",
+				password:{
+					required:true,
+					rangelength:[6,15]
+				},
+				password1:{
+					required:true,
+					rangelength:[6,15],
+					equalTo:"#pwd"
+				},
+				email:{
+					required:true,
+					email:true
+				},
+			
+			},
+			messages:{
+				name:"请输入用户名",
+				password:{
+					required:"请输入密码",
+					password:"请输入6到15位的字符串"
+				},
+			
+				email:{
+					required:"请您输入邮箱地址",
+					email:"请您输入正确的邮箱地址"
+				},
+				
+			},
+		})
+
+
+
+	
+
 	</script>
 </body>
 </html>

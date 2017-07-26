@@ -321,7 +321,7 @@ ul,ol{
 	display: flex;
 	justify-content: space-around;
 }
-#footer>div>span{
+#footer>div>a{
 	margin-top: 20px;
 }
 #footer>.footer-logo>img{

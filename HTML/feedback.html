@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
+	<title>意见反馈</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<title>global</title>
-	<link rel="stylesheet" href="../css/global.css">
 	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
-	<script src = "../js/global.js"></script>
+	<link rel="stylesheet" href="../css/feedback.css">
 </head>
 <body>
-	<div id = "body">
-			<nav>
-			<div class="nav_color">
-				<a href="Leaderboard.html" class="leader"></a>
-				<h3>全球票房榜</h3>
-			</div>	
-		</nav>
-		<ul class="nav_ul">
-			<li ><a href="#" class="blue">北美</a></li>
-			<li><a href="inland.html">内地</a></li>
-			<li><a href="HongKo">香港</a></li>
-			<li><a href="Taiwan.html">台湾</a></li>
-			<li><a href="Japan.html">日本</a></li>
-			<li><a href="Korea.html">韩国</a></li>
-		</ul>
-		<!-- 获取 -->
-		<div class="summary"></div>
-		<div class="ul">
-			<ul class="receive"></ul>
-		</div>
+	<div class="title">
+		<a href="index.html" class="img_back">&nbsp;&nbsp;<img src="../images/2-left.png" class="back" alt=""></a>
+		<span class="feed">意见反馈</span>
+	</div>
+	<div class="division"></div>
+	<form class="tickling">
+	<input type="text" placeholder="在此输入您的反馈，您的意见对我们非常重要" class="ticklingtwo">
+	<div class="ticklingthree"></div>
+	<input type="text" placeholder="请输入您的手机号码，方便我们回复您" class="ticklingone" pattern="^1[34578]\d{9}$" id="iPhone">
+	<div class="submit_feedback">
+		<input type="submit" class="submit_feedbackone" onclick="fun()">
+	</div>
+	<a href="#" id = "top"></a>
 		<div class="border-footer"></div>
 		<ul class = "nav-footer">
 			<li><a href="index.html">首页</a></li>
@@ -53,5 +44,14 @@
 			<div class="copy">Copyright 2006-2017 Mtime.com Inc.All rights reserved</div>
 		</div>
 	</div>
+	</form>
+	<script>
+
+		function fun(){
+			if($(".ticklingtwo").val()==""){
+				alert("请输入您的反馈信息");
+			}
+		}
+	</script>
 </body>
 </html>

@@ -31,6 +31,7 @@ ul,ol{
 	/*text-align:center;*/
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 .header_color>a>img:first-child{
 	width: 100%;
@@ -38,13 +39,14 @@ ul,ol{
 	margin-top: 10px;
 	/*margin-left: 13px;*/
 }
-.header_color>button{
+.header_color>.tit{
 	/*width: 15%;*/
 	/*margin:0px 7px;*/
 	/*margin-left: 5px;*/
 	background-color:rgb(28,38,53);
 	color: rgb(187,187,187);
 	font-size: 16px;
+	color: white;
 }
 .header_color>.remove_left{
 	/*margin-left: 10px;*/
@@ -55,11 +57,17 @@ ul,ol{
 	height: 50%;
 	margin-top: 15px;
 }
-.header_color>.white{
-	color:white;
-	font-weight: bold;
-	border-bottom:5px solid white;
-	width: 50px;
+.header_color>.find{
+	margin-top: 25px;
+}
+.header_color>.find>.tit{
+	color: white;
+}
+.header_color>.find>.white{
+	display: inline-block;
+	width: 100%;
+	border-bottom:6px solid white;
+	
 }
 /*导航*/
 .nav{
@@ -78,8 +86,8 @@ ul,ol{
 	margin-top: 20px;
 	/*margin-left:8%;*/
 	font-size:15px;
-}
-.nav>ul>li>a{
+}.nav>ul>li>a{
+
 	width: 80%;
 	font-size: 20px;
 	/*margin-left:10%;*/
@@ -135,7 +143,7 @@ ul,ol{
 
 }
 .evaluate_font{
-	width: 100%;
+	width: 90%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 20px;
@@ -190,7 +198,7 @@ ul,ol{
 	display: flex;
 	justify-content: space-around;
 }
-#footer>div>span{
+#footer>div>a{
 	margin-top: 20px;
 }
 #footer>.footer-logo>img{
@@ -200,4 +208,16 @@ ul,ol{
 	color: rgb(205,205,205);
 	font-size: 14px;
 	margin-bottom: -20px;
+}
+#top{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/4Abacktop.png);
+	background-size: 50px 50px;
+	position: fixed;
+	top:600px;
+	left:350px;
+	display: none
+
 }

@@ -1,0 +1,247 @@
+*{
+	margin:0px;
+	padding: 0px;
+	-webkit-tap-highlight-color:transparent;
+	font-family: "微软雅黑";
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color:#333;
+}
+input,button{
+	border:none;
+	outline: none;
+	-webkit-appearance:none;
+}
+ul,ol{
+	list-style-type: none;
+}
+#body{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin:0 auto;
+}
+/*头部*/
+.nav_color{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(28,38,53);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.leader{
+	display: inline-block;
+	width: 40%;
+	height: 100%;
+	/*background-color: rgb(255,255,255);*/
+	background-image: url(../images/3-尖角.png);
+	/*background-size: 15px 15px;*/
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	/*color: white;*/
+
+}
+.share{
+	width: 60%;
+}
+#content{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: rgb(51,51,51);
+	font-size: 25px;
+}
+#content>video{
+	width: 80%;
+	margin: 0 auto;
+}
+p{
+	color: black;
+}
+img{
+	width: 80%;
+	/*height: 40%;*/
+	margin-left: 10%;
+	/*height: 20px;*/
+}
+/*.class{
+	width: 100%;
+	display: flex;
+	justify-content:center;
+}*/
+#title{
+	width: 100%;
+	font-weight :bold;
+	font-size: 30px;
+	
+}
+.time{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#time{
+	/*width: 40%;*/
+	color: rgb(125,125,125);
+}
+.discuss>a{
+	color: rgb(30,125,215);
+}
+.bor_top{
+	width:99%;
+	height: 50px;
+	border:1px solid rgb(246,246,246);
+	box-shadow: 0px 0px 1px rgb(55,51,55);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+}
+.cir{
+	width: 100%;
+}
+.bor_top>.parcel{
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.mv_people{
+	width: 40%;
+	height: 40px;
+	border-radius: 40%/45px;
+	border:2px solid rgb(215,215,215);
+	text-align: center;
+	line-height: 40px;
+	
+	/*margin-left: -20px;*/
+}
+.nav-footer{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	font-size: 20px;
+	margin-top: 10px;	
+}
+.border-footer{
+	width: 100%;
+	border-bottom: 1px solid rgb(246,246,246);
+	margin-top: 10px;
+}
+.nav-footer>li>a{
+	color: rgb(30,125,215);
+}
+#footer{
+	width: 100%;
+	height: 120px;
+	background-color: rgb(246,246,246);
+	margin-top: 20px;
+/*	display: flex;
+	justify-content: center;*/
+}
+#footer>div{
+	width: 100%;
+	/*margin-top: 10px;*/
+	display: flex;
+	justify-content: space-around;
+}
+#footer>div>a{
+	margin-top: 20px;
+}
+#footer>.footer-logo>img{
+	width: 30%;
+	margin-top: 10px;
+}
+.copy{
+	color: rgb(205,205,205);
+	font-size: 14px;
+	margin-bottom: -20px;
+}
+#top{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/4Abacktop.png);
+	background-size:40px 40px;
+	position: fixed;
+	top:600px;
+	left:350px;
+	display: none
+}
+.bor_shadow{
+	width: 100%;
+	/*height: 76px;*/
+	min-width: 320px;
+	max-width: 640px;
+	background-color: black;
+	opacity:0.6;
+	padding-top: 560px;
+	display: flex;
+	
+}
+.bor_white{
+	width: 100%;
+	/*height: 250px;*/
+	background-color: white;
+	/*margin-top: 400px;*/
+	text-align: center;
+	/*display: flex;*/
+	padding-top: -10px;
+	position: absolute;
+	top:75.5%;
+}
+.bor_img{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.bor_img>a{
+	width: 25%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.bor_img>a>img{
+	width: 70%;
+	height: 70%;
+}
+.bor_img>a>span{
+	margin-top: 10px;
+	color: rgb(119,119,119);
+}
+.bor_span>.bor_share{
+	width: 80%;
+	color: rgb(119,119,119);
+	font-size: 20px;
+}
+.bor_span>.bor_err{
+	width: 3%;
+	height: 3%;
+	/*flex-basis: 30%*/
+	/*margin-left: 200px;*/
+}
+.bor_span{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.bor_border{
+	width: 100%;
+	border-top: 1px solid rgb(215,215,215);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.bor_shadow,.bor_white{
+	display: none;
+}
