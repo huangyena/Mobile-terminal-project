@@ -4918,7 +4918,7 @@
 }
 ';
 	}elseif ($type == 'buy_tickets') {//购票-全部
-		$str = '{"data":[
+		$str = '{data:[
     {
         "address": "西城区西单北大街甲131号大悦城商场十层", 
         "baiduLatitude": 39.917507, 
@@ -5556,42 +5556,42 @@
         {
             "iconTitle": "模玩",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161133.99290860.jpg",
-            "url": "http://127.0.0.1/XiangMu/html/MallPlayMode.html"
+            "url": "MallPlayMode.html"
         },
         {
             "iconTitle": "数码",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161141.82690725.jpg",
-            "url": "http://127.0.0.1/XiangMu/html/MallDigital.html"
+            "url": "MallDigital.html"
         },
         {
             "iconTitle": "服饰",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161148.25620959.jpg",
-            "url": "http://127.0.0.1/XiangMu/html/MallClothes.html"
+            "url": "MallClothes.html"
         },
         {
             "iconTitle": "家居",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161155.82939104.jpg",
-            "url": "http://127.0.0.1/XiangMu/html/MallHome.html"
+            "url": "MallHome.html"
         },
         {
             "iconTitle": "星战",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161224.10155577.jpg",
-            "url": "http://127.0.0.13/XiangMu/html/MallStarWars.html"
+            "url": "MallStarWars.html"
         },
         {
             "iconTitle": "漫威",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161315.97010262.jpg",
-            "url": "http://127.0.0.1/XiangMu/html/MallMarvel.html"
+            "url": "MallMarvel.html"
         },
         {
             "iconTitle": "蝙超",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161325.50615572.jpg",
-            "url": "http://127.0.0.1/XiangMu/html/MallBatman&Superman.html"
+            "url": "MallBatman&Superman.html"
         },
         {
             "iconTitle": "全部",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161342.70896250.jpg",
-            "url": "http://127.0.0.1/XiangMu/html/MallAll.html"
+            "url": "MallAll.html"
         }
     ],
     "scrollImg": [
