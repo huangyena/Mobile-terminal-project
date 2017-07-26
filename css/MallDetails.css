@@ -41,7 +41,6 @@ ul,ol{
 	position: fixed;
 	bottom: 0;
 	z-index: 1001;
-	border: 1px solid black;
 }
 .Floating_bottom>a{
 	width: 100%;
