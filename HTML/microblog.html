@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>microblog</title>
+	<link rel="stylesheet" href="../css/microblog.css">
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+		<script src = "../js/jquery.validate.min.js"></script>
+	<script src = "../js/messages_zh.min.js"></script>
+</head>
+<body>
+	<div id = "#body">
+		<div class="gradient"></div>
+		<div class="bgpic">
+			<div class="logo">
+				<img src="../images/logo-m.png" alt="">
+				<a href="cancel.html">注册</a>
+			</div>
+			<br><br>
+			<form action="">
+				<input type="text" placeholder="邮箱/会员账号/手机号" class="text" name="text">
+				<br><br>
+				<input type="password" placeholder="密码" class="pwd" name="pwd">
+				<br><br>
+				<input type="checkbox" checked class = 'check'><span>下次自动登录</span>
+				<br><br>
+				<input type="button" value="取消" class = 'cancel'>
+				<a href="find.html"><input type="submit" value="登录" class = 'log_in'></a>
+				<br>
+			</form>
+			<a href='forgetpwd.html' class = 'forget'>忘记密码</a>
+		</div>
+
+	</div>
+	<script >
+		$('form').validate({
+			submitHandler:function(){
+				var data = new FormData($("form")[0]);
+				$.ajax({
+					url:"http://192.168.1.250/aja/login.php",
+					type:"get",
+					processData:false,
+					contentType:false,
+					success:function(data){
+						console.log(data);
+						var obj = JSON.parse(data);
+						console.log(obj);
+						console.log(data.msg);
+					}
+				})
+			}
+		})
+	</script>
+</body>
+</html>

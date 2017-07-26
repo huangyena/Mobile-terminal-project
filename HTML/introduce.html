@@ -10,7 +10,7 @@
 <body>
 	<div class="city">
 		<div class="back" onclick="jump()"><</div>
-		<div class="subject"></div>
+		<div class="subject" onclick="fun()"></div>
 	</div>
 	<div id="site1" style="width: 100%;display: flex;align-items: center;justify-content: space-around;">
 		<div class="siteone"></div>
@@ -35,6 +35,31 @@
 	</div>
 	<div class="play_time" style="width: 100%;display: flex;flex-wrap: wrap;justify-content: space-around;">
 	</div>
+
+	<div class="bor_shadow"  style="position: absolute;top:0px;left:0;"></div>
+			<div class="bor_white"  >
+				<div class="bor_span">
+					<span class="bor_share">分享</span>
+					<img src="../images/2-close.png" alt="" class="bor_err" onclick="fun1()">
+				</div>
+				
+				<div class="bor_border"></div>
+
+				<div class="bor_img">
+					<a href="microblog.html">
+						<img src="../images/share06.png" alt="">
+						<span>新浪微博</span>
+					</a>
+					<a href="space.html">
+						<img src="../images/share09.png" alt="">
+						<span>QQ空间</span>
+					</a>
+					<a href="enter.html">
+						<img src="../images/share07.png" alt="">
+						<span>时光网</span>
+					</a>
+				</div>
+			</div>
 	<!-- <div id="yi"></div> -->
 	<script>
 		var cid = location.href.split("=")[1];
@@ -172,6 +197,21 @@
 				});
 		}
 		funone();
+
+
+		function fun(){
+			$(".bor_shadow").css("display","block");
+			$(".bor_white").css("display","block");
+			$("html,body").css({"height":"100%","overflow":"hidden"});
+
+		}
+		function fun1(){
+			$(".bor_shadow").css("display","none");
+			$(".bor_white").css("display","none");
+			$("html,body").css({"height":"","overflow":""});
+
+		}
+
 	</script>
 </body>
 </html>

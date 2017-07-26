@@ -8,16 +8,31 @@
 	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
 	<script src="../js/swiper.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../js/swiper.min.css">
+	<style>
+		#top{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background-image: url(../images/4Abacktop.png);
+			background-size:40px 40px;
+			position: fixed;
+			top:600px;
+			left:350px;
+			display: none
+
+		}
+		
+	</style>
 </head>
 <body>
 	<div class="box">
 		<header class="head">
 			<a href="#" class="title"></a>
-			<a href="#">首页</a>
-			<a href="" class="ticket">购票</a>
-			<a href="">商城</a>
-			<a href="">发现</a>
-			<a href="" class="titleone"></a>
+			<a href="index.html">首页</a>
+			<a href="shop.html" class="ticket">购票</a>
+			<a href="shoppingMall.html">商城</a>
+			<a href="find.html">发现</a>
+			<a href="enter.html" class="titleone"></a>
 		</header>	
 	</div> 
 	<div class="shuffling">
@@ -73,7 +88,7 @@
 		<!-- <div class="receiveone"></div>
 		<div class="receivetwo"></div> -->
 	</div>
-	<a href="#"><img src="../images/1-回到顶部.png" class="top"></a>
+	<a href="#" id = "top"></a>
 	<script>
  	// function getDate() {
  		var mySwiper = new Swiper('.jd_banner',{
@@ -252,6 +267,15 @@
 		}
 	})
 		}
+		$(document).scroll(function(){
+     		var top = $(window).scrollTop();
+     		var top_one = $("#top");
+     		if(top>600){
+     			top_one.css("display","block");
+     		}else{
+     			top_one.css("display","none");
+     		}
+     	})
 		</script>
 </body>
 </html>
