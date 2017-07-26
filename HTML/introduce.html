@@ -7,115 +7,171 @@
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
 <link rel="stylesheet" href="../css/introduce.css">
 <script src = "../js/插件/jquery-3.1.1.min.js"></script>
-<style type="text/css">
-	h2{
-		 margin-bottom: 40px;
-		 margin-top: 40px;
-	  }
-	  .vmc-centered{ padding: 10px 0; }
-	  .vmc-centered img { transition: all 0.3s ease; }
-	  .vmc-centered .vmc_active img { transform: scale(1.2); }
-	</style>
 <body>
 	<div class="city">
 		<div class="back" onclick="jump()"><</div>
 		<div class="subject"></div>
 	</div>
-	<div id="scrollBox">
-		<ul class="list">
-		</ul>
+	<div id="site1" style="width: 100%;display: flex;align-items: center;justify-content: space-around;">
+		<div class="siteone"></div>
+		<div class="sitetwo"></div>
 	</div>
+	<div>
+		<div id="scrollBox">
+			<ul class="list"></ul>
+		</div>
+		<div id="title">
+			<span id="details"></span><br>
+			<span id='topic'></span>
+			<span id="topicone"> - </span>
+			<span id="topictwo"></span>
+			<span id="topicthree">></span>
+		</div>
+	</div>
+	<div class="play" >
+		<div class="play_date">
+			<div class="time" style="width: 160%;display: flex;justify-content: space-around;align-items: center;margin-top: 10px;"></div>
+		</div>
+	</div>
+	<div class="play_time" style="width: 100%;display: flex;flex-wrap: wrap;justify-content: space-around;">
+	</div>
+	<!-- <div id="yi"></div> -->
 	<script>
+		var cid = location.href.split("=")[1];
+		console.log(cid);
+		var moveList = [];
+
 		function jump(){
 			window.open("shop.html");
 		}
 		// function fun(){
 		// 	alert("你好");
 		// }
-		$.ajax({
-			// 获取文件路径
-			url:"../data/data.php?type=buy_tickets",
-			success:function(data){//判断是否成功，获取数据源
-				var obj = JSON.parse(data);
-				array = obj.data;
-				console.log(array);
-				for (var i = 0; i < obj.data.length; i++) {
-					var con = obj.data[i].cinemaId;
-					}
-			// var li = $("<div class ='designation'></div>");
-			// 		li.html(array[i].cinameName);
+		
 			$.ajax({
-				url:"../data/buyTicket.php?type=getMovieList&&cId="+con,
+				url:"../data/buyTicket.php?type=getMovieList&&cId="+cid,
 				success:function(data){
+				// console.log(data);
 				var obj = JSON.parse(data);
-				console.log(obj);
+				// console.log(obj);
+				moveList = obj.movies;
+				var ly=$("<span class='trade'></span>");
+					ly.html(obj.cinema.name);
+					$(".siteone").append(ly);
+				var img =$("<div class='img'></div>");
+					$(".siteone").append(img);
+				var bor =$("<span class='imgone'></span>");
+					$(".sitetwo").append(bor);
+				var boe =$("<span class='imgtwo'></span>");
+					$(".sitetwo").append(boe);				
+				// console.log(obj.movies[0].showDates);
+				
 				for (var i = 0; i <obj.movies.length; i++){
+					// console.log(obj.movies[i]);
 					var a=obj.movies[i].img;
 					var b=obj.movies[i].title;
-					console.log(b);
+					var c=obj.movies[i].length;
+					var d=obj.movies[i].type;
+					var e=obj.movies[i].movieId;
+					// console.log(e);
+					// console.log(obj.movies[i].showDates);
 					a = "http://imgproxy.mtime.cn/get.ashx?uri="+encodeURIComponent(a)+"&width=115&height=160&clipType=4"
 					var li=$("<li id='"+i+"'><img src='"+a+"'alt='' class='img'/><div class='character'>"+b+"</div></li>");
 					li.css("width",(100/obj.movies.length)+'%')
 					$(".list").append(li);
-					
-					// li.html(b);
 					$(".list li").append(li);
 					if (i == 0) {
 						li.children('img').addClass('border');
 						li.children('div').addClass('text_div');
 					}
+					if(i == 0){
+						$("#details").html(moveList[0].title);
+						$("#topic").html(moveList[0].length);
+						$("#topictwo").html(moveList[0].type);
+						$(".date").html(moveList[0].showDates[0]);
+						$(".dateone").html(moveList[0].showDates[1]);
+					}
 					li.on("click",function(){
 						$(".list").css("margin-left",(0.33-this.id*0.33)*100+"%");
+						$(this).children('div').addClass('text_div');
 						$(".list li>img").removeClass('border');
 						$(".list li>div").removeClass('text_div');
 						$(this).children('img').addClass('border');
 						$(this).children('div').addClass('text_div');
-						// $(this).children('div').css('color',"rgb(130,130,130)");
+						$("#details").html(moveList[this.id].title) ;
+						$("#topic").html(moveList[this.id].length) ;
+						$("#topictwo").html(moveList[this.id].type);
+						funone(moveList[this.id].movieId);
 					});
 				}
 				$(".list").css({"width":(obj.movies.length/3*100)+"%","margin-left":'33.33%'});
 				}
-			})
-			}
 			});
-		// jQuery(function($){
-		//   $('.vmcarousel-centered').vmcarousel({
-		// 	 centered: true,
-		// 	 start_item: 2,
-		// 	 autoplay: false,
-		// 	 infinite: false
-		//   });
 
-		//   $('.vmcarousel-centered-infitine').vmcarousel({
-		// 	 centered: true,
-		// 	 start_item: 1,
-		// 	 autoplay: false,
-		// 	 infinite: true
-		//   });
+		function funone(mid){
+			$(".play_time").empty();
+				$.ajax({
+					url:"../data/buyTicket.php?type=getMovieTime&mId="+mid+"&cId="+cid,
+					success:function(ta){
+						var a=JSON.parse(ta);
+						// console.log(a);
+						// console.log(mid);
+						for(var i = 0;i<a.s.length;i++){
+							// 厅位
+							var hall = $("<div class = 'hall'></div>");
+							hall.html(a.s[i].hall);
+							
 
-		//   $('.vmcarousel-normal').vmcarousel({
-		// 	 centered: false,
-		// 	 start_item: 0,
-		// 	 autoplay: false,
-		// 	 infinite: false
-		//   });
-	 //   });
-		// $.ajax({
-		// 	//获取文件路径
-		// 	url:"../data/data.php?type=trailer",
-		// 	success:function(data){//判断是否成功，获取数据源
-		// 		// console.log(data);
-		// 		var obj = JSON.parse(data);
-		// 		// console.log(obj);
-		// 		// array = obj.data;
-		// 		for (var i = 0; i < obj.trailers.length; i++) {
-		// 			// var con = obj.data[i].cinemaId;
-		// 			var com = obj.trailers[i].movieId;
-		// 			// console.log(con);
-		// 			console.log(com);
-		// 			}
-		// 		}
-		// 		});
+							// hall.slice
+							// 时间
+							var time_one = $("<div class = 'time_one'></div>") 
+							
+							time_one.html(a.s[i].showDay);
+							var ti = a.s[i].showDay;
+							var hour = parseInt(ti/60/60%24);
+							// console.log("--"+hour);
+							var mit = parseInt(ti/60%60);
+							// console.log(mit);
+							var b = hour+":"+mit;
+							var add_time = $("<div class = 'add_time' style = 'width: 20%;text-align: center;margin-top:20px;font-size:20px;font-weight:bold'>"+b+"</div>");
+							// 2D+字体
+							var versionDesc = $("<div class = 'versionDesc'></div>");
+							versionDesc.html(a.s[i].versionDesc+"/"+a.s[i].language);
+							// var now = new Date();
+							// var s = now.getTime();
+							// console.log("++++"+s);
+							// 
+							// 		
+							var add_div = $("<div class = 'add_div'  style = 'width: 20%;text-align: center;margin-top:10px;' ></div>");
+							add_div.append(versionDesc)
+							add_div.append(hall);
+
+							// 价钱
+							var price = $("<div class = 'price'  style = 'width: 20%;text-align: center;margin-top:20px;color:rgb(255,134,0);font-weight:bold;font-size:20px;'></div>")
+							price.html("￥"+a.s[i].price);
+							// 购票
+							var ticket = $("<a href= 'selecttheaters.html' class = 'ticket' style = 'display:block;width: 25%;height: 30px;background-color: rgb(255,134,0);color: white;font-size:20px;text-align:center;border-radius:20px;margin-top:10px'>购票</a>");
+
+							// 边框线
+							var bor_top = $("<div style = 'width:90%;border-bottom:1px solid rgb(215,215,215);text-align:center;margin-left:2%;margin-top:15px;margin-bottom:15px;'></div>")
+
+							$(".play_time").append(add_time);
+							// $(".play_time").append(versionDesc);
+							$(".play_time").append(add_div)
+							$(".play_time").append(price);
+						console.log(a.s[1].showDay);
+							// $(".play_time").append(hall);
+							$(".play_time").append(ticket);	
+							$(".play_time").append(bor_top)				
+					function getLocalTime(nS) {     
+   					return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');     
+					}     
+					$(".time").html(getLocalTime(a.s[i].showDay));
+						}
+					}
+				});
+		}
+		funone();
 	</script>
 </body>
 </html>

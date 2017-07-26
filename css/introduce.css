@@ -49,26 +49,13 @@ ul,ol{
 	height:45px;
 	background-size:45px 45px;
 }
-/*.list>.receicve{
-	width:80%;
-}*/
+
 .list{
 	/*width: 100%;*/
 	/*height:148px;*/
 	display: flex;
 	justify-content: content;
 }
-/*.list>.receicve{
-	width: 100%;*/
-	/*display: flex;*/
-	/*justify-content: flex-start;*/
-/*}*/
-/*.img{*/
-	/*float:right;*/
-	/*padding-left:5%;
-	width:25%;*/
-	/*height:100px;*/
-/*}*/
 #scrollBox{
 	width: 100%;
 	overflow-x: hidden;
@@ -97,3 +84,104 @@ ul,ol{
 .text_div{
 	display: none;
 }
+#title{
+	text-align:center;
+	border-bottom:1px solid rgb(216,216,216);
+}
+#title>#details{
+	font-size:1.4rem;
+	font-weight:bolder;
+}
+#title>#topic{
+	font-size:1.2rem;
+	color:rgb(119,119,119);
+}
+#title>#topicone{
+	color:rgb(119,119,119);
+	font-size:1.3rem;
+	text-align:right;
+}
+#title>#topictwo{
+	color:rgb(119,119,119);
+	font-size:1.2rem;
+	/*text-align:right;*/
+}
+#title>#topicthree{
+	font-size:1.5rem;
+	text-align:right;
+}
+
+.city>#site1{
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+#site1>.siteone{
+	width: 60%;
+}
+#site1>.siteone>.img{
+	 width: 60%;
+	background-image:url(../images/1-7.png);
+	background-size:170px 35px;
+	width:170px;
+	height:35px;
+}
+#site1>.siteone>.trade{
+	margin:8px;
+	font-size:1.3rem;
+	font-weight:bolder;
+}
+#site1>.sitetwo{
+	width: 30%;
+}
+#site1>.sitetwo>.imgone{
+	display:inline-block;
+	background-image:url(../images/1-10.png);
+	background-size:45px 30px;
+	border-left:1px solid rgb(216,216,216);
+	width: 45px;
+	height:32px;
+	/*text-align:right;*/
+	/*position:absolute;
+	top:70px;
+	left:320px;*/
+}
+#site1>.sitetwo>.imgtwo{
+	display:inline-block;
+	background-image:url(../images/1-11.png);
+	background-size:45px 30px;
+	border-left:1px solid rgb(216,216,216);
+	width: 45px;
+	height:32px;
+	/*text-align:right;*/
+	/*position:absolute;
+	top:70px;
+	left:360px;*/
+}
+.play .play_date{
+	width:100%;
+	border-bottom:1px solid rgb(216,216,216);
+	height:50px;
+	font-size:18px;
+	line-height:50px;
+	display:flex;
+	justify-content:space-around;
+}
+.play .play_date .date{
+	padding-bottom:10px;
+}
+.play .play_date .dateone{
+	padding-bottom:10px;
+}
+.shape{
+	font-weight:bold;
+	border-bottom:2px solid rgb(30,125,215);
+	color:rgb(30,125,215);
+}
+/*.shapeone{
+	font-weight:bold;
+	border-bottom:2px solid rgb(30,125,215);
+	color:rgb(30,125,215);
+}
+.*/

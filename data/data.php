@@ -9,6 +9,59 @@
     "lid": 290,
     "ms": [
         {
+            "NearestCinemaCount": 158,
+            "NearestDay": 1499673600,
+            "NearestShowtimeCount": 2395,
+            "aN1": "史蒂夫·卡瑞尔",
+            "aN2": "克里斯汀·韦格",
+            "actors": "史蒂夫·卡瑞尔 / 克里斯汀·韦格 / 崔·帕克 / 妮芙·沙瑞尔",
+            "cC": 159,
+            "commonSpecial": "格鲁带小黄人重走“坏蛋”老路",
+            "d": "96",
+            "dN": "凯尔·巴尔达",
+            "def": 0,
+            "id": 208828,
+            "img": "http://img5.mtime.cn/mt/2017/05/25/093450.93995760_1280X720X2.jpg",
+            "is3D": true,
+            "isDMAX": true,
+            "isFilter": false,
+            "isHasTrailer": true,
+            "isHot": true,
+            "isIMAX": false,
+            "isIMAX3D": true,
+            "isNew": false,
+            "isTicket": true,
+            "m": "",
+            "movieType": "动画 / 冒险 / 喜剧",
+            "p": [
+                "动画冒险喜剧"
+            ],
+            "r": 7.2,
+            "rc": 0,
+            "rd": "20170707",
+            "rsC": 0,
+            "sC": 6854,
+            "t": "神偷奶爸3",
+            "tCn": "神偷奶爸3",
+            "tEn": "Despicable Me 3",
+            "ua": -1,
+            "versions": [
+                {
+                    "enum": 2,
+                    "version": "3D"
+                },
+                {
+                    "enum": 4,
+                    "version": "IMAX3D"
+                },
+                {
+                    "enum": 6,
+                    "version": "中国巨幕"
+                }
+            ],
+            "wantedCount": 6805
+        },
+        {
             "NearestCinemaCount": 156,
             "NearestDay": 1499673600,
             "NearestShowtimeCount": 947,
@@ -21,7 +74,7 @@
             "dN": "钱人豪",
             "def": 0,
             "id": 218216,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F06%2F12%2F113546.83485649_1280X720X2.jpg&width=130&height=195&clipType=4",
+            "img": "http://img5.mtime.cn/mt/2017/06/27/113720.70077857_1280X720X2.jpg",
             "is3D": true,
             "isDMAX": false,
             "isFilter": false,
@@ -41,7 +94,7 @@
             "rd": "20170706",
             "rsC": 0,
             "sC": 2483,
-            "t": "喵星人",
+            "t": "京城81号2",
             "tCn": "京城81号2",
             "tEn": "The House That Never Dies II",
             "ua": -1,
@@ -70,7 +123,7 @@
             "dN": "郭子健",
             "def": 0,
             "id": 226435,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F07%2F12%2F112412.64304863_1280X720X2.jpg&width=130&height=195&clipType=4",
+            "img": "http://img5.mtime.cn/mt/2017/06/28/102059.84589245_1280X720X2.jpg",
             "is3D": true,
             "isDMAX": true,
             "isFilter": false,
@@ -85,12 +138,12 @@
             "p": [
                 "奇幻剧情动作"
             ],
-            "r": 7.7,
+            "r": -1,
             "rc": 0,
             "rd": "20170713",
             "rsC": 0,
             "sC": 1757,
-            "t": "大护法",
+            "t": "悟空传",
             "tCn": "悟空传",
             "tEn": "Wu Kong",
             "ua": -1,
@@ -123,7 +176,7 @@
             "dN": "迈克尔·贝",
             "def": 0,
             "id": 211901,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F05%2F25%2F093450.93995760_1280X720X2.jpg&width=130&height=195&clipType=4",
+            "img": "http://img5.mtime.cn/mt/2017/06/15/110834.10533198_1280X720X2.jpg",
             "is3D": true,
             "isDMAX": true,
             "isFilter": false,
@@ -143,7 +196,7 @@
             "rd": "20170623",
             "rsC": 0,
             "sC": 1726,
-            "t": "神偷奶爸3",
+            "t": "变形金刚5：最后的骑士",
             "tCn": "变形金刚5：最后的骑士",
             "tEn": "Transformers: The Last Knight",
             "ua": -1,
@@ -180,7 +233,7 @@
             "dN": "卢正雨",
             "def": 0,
             "id": 236657,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F05%2F25%2F171344.67642434_1280X720X2.jpg&width=130&height=195&clipType=4",
+            "img": "http://img5.mtime.cn/mt/2017/06/14/120719.72285089_1280X720X2.jpg",
             "is3D": false,
             "isDMAX": false,
             "isFilter": false,
@@ -200,7 +253,7 @@
             "rd": "20170707",
             "rsC": 0,
             "sC": 1526,
-            "t": "青禾男高",
+            "t": "绝世高手",
             "tCn": "绝世高手",
             "tEn": "The One",
             "ua": -1,
@@ -225,7 +278,7 @@
             "dN": "张杨",
             "def": 0,
             "id": 228270,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F06%2F27%2F113720.70077857_1280X720X2.jpg&width=130&height=195&clipType=4",
+            "img": "http://img5.mtime.cn/mt/2017/05/19/103610.29135980_1280X720X2.jpg",
             "is3D": false,
             "isDMAX": false,
             "isFilter": false,
@@ -245,7 +298,7 @@
             "rd": "20170620",
             "rsC": 0,
             "sC": 1013,
-            "t": "京城八十一号2",
+            "t": "冈仁波齐",
             "tCn": "冈仁波齐",
             "tEn": "Paths of the Soul",
             "ua": -1,
@@ -270,7 +323,7 @@
             "dN": "蒋卓原",
             "def": 0,
             "id": 234923,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F06%2F15%2F110834.10533198_1280X720X2.jpg&width=130&height=195&clipType=4",
+            "img": "http://img5.mtime.cn/mt/2017/05/25/171344.67642434_1280X720X2.jpg",
             "is3D": false,
             "isDMAX": false,
             "isFilter": false,
@@ -285,12 +338,12 @@
             "p": [
                 "爱情动作喜剧"
             ],
-            "r": 6.9,
+            "r": -1,
             "rc": 0,
             "rd": "20170713",
             "rsC": 0,
             "sC": 449,
-            "t": "变形金刚5：最后的骑士",
+            "t": "青禾男高",
             "tCn": "青禾男高",
             "tEn": "Fist & Faith",
             "ua": -1,
@@ -315,7 +368,7 @@
             "dN": "尹鸿承",
             "def": 0,
             "id": 230633,
-            "img": "http://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2017%2F06%2F14%2F120719.72285089_1280X720X2.jpg&width=130&height=195&clipType=4",
+            "img": "http://img5.mtime.cn/mt/2017/06/22/103704.71288709_1280X720X2.jpg",
             "is3D": false,
             "isDMAX": false,
             "isFilter": false,
@@ -335,7 +388,7 @@
             "rd": "20170629",
             "rsC": 0,
             "sC": 419,
-            "t": "绝世高手",
+            "t": "逆时营救",
             "tCn": "逆时营救",
             "tEn": "Reset",
             "ua": -1,
@@ -2373,7 +2426,6 @@
             "tag": "", 
             "title": "哪些电影被打高分？", 
             "desc": "Mtime2017院线电影半年榜", 
-            "d":"2017-07-05 16:11:53",
             "img": "http://img5.mtime.cn/mg/2017/07/05/174559.31423009.jpg", 
             "img2": "", 
             "img3": "", 
@@ -2386,7 +2438,6 @@
             "tag": "", 
             "title": "我们的香港依然美丽！", 
             "desc": "弹指一挥二十年 香江影人话回归", 
-            "d":"2017-07-05 16:11:53",
             "img": "http://img5.mtime.cn/mg/2017/07/05/174824.45745446.jpg", 
             "img2": "", 
             "img3": "", 
@@ -2399,7 +2450,6 @@
             "tag": "", 
             "title": "《变形金刚5》主创专访", 
             "desc": "迈克尔贝：电影为观众而拍", 
-            "d":"2017-07-05 16:11:53",
             "img": "http://img5.mtime.cn/mg/2017/02/13/174516.24490783.jpg", 
             "img2": "", 
             "img3": "", 
@@ -4873,8 +4923,7 @@
         "address": "西城区西单北大街甲131号大悦城商场十层", 
         "baiduLatitude": 39.917507, 
         "baiduLongitude": 116.37897, 
-        "cinameName": "首都电影院（西单店）",
-        "cinameMoney":"￥45起",
+        "cinameName": "首都电影院（西单店）", 
         "cinemaId": 1815, 
         "couponActivityList": [
             {
@@ -4914,9 +4963,6 @@
         "baiduLongitude": 116.478516, 
         "cinameName": "北京万达国际影城CBD店", 
         "cinemaId": 1007, 
-        "cinameName": "北京万达国际影城CBD店",
-        "cinameMoney":"￥50起", 
-        "cinemaId": 1007, 
         "couponActivityList": [
             {
                 "desc": "看暑期大片拿百元壕礼，送完即止（7.7-7.16)", 
@@ -4954,7 +5000,6 @@
         "baiduLatitude": 40.005844, 
         "baiduLongitude": 116.40042, 
         "cinameName": "CGV星星影城（北京奥体店）", 
-        "cinameMoney":"￥55起",
         "cinemaId": 2618, 
         "couponActivityList": [
             {
@@ -4993,7 +5038,6 @@
         "baiduLatitude": 39.92149, 
         "baiduLongitude": 116.36694, 
         "cinameName": "首都影院金融街店", 
-        "cinameMoney":"￥60起",
         "cinemaId": 3194, 
         "couponActivityList": [
             {
@@ -5032,7 +5076,6 @@
         "baiduLatitude": 39.927555, 
         "baiduLongitude": 116.44598, 
         "cinameName": "北京博纳朝阳门旗舰店", 
-        "cinameMoney":"￥65起",
         "cinemaId": 2281, 
         "couponActivityList": [
             {
@@ -5071,7 +5114,6 @@
         "baiduLatitude": 39.97587, 
         "baiduLongitude": 116.49734, 
         "cinameName": "CGV星星影城（北京颐堤港店）", 
-        "cinameMoney":"￥67起",
         "cinemaId": 3091, 
         "couponActivityList": [
             {
@@ -5109,8 +5151,7 @@
         "address": "通州区新华西街58号万达广场一号楼5层", 
         "baiduLatitude": 39.912094, 
         "baiduLongitude": 116.64583, 
-        "cinameName": "北京万达通州店",
-        "cinameMoney":"￥40起", 
+        "cinameName": "北京万达通州店", 
         "cinemaId": 6387, 
         "couponActivityList": [
             {
@@ -5149,7 +5190,6 @@
         "baiduLatitude": 40.218002, 
         "baiduLongitude": 116.24633, 
         "cinameName": "首都电影院昌平店", 
-        "cinameMoney":"￥43起",
         "cinemaId": 4608, 
         "couponActivityList": [
             {
@@ -5188,7 +5228,6 @@
         "baiduLatitude": 39.90357, 
         "baiduLongitude": 116.42668, 
         "cinameName": "北京百老汇影城国瑞购物中心店", 
-        "cinameMoney":"￥48起",
         "cinemaId": 2271, 
         "couponActivityList": [
             {
@@ -5226,8 +5265,7 @@
         "address": "北京石景山区 石景山路乙18号万达广场3层", 
         "baiduLatitude": 39.911564, 
         "baiduLongitude": 116.23272, 
-        "cinameName": "北京万达国际影城石景山店",
-        "cinameMoney":"￥52起", 
+        "cinameName": "北京万达国际影城石景山店", 
         "cinemaId": 2148, 
         "couponActivityList": [
             {
@@ -5265,8 +5303,7 @@
         "address": "北京市朝阳区建国门外大街1号国贸商城区域三地下一层3B120", 
         "baiduLatitude": 39.91817, 
         "baiduLongitude": 116.466385, 
-        "cinameName": "北京百丽宫影城国贸店",
-        "cinameMoney":"￥56起", 
+        "cinameName": "北京百丽宫影城国贸店", 
         "cinemaId": 2929, 
         "couponActivityList": [
             {
@@ -5304,8 +5341,7 @@
         "address": "北京市王府井大街新东安广场6层", 
         "baiduLatitude": 39.92114, 
         "baiduLongitude": 116.41813, 
-        "cinameName": "北京百老汇影城apm购物中心店",
-        "cinameMoney":"￥62起", 
+        "cinameName": "北京百老汇影城apm购物中心店", 
         "cinemaId": 1004, 
         "couponActivityList": [
             {
@@ -5520,42 +5556,42 @@
         {
             "iconTitle": "模玩",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161133.99290860.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/?c1=25"
+            "url": "http://127.0.0.1/XiangMu/html/MallPlayMode.html"
         },
         {
             "iconTitle": "数码",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161141.82690725.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/?c1=8"
+            "url": "http://127.0.0.1/XiangMu/html/MallDigital.html"
         },
         {
             "iconTitle": "服饰",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161148.25620959.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/?c1=42"
+            "url": "http://127.0.0.1/XiangMu/html/MallClothes.html"
         },
         {
             "iconTitle": "家居",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161155.82939104.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/?c1=43"
+            "url": "http://127.0.0.1/XiangMu/html/MallHome.html"
         },
         {
             "iconTitle": "星战",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161224.10155577.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/?q=%E6%98%9F%E7%90%83%E5%A4%A7%E6%88%98"
+            "url": "http://127.0.0.13/XiangMu/html/MallStarWars.html"
         },
         {
             "iconTitle": "漫威",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161315.97010262.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/?q=%E6%BC%AB%E5%A8%81"
+            "url": "http://127.0.0.1/XiangMu/html/MallMarvel.html"
         },
         {
             "iconTitle": "蝙超",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161325.50615572.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/?q=%E8%9D%99%E8%B6%85"
+            "url": "http://127.0.0.1/XiangMu/html/MallBatman&Superman.html"
         },
         {
             "iconTitle": "全部",
             "image": "http://img5.mtime.cn/mg/2017/02/07/161342.70896250.jpg",
-            "url": "http://mall.wv.mtime.cn/#!/commerce/list/"
+            "url": "http://127.0.0.1/XiangMu/html/MallAll.html"
         }
     ],
     "scrollImg": [
@@ -7373,7 +7409,7 @@
             "topListNameCn": "好莱坞票房回报率最高的十大演员",
             "topListNameEn": "",
             "type": 2,
-            "summary": "“美队”克里斯·埃文斯蝉，位列“2016好莱坞票房回报率最高演员”排行榜NO.1，克里斯·帕拉特、斯嘉丽·约翰逊紧随其后，分列第二第三。"
+            "summary": "“美队”克里斯·埃文斯蝉位列“2016好莱坞票房回报率最高演员”排行榜NO.1，克里斯·帕拉特、斯嘉丽·约翰逊紧随其后，分列第二第三。"
         },
         {
             "id": 1466,
@@ -7401,7 +7437,7 @@
             "topListNameCn": "时光评分最高的20部伊朗电影",
             "topListNameEn": "",
             "type": 0,
-            "summary": "高分片单哪国强?伊朗电影有话讲，谈及儿童片的佳作非伊朗电影莫属,论及宗教与人生之反思,伊朗电影更加切身与写实,有笑也有泪。在宗教、民族与政治的夹缝中,伊朗电影生存艰难却力道十足。"
+            "summary": "高分片单哪国强?伊朗电影有话讲！谈及儿童片的佳作非伊朗电影莫属,论及宗教与人生之反思,伊朗电影更加切身与写实,有笑也有泪。在宗教、民族与政治的夹缝中,伊朗电影生存艰难却力道十足。"
         },
         {
             "id": 1404,
@@ -7471,14 +7507,14 @@
             "topListNameCn": "2015年日本《电影旬报》海外十佳影片",
             "topListNameEn": "",
             "type": 0,
-            "summary": "2015日本旬报海外佳片榜：，《疯狂的麦克斯4》,夺魁，《刺客聂隐娘》位列第五。"
+            "summary": "2015日本旬报海外佳片榜：《疯狂的麦克斯4》夺魁，《刺客聂隐娘》位列第五。"
         },
         {
             "id": 1340,
             "topListNameCn": "2015年日本《电影旬报》年度十佳影片",
             "topListNameEn": "",
             "type": 0,
-            "summary": "2015日本旬报大奖揭晓：，《恋人们》夺魁，《海街日记》位列第四。"
+            "summary": "2015日本旬报大奖揭晓：《恋人们》夺魁，《海街日记》位列第四。"
         }
     ],
     "totalCount": 164,
@@ -7496,7 +7532,7 @@
             "id": 246811,
             "image": "http://img5.mtime.cn/mt/2017/05/26/100241.71536270_1280X720X2.jpg",
             "rating": "-1.0",
-            "title": "《恶魔城》",
+            "title": "恶魔城",
             "titleEn": "Castlevania",
             "type": 1,
             "year": "2017"
@@ -7515,7 +7551,7 @@
             "id": 208175,
             "image": "http://img5.mtime.cn/mt/2017/05/24/165405.78569149_1280X720X2.jpg",
             "rating": "8.0",
-            "title": "《蜘蛛侠：英雄归来》",
+            "title": "蜘蛛侠：英雄归来",
             "titleEn": "Spider-Man: Homecoming",
             "type": 1,
             "year": "2017"
@@ -7534,7 +7570,7 @@
             "id": 226435,
             "image": "http://img5.mtime.cn/mt/2017/06/28/102059.84589245_1280X720X2.jpg",
             "rating": "-1.0",
-            "title": "《悟空传》",
+            "title": "悟空传",
             "titleEn": "Wu Kong",
             "type": 1,
             "year": "2017"
@@ -7553,7 +7589,7 @@
             "id": 225748,
             "image": "http://img5.mtime.cn/mt/2017/06/15/123140.23327224_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《明月几时有》",
+            "title": "明月几时有",
             "titleEn": "Our Time Will Come",
             "type": 1,
             "year": "2017"
@@ -7572,7 +7608,7 @@
             "id": 208828,
             "image": "http://img5.mtime.cn/mt/2017/05/25/093450.93995760_1280X720X2.jpg",
             "rating": "7.2",
-            "title": "《神偷奶爸3》",
+            "title": "神偷奶爸3",
             "titleEn": "Despicable Me 3",
             "type": 1,
             "year": "2017"
@@ -7591,7 +7627,7 @@
             "id": 219719,
             "image": "http://img31.mtime.cn/mt/2016/03/09/154322.24630161_1280X720X2.jpg",
             "rating": "6.8",
-            "title": "《星丘车站失物招领》",
+            "title": "星丘车站失物招领",
             "titleEn": "星が丘ワンダーランド",
             "type": 1,
             "year": "2016"
@@ -7610,7 +7646,7 @@
             "id": 208175,
             "image": "http://img5.mtime.cn/mt/2017/05/24/165405.78569149_1280X720X2.jpg",
             "rating": "8.0",
-            "title": "《蜘蛛侠：英雄归来》",
+            "title": "蜘蛛侠：英雄归来",
             "titleEn": "Spider-Man: Homecoming",
             "type": 1,
             "year": "2017"
@@ -7629,7 +7665,7 @@
             "id": 208828,
             "image": "http://img5.mtime.cn/mt/2017/05/25/093450.93995760_1280X720X2.jpg",
             "rating": "7.2",
-            "title": "《神偷奶爸3》",
+            "title": "神偷奶爸3",
             "titleEn": "Despicable Me 3",
             "type": 1,
             "year": "2017"
@@ -7648,7 +7684,7 @@
             "id": 225748,
             "image": "http://img5.mtime.cn/mt/2017/06/15/123140.23327224_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《明月几时有》",
+            "title": "明月几时有",
             "titleEn": "Our Time Will Come",
             "type": 1,
             "year": "2017"
@@ -7667,7 +7703,7 @@
             "id": 229173,
             "image": "http://img31.mtime.cn/mt/2016/05/06/162756.42449619_1280X720X2.jpg",
             "rating": "6.9",
-            "title": "《团地》",
+            "title": "团地",
             "titleEn": "団地",
             "type": 1,
             "year": "2016"
@@ -7686,7 +7722,7 @@
             "id": 236657,
             "image": "http://img5.mtime.cn/mt/2017/06/14/120719.72285089_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《绝世高手》",
+            "title": "绝世高手",
             "titleEn": "The One",
             "type": 1,
             "year": "2017"
@@ -7705,7 +7741,7 @@
             "id": 228270,
             "image": "http://img5.mtime.cn/mt/2017/05/19/103610.29135980_1280X720X2.jpg",
             "rating": "7.6",
-            "title": "《冈仁波齐》",
+            "title": "冈仁波齐",
             "titleEn": "Paths of the Soul",
             "type": 1,
             "year": "2015"
@@ -7724,7 +7760,7 @@
             "id": 237873,
             "image": "http://img5.mtime.cn/mt/2016/12/22/101956.78844670_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《相爱一天》",
+            "title": "相爱一天",
             "titleEn": "One Day",
             "type": 1,
             "year": "2016"
@@ -7743,7 +7779,7 @@
             "id": 225748,
             "image": "http://img5.mtime.cn/mt/2017/06/15/123140.23327224_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《明月几时有》",
+            "title": "明月几时有",
             "titleEn": "Our Time Will Come",
             "type": 1,
             "year": "2017"
@@ -7756,13 +7792,13 @@
         "commentCount": 10,
         "id": 8010819,
         "image": "",
-        "nickname": "《鲜有废客》",
+        "nickname": "鲜有废客",
         "rating": "6.0",
         "relatedObj": {
             "id": 224581,
             "image": "http://img5.mtime.cn/mt/2017/05/13/163157.32841919_1280X720X2.jpg",
             "rating": "7.4",
-            "title": "《玉子》",
+            "title": "玉子",
             "titleEn": "Okja",
             "type": 1,
             "year": "2017"
@@ -7781,7 +7817,7 @@
             "id": 236657,
             "image": "http://img5.mtime.cn/mt/2017/06/14/120719.72285089_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《绝世高手》",
+            "title": "绝世高手",
             "titleEn": "The One",
             "type": 1,
             "year": "2017"
@@ -7800,7 +7836,7 @@
             "id": 232458,
             "image": "http://img5.mtime.cn/mt/2017/06/19/154259.83085841_1280X720X2.jpg",
             "rating": "8.2",
-            "title": "《大军师司马懿之军师联盟》",
+            "title": "大军师司马懿之军师联盟",
             "titleEn": "The Advisors Alliance",
             "type": 1,
             "year": "2017"
@@ -7819,7 +7855,7 @@
             "id": 231974,
             "image": "http://img5.mtime.cn/mt/2017/01/22/190411.87263187_1280X720X2.jpg",
             "rating": "7.3",
-            "title": "《我是你的眼》",
+            "title": "我是你的眼",
             "titleEn": "Le coeur en braille",
             "type": 1,
             "year": "2016"
@@ -7838,7 +7874,7 @@
             "id": 229350,
             "image": "http://img31.mtime.cn/mt/2016/08/22/153326.93405452_1280X720X2.jpg",
             "rating": "7.8",
-            "title": "《战争天堂》",
+            "title": "战争天堂",
             "titleEn": "Ray",
             "type": 1,
             "year": "2016"
@@ -7857,7 +7893,7 @@
             "id": 225748,
             "image": "http://img5.mtime.cn/mt/2017/06/15/123140.23327224_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《明月几时有》",
+            "title": "明月几时有",
             "titleEn": "Our Time Will Come",
             "type": 1,
             "year": "2017"
@@ -7876,7 +7912,7 @@
             "id": 228270,
             "image": "http://img5.mtime.cn/mt/2017/05/19/103610.29135980_1280X720X2.jpg",
             "rating": "7.6",
-            "title": "《冈仁波齐》",
+            "title": "冈仁波齐",
             "titleEn": "Paths of the Soul",
             "type": 1,
             "year": "2015"
@@ -7895,7 +7931,7 @@
             "id": 232458,
             "image": "http://img5.mtime.cn/mt/2017/06/19/154259.83085841_1280X720X2.jpg",
             "rating": "8.2",
-            "title": "《大军师司马懿之军师联盟》",
+            "title": "大军师司马懿之军师联盟",
             "titleEn": "The Advisors Alliance",
             "type": 1,
             "year": "2017"
@@ -7914,7 +7950,7 @@
             "id": 225748,
             "image": "http://img5.mtime.cn/mt/2017/06/15/123140.23327224_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《明月几时有》",
+            "title": "明月几时有",
             "titleEn": "Our Time Will Come",
             "type": 1,
             "year": "2017"
@@ -7933,7 +7969,7 @@
             "id": 236831,
             "image": "http://img5.mtime.cn/mt/2017/06/13/102515.11465708_1280X720X2.jpg",
             "rating": "6.9",
-            "title": "《与君相恋100次》",
+            "title": "与君相恋100次",
             "titleEn": "The 100th Love with You",
             "type": 1,
             "year": "2017"
@@ -7952,7 +7988,7 @@
             "id": 225821,
             "image": "http://img5.mtime.cn/mt/2017/06/14/102756.92094848_1280X720X2.jpg",
             "rating": "6.0",
-            "title": "《反转人生》",
+            "title": "反转人生",
             "titleEn": "Wished",
             "type": 1,
             "year": "2017"
@@ -7971,7 +8007,7 @@
             "id": 174129,
             "image": "http://img5.mtime.cn/mt/2016/11/20/150112.14730491_1280X720X2.jpg",
             "rating": "6.9",
-            "title": "《忽然七日》",
+            "title": "忽然七日",
             "titleEn": "Before I Fall",
             "type": 1,
             "year": "2017"
@@ -7990,7 +8026,7 @@
             "id": 211901,
             "image": "http://img5.mtime.cn/mt/2017/06/15/110834.10533198_1280X720X2.jpg",
             "rating": "6.0",
-            "title": "《变形金刚5：最后的骑士》",
+            "title": "变形金刚5：最后的骑士",
             "titleEn": "Transformers: The Last Knight",
             "type": 1,
             "year": "2017"
@@ -8009,7 +8045,7 @@
             "id": 230741,
             "image": "http://img5.mtime.cn/mt/2017/06/27/094216.51502918_1280X720X2.jpg",
             "rating": "-1.0",
-            "title": "《敦刻尔克》",
+            "title": "敦刻尔克",
             "titleEn": "Dunkirk",
             "type": 1,
             "year": "2017"
@@ -8028,7 +8064,7 @@
             "id": 225748,
             "image": "http://img5.mtime.cn/mt/2017/06/15/123140.23327224_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《明月几时有》",
+            "title": "明月几时有",
             "titleEn": "Our Time Will Come",
             "type": 1,
             "year": "2017"
@@ -8047,7 +8083,7 @@
             "id": 51115,
             "image": "http://img31.mtime.cn/mt/2012/08/23/014515.50263320_1280X720X2.jpg",
             "rating": "8.0",
-            "title": "《林肯》",
+            "title": "林肯",
             "titleEn": "Lincoln",
             "type": 1,
             "year": "2012"
@@ -8066,7 +8102,7 @@
             "id": 236830,
             "image": "http://img5.mtime.cn/mt/2016/09/26/161832.97614867_1280X720X2.jpg",
             "rating": "6.7",
-            "title": "《明日的我与昨日的你约会》",
+            "title": "明日的我与昨日的你约会",
             "titleEn": "ぼくは明日、昨日のきみとデートする",
             "type": 1,
             "year": "2016"
@@ -8085,7 +8121,7 @@
             "id": 208175,
             "image": "http://img5.mtime.cn/mt/2017/05/24/165405.78569149_1280X720X2.jpg",
             "rating": "8.0",
-            "title": "《蜘蛛侠：英雄归来》",
+            "title": "蜘蛛侠：英雄归来",
             "titleEn": "Spider-Man: Homecoming",
             "type": 1,
             "year": "2017"
@@ -8104,7 +8140,7 @@
             "id": 200612,
             "image": "http://img5.mtime.cn/mt/2017/06/13/151710.71675009_1280X720X2.jpg",
             "rating": "7.5",
-            "title": "《异形：契约》",
+            "title": "异形：契约",
             "titleEn": "Alien: Covenant",
             "type": 1,
             "year": "2017"
@@ -8123,7 +8159,7 @@
             "id": 211901,
             "image": "http://img5.mtime.cn/mt/2017/06/15/110834.10533198_1280X720X2.jpg",
             "rating": "6.0",
-            "title": "《变形金刚5：最后的骑士》",
+            "title": "变形金刚5：最后的骑士",
             "titleEn": "Transformers: The Last Knight",
             "type": 1,
             "year": "2017"
@@ -8142,7 +8178,7 @@
             "id": 228587,
             "image": "http://img5.mtime.cn/mt/2016/11/29/110654.23853104_1280X720X2.jpg",
             "rating": "8.0",
-            "title": "《隐藏人物》",
+            "title": "隐藏人物",
             "titleEn": "Hidden Figures",
             "type": 1,
             "year": "2016"
@@ -8161,7 +8197,7 @@
             "id": 211901,
             "image": "http://img5.mtime.cn/mt/2017/06/15/110834.10533198_1280X720X2.jpg",
             "rating": "6.0",
-            "title": "《变形金刚5：最后的骑士》",
+            "title": "变形金刚5：最后的骑士",
             "titleEn": "Transformers: The Last Knight",
             "type": 1,
             "year": "2017"
@@ -8180,7 +8216,7 @@
             "id": 236208,
             "image": "http://img5.mtime.cn/mt/2016/10/09/162542.59999752_1280X720X2.jpg",
             "rating": "-1.0",
-            "title": "《奇迹，那天如此重要》",
+            "title": "奇迹，那天如此重要",
             "titleEn": "キセキ―あの日のソビト―",
             "type": 1,
             "year": "2017"
@@ -8199,7 +8235,7 @@
             "id": 240087,
             "image": "http://img5.mtime.cn/mt/2017/06/28/163508.90323223_1280X720X2.jpg",
             "rating": "6.3",
-            "title": "《救僵清道夫》",
+            "title": "救僵清道夫",
             "titleEn": "Vampire Cleanup Department",
             "type": 1,
             "year": "2017"
@@ -8218,7 +8254,7 @@
             "id": 228270,
             "image": "http://img5.mtime.cn/mt/2017/05/19/103610.29135980_1280X720X2.jpg",
             "rating": "7.6",
-            "title": "《冈仁波齐》",
+            "title": "冈仁波齐",
             "titleEn": "Paths of the Soul",
             "type": 1,
             "year": "2015"
@@ -8237,7 +8273,7 @@
             "id": 230201,
             "image": "http://img5.mtime.cn/mt/2016/10/03/124246.29265585_1280X720X2.jpg",
             "rating": "7.6",
-            "title": "《帕特森》",
+            "title": "帕特森",
             "titleEn": "Paterson",
             "type": 1,
             "year": "2016"
@@ -8256,7 +8292,7 @@
             "id": 211901,
             "image": "http://img5.mtime.cn/mt/2017/06/15/110834.10533198_1280X720X2.jpg",
             "rating": "6.0",
-            "title": "《变形金刚5：最后的骑士》",
+            "title": "变形金刚5：最后的骑士",
             "titleEn": "Transformers: The Last Knight",
             "type": 1,
             "year": "2017"
@@ -8275,7 +8311,7 @@
             "id": 238197,
             "image": "http://img5.mtime.cn/mt/2017/05/27/093756.56918980_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《生化危机：复仇》",
+            "title": "生化危机：复仇",
             "titleEn": "Biohazard: Vendetta",
             "type": 1,
             "year": "2017"
@@ -8294,7 +8330,7 @@
             "id": 200612,
             "image": "http://img5.mtime.cn/mt/2017/06/13/151710.71675009_1280X720X2.jpg",
             "rating": "7.5",
-            "title": "《异形：契约》",
+            "title": "异形：契约",
             "titleEn": "Alien: Covenant",
             "type": 1,
             "year": "2017"
@@ -8313,7 +8349,7 @@
             "id": 221259,
             "image": "http://img5.mtime.cn/mt/2016/10/13/110544.76540613_1280X720X2.jpg",
             "rating": "7.1",
-            "title": "《悍女》",
+            "title": "悍女",
             "titleEn": "Brimstone",
             "type": 1,
             "year": "2016"
@@ -8332,7 +8368,7 @@
             "id": 200612,
             "image": "http://img5.mtime.cn/mt/2017/06/13/151710.71675009_1280X720X2.jpg",
             "rating": "7.5",
-            "title": "《异形：契约》",
+            "title": "异形：契约",
             "titleEn": "Alien: Covenant",
             "type": 1,
             "year": "2017"
@@ -8351,7 +8387,7 @@
             "id": 228635,
             "image": "http://img5.mtime.cn/mt/2017/06/13/113303.52445385_1280X720X2.jpg",
             "rating": "4.1",
-            "title": "《深夜食堂》",
+            "title": "深夜食堂",
             "titleEn": "Midnight Food Store",
             "type": 1,
             "year": "2017"
@@ -8370,7 +8406,7 @@
             "id": 227482,
             "image": "http://img5.mtime.cn/mt/2016/11/02/093828.48282968_1280X720X2.jpg",
             "rating": "7.3",
-            "title": "《天才少女》",
+            "title": "天才少女",
             "titleEn": "Gifted",
             "type": 1,
             "year": "2017"
@@ -8389,7 +8425,7 @@
             "id": 235888,
             "image": "http://img5.mtime.cn/mt/2017/04/14/103032.24464285_1280X720X2.jpg",
             "rating": "7.8",
-            "title": "《杰出公民》",
+            "title": "杰出公民",
             "titleEn": "El ciudadano ilustre",
             "type": 1,
             "year": "2016"
@@ -8408,7 +8444,7 @@
             "id": 200612,
             "image": "http://img5.mtime.cn/mt/2017/06/13/151710.71675009_1280X720X2.jpg",
             "rating": "7.5",
-            "title": "《异形：契约》",
+            "title": "异形：契约",
             "titleEn": "Alien: Covenant",
             "type": 1,
             "year": "2017"
@@ -8427,7 +8463,7 @@
             "id": 229178,
             "image": "http://img5.mtime.cn/mt/2017/06/03/231907.43229032_1280X720X2.jpg",
             "rating": "7.0",
-            "title": "《生吃》",
+            "title": "生吃",
             "titleEn": "Raw",
             "type": 1,
             "year": "2016"
@@ -8446,7 +8482,7 @@
             "id": 40205,
             "image": "http://img5.mtime.cn/mt/2017/06/07/165220.57640158_1280X720X2.jpg",
             "rating": "7.5",
-            "title": "《神奇女侠》",
+            "title": "神奇女侠",
             "titleEn": "Wonder Woman",
             "type": 1,
             "year": "2017"

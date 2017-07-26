@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索</title>
+	<link rel="stylesheet" href="../css/3-particulars.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/3-particulars.js"></script>
+	<style>
+		#top{
+			width: 40px;
+			height: 40px;
+			background-image: url(../images/4Abacktop.png);
+			background-size:40px 40px;
+			position: fixed;
+			top:600px;
+			left:350px;
+			display: none
+
+		}
+	</style>
+</head>
+<body>
+	<div class="body">		
+		<div class="image">
+			<header class="head">
+				<a href=""><p class="arrows"></p></a>
+				<p class="collect">
+					<span class="collection"></span>
+					<span class="share"></span>
+				</p>
+			</header>
+			<p class="xian"></p>
+		</div>
+		
+		<article class="table">
+			<div class="cinema"></div>
+			<div class="cinema_text"></div>
+		</article>
+		<div class="cin">
+			<p class="p7"></p>
+			<p class="p8">查影讯/购票</p>
+			<div ></div>
+			<p class="p9"></p>
+			<p class="p10"></p>
+			<div></div>
+			<div></div>
+		</div>
+		<article class="credits">
+			<h2 class="h2"></h2>
+			<div class="actor">
+				<p class="direct">导演</p>
+
+				<p class="star">主要演员</p>
+				<p class=""></p>
+			</div>
+		</article>	
+	</div>
+
+	
+
+
+
+	<div id = "top"></div>
+    <script>
+     	$(document).scroll(function(){
+     		var top = $(window).scrollTop();
+     		var top_one = $("#top");
+     		if(top>600){
+     			top_one.css("display","block");
+     		}else{
+     			top_one.css("display","none");
+     		}
+     	})
+    </script>
+
+</body>
+</html>

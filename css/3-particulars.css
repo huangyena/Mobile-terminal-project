@@ -1,0 +1,308 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family:"微软雅黑";
+}
+
+a{
+	text-decoration: none;
+	color:#333;
+}
+ul,ol{
+	list-style: none;
+}
+input,button{
+	border: none;
+	outline: none;
+	-webkit-appearance:none;
+}
+.body{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+.image{
+	width: 100%;
+	height: 170px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.image>.head{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.image>.head>a>p{
+	margin-left:  10px;
+
+}
+.image>.head>p{
+	margin: 10px;
+
+}
+.image>.head>a>.arrows{
+	width: 30px; 
+	height: 30px;
+	background-image: url(../images/3-back.png);
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+.image>.head>.collect{
+	width: 80px;
+	height: 30px; 
+	display: flex;
+}
+.image>.head>.collect>span{
+	width: 30px;
+	height: 30px;
+}
+.image>.head>.collect>.collection{
+	background-image: url(../images/3-collection.png);
+	background-repeat: no-repeat;
+	margin-right: 20px; 
+	background-size: 30px 30px;
+}
+.image>.head>.collect>.share{
+	background-image: url(../images/3-share.png);
+	background-size: 30px 30px;
+}
+
+.image>.xian{
+	width: 100%;
+	height: 30px;  
+	background-image: url(../images/3-xian.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-self: flex-end; 
+}
+
+/*获取父子雄兵系列*/
+.table{
+	width: 100%;
+	margin-top: -90px;
+	display: flex;
+}
+
+.table>.cinema{
+	width:35%;
+	border:2px solid rgb(255,255,255);
+	margin-left: 15px;
+	display: flex;
+	justify-content: space-around;
+	/*min-width: 320px;*/
+}
+.table>.cinema>a>img{
+	width: 100%;
+	/*min-width: 320px;*/
+}
+
+.table>.cinema_text{
+	width: 55%;
+	min-height: 100%;
+
+}
+.table>.cinema_text>p{
+	width: 50%;
+	color: rgb(255,255,255);
+	margin-left: 10px; 
+
+}
+.table>.cinema_text>.p1{
+	width: 50%;
+	line-height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	min-width: 170px;
+	
+}
+.table>.cinema_text>.p2{
+	width: 50%;
+	min-width: 190px;
+
+}
+.table>.cinema_text>div>p{
+	width: 50%;
+	margin-left: 10px;
+	margin-top: 5px; 
+	font-size: 15px;
+	font-weight: bold;
+	min-width: 150px;
+}
+
+.table>.cinema_text>div{
+	display: flex;
+	flex-wrap: wrap;
+/*	min-width: 320px;*/
+	min-width: 150px;
+}
+.table>.cinema_text>div>.p3{
+	margin-top: 10px; 
+	min-width: 150px;
+}
+.table>.cinema_text>div>.span3{
+	width: 20%;
+	min-width: 150px;
+}
+
+
+.table>.cinema_text>div>.p6{
+	width: 100%;
+}
+.table>.cinema_text>div>.p5{
+	min-width: 152px;
+}
+.table>.cinema_text>div>.p6>span{
+	width: 40%;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-left: 13px;
+	border-radius:20px;
+
+}
+.table>.cinema_text>div>.p6>.span5{
+	border:1px solid rgb(153,153,153);
+	color: rgb(119,119,119);
+}
+
+.table>.cinema_text>div>.p6>.span6{
+	border:1px solid rgb(101,156,13);
+	color: rgb(101,156,13);
+}
+
+.table>.cinema_text>div>.div1{
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	text-align: center;
+	align-items: center;
+	line-height: 35px;
+	color: rgb(255,255,255);
+	background-color: rgb(101,157,14);
+	font-weight: bold;
+}
+.cin{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.cin>p{
+	width: 80%;
+
+	text-align: center;
+
+	line-height: 40px;
+}
+.cin>.p7{
+	font-size: 18px;	
+	min-width:350px;
+	height: 40px;
+	color: rgb(255,134,0);	
+}
+.cin>.p8{
+	border-radius: 20px;
+	min-width:300px;	
+	height: 40px;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	background-color: rgb(255,134,0);
+}
+.cin>.p9{
+	width: 100%;
+	max-width:300px; 
+	font-size: 18px;
+}
+.cin>div{
+	width: 100%;
+	height: 20px;
+	margin-top:10px;
+	background-color: rgb(246,246,246);
+}
+.h2{
+	width: 90%;
+	border:1px solid red;
+	margin: 20px;
+	
+}
+.h2>a{
+	width: 100%;
+	border:5px solid red;
+	display: flex;
+	justify-content:space-between;
+}
+
+.actor{
+	width: 90%;
+	height: 350px;
+	border:1px solid red;
+	margin-left: 15px; 
+	display: flex;
+	justify-content: space-between;
+
+}
+.actor>p{
+	width: 30%;
+	height: 100%;
+	border:1px solid red;
+
+}
+.actor>.direct>img{
+	width: 100%;
+	margin-top: 5px;
+}
+.actor>.direct>div{
+	width: 100%;
+	text-align: center;
+}
+.actor>.star>img{
+	margin-top: 5px;
+	width: 100%;
+	height: 35%;
+}
+.actor>.star>div{
+	width: 100%;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
