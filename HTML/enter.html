@@ -23,7 +23,7 @@
 			<div class="bor_top"></div>
 			<img src="../images/lock.png" alt="" class="lock">&nbsp;<input type="password" placeholder="密码" class= "pwd" name="password">
 			<span onclick="displaypas()">显示密码</span>
-			<input type="submit" value = "登录" id = "btn" oninput="btn()">
+			<input type="submit" value = "登录" id = "btn" >
 		</form>
 		
 		<div id = 'regbtn'>
@@ -74,7 +74,7 @@
 			submitHandler:function(){
 				var data = new FormData($('form')[0]);
 				$.ajax({
-					url:"http://192.168.1.250/aja/login.php",
+					url:"../data/login.php",
 					data:data,
 					type:"post",
 					processData:false,
@@ -85,10 +85,8 @@
 						console.log(obj);
 						var msg = obj.msg;
 						console.log(msg);
-						var tel = $(".text");
-						var pwd = $(".pwd");
-						alert(msg)
-
+						alert(msg);
+						console.log(msg)
 						
 					}
 				})
