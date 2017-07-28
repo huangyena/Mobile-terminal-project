@@ -123,7 +123,7 @@ ul,ol{
 	background-repeat: no-repeat;
 }
 .video_font{
-	width: 100%;
+	width: 73%;
 	position: absolute;
 	top:84%;
 	left:23%;
@@ -331,4 +331,16 @@ ul,ol{
 	color: rgb(205,205,205);
 	font-size: 14px;
 	margin-bottom: -20px;
+}
+#top{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/4Abacktop.png);
+	background-size:40px 40px;
+	position: fixed;
+	top:600px;
+	left:350px;
+	display: none
+
 }

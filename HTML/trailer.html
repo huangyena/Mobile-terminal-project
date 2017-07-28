@@ -93,6 +93,7 @@
 			</div>
 			<div class="copy">Copyright 2006-2017 Mtime.com Inc.All rights reserved</div>
 		</div>
+		<a href="#" id= "top"></a>
 	</div>
 	<script>
 		var video_play = $("#play")[0];
@@ -100,23 +101,36 @@
 			$("#play").css("display","block");
 			$(".play_shadow").css("display","block");
 			video_play.play();
+			$("html,body").css({"height":"100%","overflow":"hidden"});
 		}
 		function err(){
 			$("#play").css("display","none");
 			$(".play_shadow").css("display","none");
 			video_play.pause();
+			$("html,body").css({"height":"","overflow":""});
 		}
 		function fun(){
 			// $(".play_shadow").css("display","block");
 			$(".bor_shadow").css("display","block");
 			$(".bor_white").css("display","block");
+			$("html,body").css({"height":"100%","overflow":"hidden"});
 		
 		}
 		function fun1(){
 			$(".bor_shadow").css("display","none");
 			$(".bor_white").css("display","none");
-			
+			$("html,body").css({"height":"","overflow":""});
+		
 		}
+		$(document).scroll(function(){
+     		var top = $(window).scrollTop();
+     		var top_one = $("#top");
+     		if(top>600){
+     			top_one.css("display","block");
+     		}else{
+     			top_one.css("display","none");
+     		}
+     	})
 	</script>
 </body>
 </html>

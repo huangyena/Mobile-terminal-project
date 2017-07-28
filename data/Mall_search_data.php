@@ -29,16 +29,16 @@
 		$str = file_get_contents('http://m.mtime.cn/Service/callback.mi/ECommerce/SearchGoods.api?keyword=&pageIndex=1&sf=0&sm=2&topicId=0&movieId=0&roleId=0&categoryId1=0&categoryId2=0&brandId='.$brandId.'&fmin=0&fmax=0&salefid=0&cd=0&t='.$showtime);
 	}elseif ($type=="productDetail") {//商品详情
 		$goodID = $_REQUEST['goodID'];//商品id
-		$str = file_get_contents("http://m.mtime.cn/Service/callback-mall.mi/product/detail.api?goodsId=".$goodsId."&locationId=290&t=".$showtime);
+		$str = file_get_contents("http://m.mtime.cn/Service/callback-mall.mi/product/detail.api?goodsId=".$goodID."&locationId=290&t=".$showtime);
 	}elseif ($type=="productImgs") {//商品详情中的图文
 		$goodID = $_REQUEST['goodID'];//商品id
-		$str = file_get_contents("http://m.mtime.cn/Service/callback.mi/ECommerce/GoodsImageTextInfo.api?goodsId=".$goodsId."&pageIndex=1&t=".$showtime);
+		$str = file_get_contents("http://m.mtime.cn/Service/callback.mi/ECommerce/GoodsImageTextInfo.api?goodsId=".$goodID."&pageIndex=1&t=".$showtime);
 	}elseif ($type=="recommend") {//商品详情中推荐的其他商品
 		$goodID = $_REQUEST['goodID'];//商品id
-		$str = file_get_contents("http://m.mtime.cn/Service/callback.mi/ECommerce/RecommendProducts.api?goodsId=".$goodsId."&pageIndex=1&t=".$showtime);
+		$str = file_get_contents("http://m.mtime.cn/Service/callback.mi/ECommerce/RecommendProducts.api?goodsId=".$goodID."&pageIndex=1&t=".$showtime);
 	}elseif ($type == 'goodsReviews') {//评论晒单
 		$goodID = $_REQUEST['goodID'];//商品id
-		$str = file_get_contents("http://m.mtime.cn/Service/callback.mi/ECommerce/GoodsReviews.api?goodsId=".$goodsId."&pageIndex=1&t=".$showtime);
+		$str = file_get_contents("http://m.mtime.cn/Service/callback.mi/ECommerce/GoodsReviews.api?goodsId=".$goodID."&pageIndex=1&t=".$showtime);
 	}
 	echo "$str";
  ?>
