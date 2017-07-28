@@ -146,7 +146,7 @@
 					var bor = $("<div class='bor'></div>");
 					outBox.append(bor);
 					$(".receive").append(outBox);
-					}console.log(array);
+					}
 				}
 			})
 				}
@@ -232,6 +232,7 @@
 				var obj = JSON.parse(data);
 			for(var i = 0; i < array.length; i++){
 				if (array[i].cinameName.indexOf(keyword) != -1) {
+					console.log(array[i].cinameName.indexOf(keyword));
 					var outBox = $("<a href='introduce.html?mid="+obj.data[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
 					li.html(obj.data[i].cinameName);
