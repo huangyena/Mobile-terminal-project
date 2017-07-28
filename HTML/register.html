@@ -19,7 +19,7 @@
 		</div>
 		<form id = "form">
 		用 户 名：<input type="text" name = "name" placeholder="请输入手机号">
-		<span id = "span" onclick="fun(this)">获取验证码</span>
+		<input type = "button" id = "span" value = "获取验证码">
 		<br>
 
 		<div class="bot_top"></div>
@@ -70,32 +70,25 @@
 	</div>
 	<script>
 		var time;
-		function fun(ele){
-			if(ele.value == "获取验证码" || ele.value == "重新获取验证码"){
-				time = setInterval(fun1,10);
+		$("#span").click(function(){
+			var text = $(this).val();
+			if(text == "获取验证码" || text == "重新获取验证码"){
+				time = setInterval(fun1,1000);
 				$("#span").attr("disabled","");
-				console.log($("#span"));
 			}
 			console.log("后台返回信息");
-			console.log($("#span"));//jquery
-			console.log($("#span")[0]);//dom
-		}
-		console.log("===========");
+		})
 		var num = 60;
 		function fun1(){
-			var span = $("#span");
-			console.log(span);
-			console.log("++++++++");
 			if(num==0){
 				clearInterval(time);
-				$("#span")[0].value="重新获取验证码";
+				$("#span").val("重新获取验证码");
 				num=60;
-				$("#span").removeAttribute("disabled");
+				$("#span").removeAttr("disabled");
 			}else{
 				num--;
-				$("#span")[0].value = "重新发送（"+num+"s）";
+				$("#span").val("重新发送（"+num+"s）");
 			}
-			console.log("+++++++=");
 		}
 
 
