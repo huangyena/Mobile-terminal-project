@@ -32,16 +32,45 @@
 	<div class="body">		
 		<div class="image">
 			<header class="head">
-				<a href=""><p class="arrows"></p></a>
+				<a href="" onclick="window.history.back(-1)"><p class="arrows"><img src="../images/3-jianjiaozuo.png" alt=""></p></a>
 				<p class="collect">
-					<span class="collection"></span>
-					<span class="share"></span>
+					<span class="collection" onclick="fun()"></span>
+					<span class="share" onclick="fun2()"></span>
 				</p>
 			</header>
 			<p class="xian"></p>
 		</div>
+
+
+		<div class="bor_shadow"  style="position: absolute;top:0px;left:0;"></div>
+			<div class="bor_white"  >
+				<div class="bor_span">
+					<span class="bor_share">分享</span>
+					<img src="../images/2-close.png" alt="" class="bor_err" onclick="fun1()">
+				</div>
+				
+				<div class="bor_border"></div>
+
+				<div class="bor_img">
+					<a href="microblog.html">
+						<img src="../images/share06.png" alt="">
+						<span>新浪微博</span>
+					</a>
+					<a href="space.html">
+						<img src="../images/share09.png" alt="">
+						<span>QQ空间</span>
+					</a>
+					<a href="enter.html">
+						<img src="../images/share07.png" alt="">
+						<span>时光网</span>
+					</a>
+				</div>
+			</div>
+		</div>
 		
-		<article class="table">
+		
+		
+			<article class="table">
 			<div class="cinema"></div>
 			<div class="cinema_text"></div>
 		</article>
@@ -54,22 +83,97 @@
 			<div></div>
 			<div></div>
 		</div>
+		<div id = "hide">
 		<article class="credits">
 			<h2 class="h2"></h2>
 			<div class="actor">
 				<p class="direct">导演</p>
-
 				<p class="star">主要演员</p>
-				<p class=""></p>
+				<p class="star1"></p>	
 			</div>
 		</article>	
+		<div class="ban"></div>
+		<article class="credits1">
+			<h2 class="h2_1"></h2>
+			<ul class="ul"></ul>
+		</article>
+		<div class="ban1"></div>
+
+		<article class="credits2">
+			<h2 class="h2_2"></h2>
+			<h2 class="h2_3"></h2>
+			<div class="hh1"></div>
+		</article>
+		<h2 class="duanping"></h2>
+		<ul class="ul1">
+
+
+		</ul>
+
+		<footer class="footer">
+			<nav class="footer_nav">
+				<ul>
+					<li>
+						<a href="index.html">
+							<span>首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="shop.html">
+							<span>购票</span>
+						</a>
+					</li>
+					<li>
+						<a href="shoppingMall.html">
+							<span>商城</span>
+						</a>
+					</li>
+					<li>
+						<a href="find.html">
+							<span>发现</span>
+						</a>
+					</li>
+					<li>
+						<a href="enter.html">
+							<span>我的</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footlink">
+				<ul>
+					<li><a href="index.html">PC版</a></li>
+					<li>丨</li>
+					<li><a href="download.html">客户端下载</a></li>
+					<li>丨</li>
+					<li><a href="feedback.html">意见反馈</a></li>
+					<li>丨</li>
+					<li><a href="help_center.html">帮助中心</a></li>
+				</ul>
+			</div>
+		
+				
+			<div class="copy">
+				<p class="copy_img"><img src="../images/3-fot_logo.jpg" alt=""></p>
+				<p class="copy_copor">
+					<span>2017-7-11 德州科技职业学院 15信息1班于存帅制作</span>
+
+				</p>
+			</div>
+		</footer>
+		
+		</div>
+
+		
+
+		
 	</div>
 
 	
 
 
 
-	<div id = "top"></div>
+	<a href = "#" id = "top"></div>
     <script>
      	$(document).scroll(function(){
      		var top = $(window).scrollTop();
@@ -79,8 +183,23 @@
      		}else{
      			top_one.css("display","none");
      		}
-     	})
+     	});
+     	function fun2(){
+			$(".bor_shadow").css("display","block");
+			$(".bor_white").css("display","block");
+			// $("html,body").css({"height":"100%","overflow":"hidden"});
+			$("#hide").css("display","none");
+
+		}
+		function fun1(){
+			$(".bor_shadow").css("display","none");
+			$(".bor_white").css("display","none");
+			// $("html,body").css({"height":"","overflow":""});
+			$("#hide").css("display","block");
+		}
+
     </script>
+
 
 </body>
 </html>
