@@ -4,24 +4,26 @@ $.ajax({
 		/*console.log(list);*/
 		var obj = JSON.parse(list);
 		
-		/*console.log(obj);*/
+		console.log(obj);
 	/*s*/
+		// console.log(obj.)
 		for (var i = 0;i<4;i++){
 			var li = $("<img class= 'img'>");
 			var imgUrl = "http://imgproxy.mtime.cn/get.ashx?uri="+encodeURIComponent(obj.ms[i].img)+"&width=130&height=195&clipType=4"
 
 			li.attr("src",imgUrl);   //图
 /*			console.log(li);
-*/			var aa = $("<a href='' class= 'lijie'></a>");
-			var em = $("<p>"+obj.ms[i].r+"</p>");
+*/			var aa = $("<a href='' onclick='window.history.back(-1)' class= 'lijie'></a>");
+			var em = $("<p style = 'margin-left:7%;margin-top:5px'>"+obj.ms[i].r+"</p>");
 
 
 			var fontDiv = $("<div class = 'fontDiv'></div>");//字
 			fontDiv.html(obj.ms[i].t);
 			/*console.log(fontDiv);*/
 			aa.append(li);
-			aa.append(fontDiv);
+			
 			aa.append(li);
+			aa.append(fontDiv);
 			aa.append(em);
 			$(".a0").append(aa);
 		}
@@ -31,9 +33,9 @@ $.ajax({
 
 			li.attr("src",imgUrl);
 			/*console.log(li);*/
-			var aa = $("<a href='' class= 'lijie'></a>");
+			var aa = $("<a href=href='3-particular.html?movieId="+obj.ms[i].id+"' class= 'lijie'></a>");
 			var fontDiv = $("<div class = 'fontDiv'></div>");
-			var em = $("<p>"+obj.ms[i].r+"</p>");
+			var em = $("<p style = 'margin-left:7%;margin-top:5px'>"+obj.ms[i].r+"</p>");
 			fontDiv.html(obj.ms[i].t);
 			/*console.log(fontDiv);*/
 			aa.append(li);

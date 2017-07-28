@@ -3,11 +3,12 @@ $.ajax({
 	success:function(a){
 		var obj = JSON.parse(a);
 		console.log(obj);
-
+		console.log(obj.ms[0].id)
 		for ( i = 0 ; i< obj.ms.length;  i++) {
+			console.log(obj.ms[i].id)
 			var li = $("<li class='li'></li>");
 			var div = $("<div class='div1'></div>");
-			var a = $("<a href=''></a>");
+			var a = $("<a href='3-particulars.html?movieId="+obj.ms[i].id+"' id = 'aaaaa'></a>");
 			var div1 = $("<div class='div2'></div>");
 
 			var p = $("<p class='p'></p>");
@@ -66,7 +67,9 @@ $.ajax({
 
 			var span5 = $("<span class='span5'></span>");
 			var span6 = $("<span class='span6'></span>");
-			var a1 = $("<a href=''></a>");
+
+			var a1 = $("<a href='shop.html' class=''></a>");
+			console.log(a1);
 			var span7 = $("<span>"+"购票"+"</span>");
 
 			span5.html(obj.ms[i].cC+"家影院上映");

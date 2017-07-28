@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>意见反馈</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="../css/feedback.css">
+</head>
+<body>
+	<div class="title">
+		<a href="index.html" class="img_back">&nbsp;&nbsp;<img src="../images/2-left.png" class="back" alt=""></a>
+		<span class="feed">意见反馈</span>
+	</div>
+	<div class="division"></div>
+	<form class="tickling">
+	<input type="text" placeholder="在此输入您的反馈，您的意见对我们非常重要" class="ticklingtwo">
+	<div class="ticklingthree"></div>
+	<input type="text" placeholder="请输入您的手机号码，方便我们回复您" class="ticklingone" pattern="^1[34578]\d{9}$" id="iPhone">
+	<div class="submit_feedback">
+		<input type="submit" class="submit_feedbackone" onclick="fun()">
+	</div>
+	<a href="#" id = "top"></a>
+		<div class="border-footer"></div>
+		<ul class = "nav-footer">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="shop.html">购票</a></li>
+			<li><a href="shoppingMall.html">商城</a></li>
+			<li><a href="find.html">发现</a></li>
+			<li><a href="enter.html">我的</a></li>
+		</ul>
+		<div id = footer>
+			<div>
+				<a href = 'http://m.mtime.cn/?uf=m' >PC版</a>
+				<a href = '' class="poles">丨</a>
+				<a href = 'download.html' >客户端下载</a>
+				<a href = '' >丨</a>
+				<a href = 'feedback.html' >意见反馈</a>
+				<a href = '' >丨</a>
+				<a href = 'help_center.html' >帮助中心</a>
+			</div>
+			<div class="footer-logo">
+				<img src="../images/3-fot_logo.jpg" alt="">
+			</div>
+			<div class="copy">Copyright 2006-2017 Mtime.com Inc.All rights reserved</div>
+		</div>
+	</div>
+	</form>
+	<script>
+
+		function fun(){
+			if($(".ticklingtwo").val()==""){
+				alert("请输入您的反馈信息");
+			}
+		}
+	</script>
+</body>
+</html>

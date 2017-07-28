@@ -39,7 +39,7 @@ input,button{
 	display: inline-block;
 	width: 60px;
 	height: 60px;
-	background-image: url(../images/3-尖角.png);
+	background-image: url(../images/3-jianjiaozuo.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -112,6 +112,7 @@ section>.seek>a>input{
 .footer>.footer_nav>ul{
 	width: 100%;
 	height: 40px;
+	font-size: 20px;
 	line-height: 40px;
 	display: flex;
 	justify-content: space-around;
@@ -141,7 +142,7 @@ section>.seek>a>input{
 	justify-content: space-around;
 }
 .footer>.footlink>ul>li{
-	font-size: 12px;
+	font-size: 16px;
 }
 .copy>.copy_img{
 	width: 100%x;

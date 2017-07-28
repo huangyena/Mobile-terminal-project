@@ -106,7 +106,7 @@ function setUlData(){
 			var div2_2_1 = $("<div class='main_div2_1'></div>");
 			var div2_2_2 = $("<div class='main_div2_2'></div>");
 			var img = $("<img/>");
-			a.attr("href",objArr[i].url);
+			a.attr("href",'MallDetails.html?goodId='+objArr[i].goodsId);
 			img.attr("src",objArr[i].imageSrc);
 			div2_1.html(objArr[i].name);
 			div2_2_1.html("&yen;"+objArr[i].minSalePrice);

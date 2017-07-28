@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>register</title>
+	<script src = "../js/jquery-3.1.1.min.js"></script>
+	<script src = "../js/jquery.validate.min.js"></script>
+	<script src = "../js/messages_zh.min.js"></script>
+	<link rel="stylesheet" href="../register.css">
+</head>
+	
+<body>
+	<div id = "body">
+		<div class = "nav_header">
+			<a href="index.html" class = 'index'>
+				<img src="../images/2-left.png" alt="" class="arrows">
+			</a>
+			<img src="../images/4Alogo.png" alt="">
+		</div>
+		<form action="">
+			<img src="../images/人头.png" alt="" class="head">&nbsp;<input type="text" placeholder="登录邮箱/手机号码" class = 'text' name="name">
+			<div class="bor_top"></div>
+			<img src="../images/lock.png" alt="" class="lock">&nbsp;<input type="password" placeholder="密码" class= "pwd" name="password">
+			<span onclick="displaypas()">显示密码</span>
+			<input type="submit" value = "登录" id = "btn" oninput="btn()">
+		</form>
+		
+		<div id = 'regbtn'>
+			<input type="button" value = '免费注册' class = "reg">
+			<input type="button" value="找回密码" class="findbtn">
+		</div>
+		<div id = "bor">
+			<span class = 'bot_b'></span>
+			<span class = "bor_font">使用第三方登录</span>
+			<span class = 'bot_b'></span>
+		</div>
+		<div id = "img">
+			<img src="../images/o_sina.png" alt="">
+			<img src="../images/o_qq.png" alt="">
+		</div>
+	</div>
+	<script>
+		function displaypas(){
+			$(".pwd").attr("type","text");
+		}
+		$("form").validate({
+			submitHandler:function(){
+				var data = new FormData($('form')[0]);
+				$.ajax({
+					url:"http://192.168.1.250/aja/login.php",
+					data:data,
+					type:"post",
+					processData:false,
+					contentType:false,
+					success:function(data){
+						console.log(data);
+						var obj = JSON.parse(data);
+						console.log(obj);
+						var msg = obj.msg;
+						console.log(msg);
+						var tel = $(".text");
+						var pwd = $(".pwd");
+						if(tel != null && pwd != null){
+							alert("账号和密码不能为空");
+						}else{
+							alert(msg);
+						}
+
+						
+					}
+				})
+			
+			}
+			
+		})
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div onclick="fu()">
+		<img src="../images/1-回到顶部.png" alt="">
+		<div id = "ds"></div>
+		<div id = "as"></div>
+	</div>
+	<script type="text/javascript">
+	
+		var a = "我就飞机返回回复啥积分哈开户费家第三方合法结婚返回活动结束返回看哈发货";
+		console.log(a.slice(0,20));
+		var c = a.slice(0,20);
+		$("#ds").html(a.slice(0,20));
+		var c = true;
+
+	function fu(){
+		 // console.log(a);
+		if (c) {
+			console.log(a.slice(0,30));
+			$("#ds").css("display","none");
+			$("#as").html(a.slice(0,30));
+			
+			c= false;
+		}else{
+				$("#ds").css("display","none");
+			$("#as").html(a.slice(0,20));
+			c = true;
+
+		}
+	}
+</script>
+</body>
+</html>

@@ -37,13 +37,13 @@ $.ajax({
 		$(".play_font").html(obj.trailer.title);
 
 		//发现-排行榜：那些荣获奥斯卡的LGBT电影
-		// console.log(obj.topList.imageUrl);
+		console.log(obj.topList.imageUrl);
 		// console.log(obj.topList.title);
-		var imges = $("<a class = 'Cannes' target='_self'></a>");
-		// console.log(img);
+		var imges = $("<img class = 'Cannes'></a>");
+		console.log(imges);
 		imges.attr("src",obj.topList.imageUrl);
 		var picturees = $("#picturees");
-		picturees.prepend(imges);
+		picturees.append(imges);
 		$("#fontes").html(obj.topList.title);
 
 		//获取恶魔城图片
@@ -67,13 +67,13 @@ $.ajax({
 		for (var i = 0; i < arr.newsList.length/2; i++) {
 			var imgLi = $("<img class = 'pictureLi'>");
 			imgLi.attr("src",arr.newsList[i].image);
-			// console.log(imgLi);
+			console.log(arr.newsList[i].id);
 			var add = $("#add");
 			var borderBottom = $("<div class = 'borderBottom'></div>");
 			var fontLi = $("<div class = 'span' > </div> ");
 			fontLi.html(arr.newsList[i].title);
 			// console.log(fontLi);
-			var href =　$("<a href='#' class = 'href'></a> ");
+			var href =　$("<a href='newsdeailes.html?newsId="+arr.newsList[i].id+"' class = 'href'></a> ");
 			href.append(imgLi);
 			href.append(fontLi);
 			href.append(borderBottom);
@@ -97,13 +97,13 @@ $.ajax({
 		for (var i = 10; i <(arr.newsList.length/2)+10; i++) {
 			var imgLi = $("<img class = 'pictureLi'>");
 			imgLi.attr("src",arr.newsList[i].image);
-			// console.log(imgLi);
+			// console.log();
 			var add1 = $("#add1");
 			var borderBottom = $("<div class = 'borderBottom'></div>")
 			var fontLi = $("<div class = 'span' > </div> ");
 			fontLi.html(arr.newsList[i].title);
 			// console.log(fontLi);
-			var href =　$("<a href='#' class = 'href'></a> ");
+			var href =　$("<a href='newsdeailes.html?newsId="+arr.newsList[i].id+"' class = 'href'></a> ");
 			href.append(imgLi);
 			href.append(fontLi);
 			href.append(borderBottom);
@@ -205,6 +205,7 @@ $.ajax({
 	success:function(data){
 		// console.log(data);
 		var evaluate = JSON.parse(data);
+		// console.log(evaluate[0].id)
 		// console.log(evaluate);
 		// console.log(evaluate[0].relatedObj.title);
 		for(var e = 0;e<evaluate.length;e++){
@@ -212,7 +213,7 @@ $.ajax({
 			var evaluate_font = $("<div class = 'evaluate_font'></div>")
 			evaluate_font.html(evaluate[e].title);
 			var borderBottom1 = $("<div class = 'borderBottom'></div>");
-			var evaluate_a = $("<a  class ='evaluate_a'></a>");
+			var evaluate_a = $("<a class ='evaluate_a' href = 'cinecism.html?reviewId="+evaluate[e].id+"'></a>");
 			var evaluate_img = $("<img class = 'evaluate_img' />");
 			evaluate_img.attr("src",evaluate[e].userImage);
 
@@ -221,12 +222,15 @@ $.ajax({
 
 			var nickname = $("<span class = 'nick'></span>");
 			var grade = $("<span class = 'grade'>-评分</span>");
+
+			// var link = $("<a href = 'cinecism.html?reviewId="+obj[i].id+"></a>")
 			nickname.html(evaluate[e].nickname);
 			evaluate_a.append(evaluate_font);
 			evaluate_a.append(evaluate_img);
 			evaluate_img.after(nickname);
 			nickname.after(grade);
 			grade.after(bracket);
+
 			$("#eadd").append(evaluate_a);
 			$("#eadd").append(borderBottom1);
 		}

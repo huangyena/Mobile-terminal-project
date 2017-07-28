@@ -8,10 +8,9 @@
 	mysqli_query($link,"create database if not exists Person");
 	mysqli_select_db($link,"person");
 	$res = mysqli_query($link,"create table if not exists userinfo (
-														usern 	ame varchar(15),
+														username varchar(15),
 														pwd varchar(15),
-														email varchar(200),
-														age int,
+														email varchar(15),
 														iconurl varchar(200)
 														)");
 	if (!$res) {
@@ -33,29 +32,26 @@
 		echo '{"code":-1,"msg":"该邮箱已被注册！"}';
 		return;
 	}
-	$age = $_REQUEST["age"];
-
-	$array=$_FILES["file"]["type"];  
-    $array=explode("/",$array);  
+    // $array=explode("/",$array);  
     $newfilename=$name;//自定义文件名（测试的时候中文名会操作失败）  
-    $_FILES["file"]["name"]=$newfilename.".".$array[1]; 
+    // $_FILES["name"]=$newfilename.".".$array[1]; 
 
    if (!is_dir("upload"))//当路径不穿在  
     {  
         mkdir("upload");//创建路径  
     }  
     $url="upload/";//记录路径  
-    if (file_exists($url.$_FILES["file"]["name"]))//当文件存在  
-    {  
-        echo $_FILES["file"]["name"] . " already exists. ";  
-    }else//当文件不存在  
-    {  
-        $url=$url.$_FILES["file"]["name"];  
-        move_uploaded_file($_FILES["file"]["tmp_name"],$url);  
-        $url = "http://192.168.1.250/aja/" . $url;  
-    }  
+    // if (file_exists($url.$_FILES["name"]))//当文件存在  
+    // {  
+    //     echo $_FILES["name"] . " already exists. ";  
+    // }else//当文件不存在  
+    // {  
+    //     $url=$url.$_FILES["name"];  
+    //     // move_uploaded_file($_FILES["tmp_name"],$url);  
+    //     $url = "127.0.0.1/ifanr/project-aifan/" . $url;  
+    // }  
 
-	$res2 = mysqli_query($link,"insert into userinfo (username,pwd,email,age,iconurl) values ('$name','$pwd','$email',$age,'$url')");
+	$res2 = mysqli_query($link,"insert into userinfo (username,pwd,email,iconurl) values ('$name','$pwd','$url')");
 	if (!$res2) {
 		echo '{"code":-1,"msg":"注册失败！"}';
 	}else{

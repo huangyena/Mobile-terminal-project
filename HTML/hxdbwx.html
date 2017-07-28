@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>hxdbwx</title>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			font-family:"微软雅黑";
+		}
+
+		a{
+			text-decoration: none;
+			color:#333;
+		}
+		ul,ol{
+			list-style: none;
+		}
+		input,button{
+			border: none;
+			outline: none;
+			-webkit-appearance:none;
+		}
+		#body{
+			width: 100%;
+			height: 100%;
+			max-width: 640px;
+			min-width: 320px;
+			margin: 0 auto;
+		}
+		#nav_header{
+			width: 100%;
+			height: 50px;
+			background-color: rgb(28,38,53);
+			display: flex;
+			align-items: center;
+		}
+		#nav_header>a{
+			width: 40%;
+		}
+		#nav_header>a>#left{
+			display: inline-block;
+			width: 10%;
+			margin-left: 5%;
+		}
+		#titleCn{
+			color:white;
+			font-size: 20px;
+		}
+		.h2_2{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
+		.h2_2>a{
+			width: 90%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.h2_3>p{
+			margin: 20px;
+		}
+		.hh1{
+			width: 100%;
+		}
+		.hh1>.p2_content{
+			width: 90%;
+			font-size:20px;
+			margin-left: 20px;
+		}
+		.duanping{
+			margin: 20px;
+		}
+		.ul1{
+			width: 100%;
+			/*border:1px solid red;*/
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.ul1>li{
+			width: 90%;
+			/*border:1px solid red;*/
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin-top: 20px;
+
+		}
+		.ul1>li>.touxiang{
+			width: 20%;
+			border-radius: 20px;
+		}
+		.ul1>li>.touxiang>img{
+			width: 80%;
+			border-radius: 30px;
+		}
+		.ul1>li>.pinglun{
+			width: 80%;
+			/*border:1px solid red;*/
+		}
+		.ul1>li>.pinglun>p{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.ul1>li>.pinglun>p>.pingfen{
+			width: 30px;
+			border:1px solid red;
+			margin-right: 10px;
+			text-align: center;
+			line-height: 30px;
+			background-color: rgb(101,157,14);
+			color: rgb(255,255,255);
+		}
+		#top{
+			display:inline-block;
+			width: 40px;
+			height: 40px;
+			background-image: url(../images/4Abacktop.png);
+			background-size:40px 40px;
+			position: fixed;
+			top:600px;
+			left:350px;
+			display: none
+
+		}
+	</style>
+</head>
+<body>
+
+	<div id = "body">
+		<div id = nav_header>
+			<a href=""><img src="../images/2-left.png" alt="" id = "left"></a>
+			<span id = "titleCn"></span>
+		</div>
+
+		<div>
+			<div id = "img_header"></div>
+			<ul class="ul"></ul>
+		</article>
+		<div class="ban1"></div>
+
+		<article class="credits2">
+			<h2 class="h2_2"></h2>
+			<h2 class="h2_3"></h2>
+			<div class="hh1"></div>
+		</article>
+		<h2 class="duanping"></h2>
+		<ul class="ul1">
+
+
+		</div>
+	</div>
+	<script>
+		var array = location.href.split("=")[1];
+		console.log(array);
+		$.ajax({
+			url:"../data/3-buyTicket.php?type=getMovieDetail&mid="+array,
+			success:function(data){
+				// console.log(data);
+				var obj = JSON.parse(data);
+				// console.log(obj);
+				// console.log(obj.titleCn);
+				$("#titleCn").html(obj.titleCn);
+			}
+		})
+		$.ajax({
+			url:"../data/3-buyTicket.php?type=MovieComments&mid="+array,
+			success:function(data){
+				var obj = JSON.parse(data);
+				console.log(obj);
+				for (var i = 0;i< obj.cts.length; i++) {
+					var li = $("<li></li>");
+					$(".ul1").append(li);
+					var div = $("<div class='touxiang'></div>");
+					var div1 = $("<div class='pinglun'></div>"); 
+					var img = $("<img />") ;
+					var p = $("<p class='name'></p>");
+					var p1 = $("<p></p>");
+					
+					img.attr("src",obj.cts[i].caimg);
+					li.append(div,div1);
+					div.append(img);
+					
+					var span = $("<span class='pingfen'></span>");
+					var span1 = $("<span></span>");
+					span1.html(obj.cts[i].ca);
+					p.append(span);
+					span.html(obj.cts[i].cr);
+					div1.append(p);
+					p.append(span1,span);
+
+					var ce = $("<div class='ce'></div>");
+					ce.html(obj.cts[i].ce);
+					var add_ce = $("<div class='add_ce' style= 'margin-top:15px;'></div>");
+					add_ce.html(ce.text().slice(0,40)+"...")
+					p.after(add_ce);
+
+
+					var bor_bot = $("<div class='bor_bot' style= 'width:95%;border-top:1px solid rgb(215,215,215);margin-top:15px;margin-bottom:15px'></div>");
+					li.append(bor_bot);
+
+					var img_hxdbwx = $("<img style='width:10%;height:30%; margin-top:15px;'/>"+"<span style = 'margin-top:20px;'>&nbsp;&nbsp;回复&nbsp;&nbsp;</span>");
+					img_hxdbwx.attr("src","../images/ico_reply.png");
+					var img_click = $("<img  style='width:10%;height:30%; margin-top:15px;' onclick='fun3(this)'/>"+"<span  style = 'margin-top:20px;'>&nbsp;&nbsp;点赞</span>");
+					img_click.attr("src","../images/ico_praise.png");
+					var a_img = $("<div style= 'width:100%;display:flex;justify-content:flex-end'></div>");
+					a_img.append(img_hxdbwx);
+					a_img.append(img_click)
+					console.log(img_click);
+					add_ce.after(a_img);
+					
+					if (obj.cts[i].cr<0) {
+						span.css("display","none");
+
+			        }
+
+			    	
+				}
+
+				
+
+			}
+		})
+		var noShow = false;
+		 function fun3(ele){
+						
+						if (noShow) {
+							$(ele).attr("src","../images/ico_praise.png");
+								noShow = false;
+						}else{
+							$(ele).attr("src","../images/ico_praise_curr.png");
+								noShow = true;
+						}
+					}
+		
+	</script>
+</body>
+</html>
