@@ -16,6 +16,11 @@ $.ajax({
 */			var aa = $("<a href='' onclick='window.history.back(-1)' class= 'lijie'></a>");
 			var em = $("<p style = 'margin-left:7%;margin-top:5px'>"+obj.ms[i].r+"</p>");
 
+			if(em.text()>1){
+				aa.append(em);
+			}else{
+				aa.append(null);
+			}
 
 			var fontDiv = $("<div class = 'fontDiv'></div>");//字
 			fontDiv.html(obj.ms[i].t);
@@ -24,7 +29,7 @@ $.ajax({
 			
 			aa.append(li);
 			aa.append(fontDiv);
-			aa.append(em);
+			
 			$(".a0").append(aa);
 		}
 		for (var i = 4;i<8;i++){
@@ -37,10 +42,17 @@ $.ajax({
 			var fontDiv = $("<div class = 'fontDiv'></div>");
 			var em = $("<p style = 'margin-left:7%;margin-top:5px'>"+obj.ms[i].r+"</p>");
 			fontDiv.html(obj.ms[i].t);
+			console.log(em);
+			if(em.text()>1){
+				aa.append(em);
+			}else{
+				aa.append(null);
+			}
+
 			/*console.log(fontDiv);*/
 			aa.append(li);
 			aa.append(fontDiv);
-			aa.append(em);
+			// aa.append(em);
 			$(".a1").append(aa);
 		}
 	}
