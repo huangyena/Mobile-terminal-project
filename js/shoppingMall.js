@@ -1442,7 +1442,7 @@ $.ajax({
 	success:function (data) {
 		var obj = JSON.parse(data);
 		var objArr = obj.goodsList;
-		// console.log(objArr);
+		console.log(objArr);
 		var ul = $("#recommendMain_box");
 		for (var i = 0; i < objArr.length; i++) {
 			var li = $("<li></li>");
@@ -1453,7 +1453,7 @@ $.ajax({
 			var div_text1 = $("<div class='recmd_content_text1'></div>");
 			var div_text2 = $("<div class='recmd_content_text2'></div>");
 			img.attr("src",objArr[i].image);
-			a.attr("href",objArr[i].url);
+			a.attr("href",'MallDetails.html?goodId='+objArr[i].goodsId);
 			// console.log(objArr[i].name);
 			var  textlength = objArr[i].name.length;
 			if (textlength > 7) {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>top</title>
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+	<style>
+		#a{
+			width: 400px;
+			height: 2000px;
+			border:2px solid red;
+			margin:0 auto;
+		}
+		#top{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background-image: url(../images/4Abacktop.png);
+			background-size:40px 40px;
+			position: fixed;
+			top:600px;
+			left:350px;
+			display: none
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div id = "a"></div>
+	<a href="#" id = "top"></a>
+    <script>
+     	$(document).scroll(function(){
+     		var top = $(window).scrollTop();
+     		var top_one = $("#top");
+     		if(top>600){
+     			top_one.css("display","block");
+     		}else{
+     			top_one.css("display","none");
+     		}
+     	})
+    </script>
+
+</body>
+</html>

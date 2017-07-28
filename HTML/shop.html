@@ -3,26 +3,41 @@
 <head>
 	<title>购物</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
 	<link rel="stylesheet" href="../css/shop.css">
 	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
 	<script src="../js/swiper.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../js/swiper.min.css">
+	<style>
+		#top{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background-image: url(../images/4Abacktop.png);
+			background-size:40px 40px;
+			position: fixed;
+			top:600px;
+			left:350px;
+			display: none
+
+		}
+		
+	</style>
 </head>
 <body>
 	<div class="box">
 		<header class="head">
 			<a href="#" class="title"></a>
-			<a href="#">首页</a>
-			<a href="" class="ticket">购票</a>
-			<a href="">商城</a>
-			<a href="">发现</a>
-			<a href="" class="titleone"></a>
+			<a href="index.html">首页</a>
+			<a href="shop.html" class="ticket">购票</a>
+			<a href="shoppingMall.html">商城</a>
+			<a href="find.html">发现</a>
+			<a href="enter.html" class="titleone"></a>
 		</header>	
 	</div> 
 	<div class="shuffling">
 		<div class="capital">
-			<a href="">北京</a>
+			<a href="selectedcity.html">北京</a>
 			<a href="">
 				<img src="../images/1-箭头.png" alt="" class="arrows">
 			</a>
@@ -69,11 +84,11 @@
 		<div class="swiper-pagination"></div>
 	</div>
 	<div class="list">
-		<div class="receive" onclick="jump()"></div>
+		<div class="receive"></div>
 		<!-- <div class="receiveone"></div>
 		<div class="receivetwo"></div> -->
 	</div>
-	<a href="#"><img src="../images/1-回到顶部.png" class="top"></a>
+	<a href="#" id = "top"></a>
 	<script>
  	// function getDate() {
  		var mySwiper = new Swiper('.jd_banner',{
@@ -88,19 +103,22 @@
 				var obj = JSON.parse(data);
 				array = obj.data;
 				for (var i = 0; i < obj.data.length; i++) {
+					var outBox = $("<a href='introduce.html?mid="+obj.data[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
 					li.html(obj.data[i].cinameName);
-					$(".receive").append(li);
+					outBox.append(li);
 					var lo = $("<div class ='money'></div>");
 					lo.html(obj.data[i].cinameMoney);
-					$(".receive").append(lo);
+					outBox.append(lo);
 					var ll = $("<div class = 'site'></div>");
 					ll.html(obj.data[i].address);
-					$(".receive").append(ll);
+					outBox.append(ll);
 					var img = $("<div class='img'></div>");
-					$(".receive").append(img);
+					outBox.append(img);
 					var bor = $("<div class='bor'></div>");
-					$(".receive").append(bor);
+					outBox.append(bor);
+					$(".receive").append(outBox);
+					
 					// var link=$("<a>你好</a>");
 					// $(".list").append(link);
 					}
@@ -113,6 +131,11 @@
 		$(".up").css("border-bottom","10px solid rgb(30,125,222)");
 		$(".down").css("border-top","10px solid rgb(187,187,187)");
 		$(".all").css("color","rgb(51,51,51)");
+		$.ajax({
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				var obj = JSON.parse(data);
 		for(var i = 0; i < array.length; i++) {
 			for (var j = 0; j < array.length-i-1; j++) {
 				if (array[j].cinameMoney > array[j+1].cinameMoney) {
@@ -123,24 +146,25 @@
 			}	
 		}
 		for (var i = 0; i < array.length; i++) {
+					var outBox = $("<a href='introduce.html?mid="+array[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
 					li.html(array[i].cinameName);
-					$(".receive").append(li);
+					outBox.append(li);
 					var lo = $("<div class ='money'></div>");
 					lo.html(array[i].cinameMoney);
-					$(".receive").append(lo);
+					outBox.append(lo);
 					var ll = $("<div class = 'site'></div>");
 					ll.html(array[i].address);
-					$(".receive").append(ll);
+					outBox.append(ll);
 					var img = $("<div class='img'></div>");
-					$(".receive").append(img);
+					outBox.append(img);
 					var bor = $("<div class='bor'></div>");
-					$(".receive").append(bor);
-					}					
+					outBox.append(bor);
+					$(".receive").append(outBox);
+					}console.log(array);
 				}
-		function jump(){
-					window.open("introduce.html");
-			}
+			})
+				}
 	function funone() {
 		$(".receive").empty();
 		$(".color").css("color","rgb(30,125,222)");
@@ -156,27 +180,36 @@
 				}
 			}	
 		}
+		$.ajax({
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				var obj = JSON.parse(data);
 		for (var i = 0; i < array.length; i++) {
+					var outBox = $("<a href='introduce.html?mid="+array[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
 					li.html(array[i].cinameName);
-					$(".receive").append(li);
+					outBox.append(li);
 					var lo = $("<div class ='money'></div>");
 					lo.html(array[i].cinameMoney);
-					$(".receive").append(lo);
+					outBox.append(lo);
 					var ll = $("<div class = 'site'></div>");
 					ll.html(array[i].address);
-					$(".receive").append(ll);
+					outBox.append(ll);
 					var img = $("<div class='img'></div>");
-					$(".receive").append(img);
+					outBox.append(img);
 					var bor = $("<div class='bor'></div>");
-					$(".receive").append(bor);
-					}					
+					outBox.append(bor);
+					$(".receive").append(outBox);
+					}
 				}
+			})				
+		} 
 		function funtwo(){
 			$(".receive").empty();
 			$(".all").css("color","rgb(30,125,222)");
 			$(".color").css("color","rgb(51,51,51)");
-			$(".up").css("border-bottom","10px solid rgb(187,187,187)");
+			$(".up").css("border-bottom","10px solid rgb(187,187,187)"); 
 			$(".down").css("border-top","10px solid rgb(187,187,187)");
 			$.ajax({
 			//获取文件路径
@@ -185,19 +218,21 @@
 				var obj = JSON.parse(data);
 				array = obj.data;
 				for (var i = 0; i < array.length; i++) {
+					var outBox = $("<a href='introduce.html?mid="+obj.data[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
-					li.html(array[i].cinameName);
-					$(".receive").append(li);
+					li.html(obj.data[i].cinameName);
+					outBox.append(li);
 					var lo = $("<div class ='money'></div>");
-					lo.html(array[i].cinameMoney);
-					$(".receive").append(lo);
+					lo.html(obj.data[i].cinameMoney);
+					outBox.append(lo);
 					var ll = $("<div class = 'site'></div>");
-					ll.html(array[i].address);
-					$(".receive").append(ll);
+					ll.html(obj.data[i].address);
+					outBox.append(ll);
 					var img = $("<div class='img'></div>");
-					$(".receive").append(img);
+					outBox.append(img);
 					var bor = $("<div class='bor'></div>");
-					$(".receive").append(bor);
+					outBox.append(bor);
+					$(".receive").append(outBox);
 					}					
 				}
 			});
@@ -205,33 +240,42 @@
 		function searchCinimal(){
 			$(".receive").empty();
 			var keyword = $("#searchField").val();
+			$.ajax({
+			//获取文件路径
+			url:"../data/data.php?type=buy_tickets",
+			success:function(data){//判断是否成功，获取数据源
+				var obj = JSON.parse(data);
 			for(var i = 0; i < array.length; i++){
 				if (array[i].cinameName.indexOf(keyword) != -1) {
-					// var title=array[i].address;
-					// console.log(title);
+					var outBox = $("<a href='introduce.html?mid="+obj.data[i].cinemaId+"'></a>");
 					var li = $("<div class ='designation'></div>");
-					li.html(array[i].cinameName);
-					$(".receive").append(li);
+					li.html(obj.data[i].cinameName);
+					outBox.append(li);
 					var lo = $("<div class ='money'></div>");
-					lo.html(array[i].cinameMoney);
-					$(".receive").append(lo);
+					lo.html(obj.data[i].cinameMoney);
+					outBox.append(lo);
 					var ll = $("<div class = 'site'></div>");
-					ll.html(array[i].address);
-					$(".receive").append(ll);
+					ll.html(obj.data[i].address);
+					outBox.append(ll);
 					var img = $("<div class='img'></div>");
-					$(".receive").append(img);
+					outBox.append(img);
 					var bor = $("<div class='bor'></div>");
-					$(".receive").append(bor);
+					outBox.append(bor);
+					$(".receive").append(outBox);
 				}
 			}
 		}
+	})
+		}
+		$(document).scroll(function(){
+     		var top = $(window).scrollTop();
+     		var top_one = $("#top");
+     		if(top>600){
+     			top_one.css("display","block");
+     		}else{
+     			top_one.css("display","none");
+     		}
+     	})
 		</script>
 </body>
 </html>
-<!--  朝阳 1362   -->
-<!-- 通州 3582 -->
-<!-- 昌平1361 -->
-<!-- 崇文区  1363-->
-<!-- 石景山 1372 -->
-<!-- 王府井 1365 -->
-<!-- 西城 1372 -->

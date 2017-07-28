@@ -1,7 +1,7 @@
 $.ajax({
 	url:"../data/discovery.php?type=getTop100&pageIndex=1&toplistId=2015",
 	success:function(data){
-		// console.log(data);
+		console.log(data);
 		var obj = JSON.parse(data);
 		console.log(obj);
 		console.log(obj.topList.summary);

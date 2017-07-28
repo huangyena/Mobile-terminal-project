@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/ifanrChark.css">
+	
+	<script src = "../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div class= "ifanr_search">
+			<div class="close_zone">
+				<span class="ifanr_close"><img src="../images/关闭.png" alt=""></span>
+			</div>
+			<div class="query_zone">
+				<i><img src="../images/放大.png" alt=""></i>
+				<input type="text" class="write">
+			</div>
+		</div>
+	<div class="box-shadow"></div>
+		<div class="introduce">
+			<div>
+				<a href=""><img src="../images/new-logo.png" alt=""></a>
+				<span class="search">
+					
+						<img src="../images/放大.png" class="search_zone">
+					
+				
+				</span>
+				<div class="ifanr_right">
+					<a href="ifanrChark.html" class="login_right">登录</a>
+					<a href="ifanrScape.html">注册</a>
+				</div>
+			</div>
+			<div class="navigition">
+				
+					<div>
+						<a href="http://www.ifanr.com/category/ifanq"><span>ifanQ</span></a>
+						<a href="http://www.ifanr.com/category/top-rank"><span>ifanRank</span></a>
+						<a href="http://www.ifanr.com/category/mindtalk"><span>MindTalk</span></a>
+					</div>
+					<div>
+						<a href="getSeven.html"><span>产品</span></a>
+						<a href="getTen.html"><span>人物</span></a>
+						<a href="getNine.html"><span>公司</span></a>
+					</div>
+					<div>
+						<a href="http://www.ifanr.com/category/%E5%9B%BE%E8%AE%B0"><span>图记</span></a>
+						<a href="http://www.ifanr.com/category/%E5%B9%BF%E5%91%8A"><span>广告</span></a>
+						<a href="getEleven.html"><span>新创</span></a>
+					</div>
+					<div>
+						<a href="getThree.html"><span>早报</span></a>
+						<a href="getEight.html"><span>汽车</span></a>
+						<a href="http://www.ifanr.com/category/game-special"><span>游戏</span></a>
+					</div>
+					<div>
+						<a href="http://www.ifanr.com/category/special"><span>特稿</span></a>
+						<a href="getTewle.html"><span>生活</span></a>
+						<a href="http://www.ifanr.com/category/%E8%8C%83%E8%AF%84"><span>范评</span></a>
+					</div>
+					<div>
+						<a href="getTwo.html"><span>视频</span></a>
+						<a href="getSix.html"><span>评测</span></a>
+						<a href=""></a>
+					</div>
+				
+			</div>
+			<div id="footer">
+				<a href="http://www.ifanr.com/app">
+					<img src="../images/appsolution.png" alt="">
+					<span>AppSolution</span>
+				</a>
+				<a href="http://www.ifanr.com/coolbuy">
+					<img src="../images/ifanr_play.png" alt="">
+					<span>玩物志</span>
+				</a>
+				<a href="http://mindstore.io/">
+					<img src="../images/`RB8DA_N_6~N0[R$1UKAE6M.png" alt="">
+					<span>MindStore</span>
+				</a>
+			</div>
+		</div>
+	<div class="womenDes">
+		<div class="navigation">
+			<img src="../images/导航 (1).png" alt="">
+		</div>
+		<div class="page_title">
+			<ul >
+				<li class="register" onclick="login()">登录</li>
+				<li class="sign" onclick="sign()">注册</li>
+			</ul>
+		</div>
+	</div>
+	<form action = "../data/regist.php" method="post" enctype="multipart/form-data">
+		<input type="text" placeholder="Email地址" class="address" name ="email">
+		<input type="text" placeholder="昵称" class="name" name ="name">
+		<input type="password" placeholder="密码" class="key" name ="password">
+		<input type="password" placeholder="密码确认" class="quit" name="pwd2">
+		<input type="button" value="注册" class="user">
+		<div class="message">
+			<span></span>
+		</div>
+		<div class="social">
+			<p>
+				<a href="blogsLogin.html">
+					<i class="ifanrx"><img src="../images/微博.png" alt=""></i>
+					<span>微博登录</span>
+				</a>
+			</p>
+		</div>
+	</form>
+	<script src = "../js/ifanrScape.js"></script>
+</body>
+</html>

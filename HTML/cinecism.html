@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cinecism</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/cinecism.css">
+	<script src = "../js/插件/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div id = "body">
+		<nav class="nav_color">
+			<a href="Inception.html" class="leader"></a>
+			<div>
+				<img src="../images/3-collection.png" alt="" class="star" onclick="fun2()">&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="../images/i_h_share.png" alt="" class="share" onclick="fun()">
+			</div>
+		</nav>
+	<!-- 	<img src = '../images/i_dot_02.png' /> -->
+		<h1 class="title"></h1>
+		
+		<div class="via">
+			<img src="" class="userImage" alt="">
+			<div class="nickname"></div>
+			<div class="num"></div>
+		</div>
+
+
+	<!-- 图片 -->
+	<div class="pic">
+		<div class="bor_bottom"></div>
+		<img src="" alt="" class="topImgUrl">
+		
+	</div>
+	<div class="time">2017-07-19&nbsp;&nbsp;18:23:00</div>
+	<div class="summaryInfo"></div>
+	<a href="#" id = "top"></a>
+	<!-- 结尾 -->
+	<div class="border-footer"></div>
+		<ul class = "nav-footer">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="shop.html">购票</a></li>
+			<li><a href="shoppingMall">商城</a></li>
+			<li><a href="find.html">发现</a></li>
+			<li><a href="enter.html">我的</a></li>
+		</ul>
+		<div id = footer>
+			<div>
+				<a href = 'http://m.mtime.cn/?uf=m' >PC版</a>
+				<a href = '' class="poles">丨</a>
+				<a href = 'download.html' >客户端下载</a>
+				<a href = '' >丨</a>
+				<a href = 'feedback.html' >意见反馈</a>
+				<a href = '' >丨</a>
+				<a href = 'help_center.html' >帮助中心</a>
+			</div>
+			<div class="footer-logo">
+				<img src="../images/3-fot_logo.jpg" alt="" style="width: 10%;">
+			</div>
+			<div class="copy">Copyright 2006-2017 Mtime.com Inc.All rights reserved</div>
+		</div>
+	<div class="bor_shadow"  style="position: absolute;top:0px;left:0;"></div>
+			<div class="bor_white"  >
+				<div class="bor_span">
+					<span class="bor_share">分享</span>
+					<img src="../images/2-close.png" alt="" class="bor_err" onclick="fun1()">
+				</div>
+				
+				<div class="bor_border"></div>
+
+				<div class="bor_img">
+					<a href="microblog.html">
+						<img src="../images/share06.png" alt="">
+						<span>新浪微博</span>
+					</a>
+					<a href="space.html">
+						<img src="../images/share09.png" alt="">
+						<span>QQ空间</span>
+					</a>
+					<a href="enter.html">
+						<img src="../images/share07.png" alt="">
+						<span>时光网</span>
+					</a>
+				</div>
+			</div>
+</div>
+	<script>
+		var review = location.href.split("=")[1];
+		console.log(review);
+		$.ajax({
+			url:"../data/discovery.php?type=getReviewDetail&reviewId="+review,
+			success:function(data){
+				// console.log(data);
+				var obj = JSON.parse(data);
+				console.log(obj);
+				// console.log();
+				var img = $("<img src = '../images/i_dot_02.png' class = 'dot' /> ");
+				console.log(img);
+				
+				$("h1").html(obj.title);
+				$("h1").prepend(img);
+				$(".userImage").attr("src",obj.userImage);
+
+				var nickname = $("<div ></div>");
+				nickname.html(obj.nickname);
+				console.log(nickname.text().slice(0,4));
+				var add = $("<div class = 'user' ></div>");
+				add.html(nickname.text().slice(0,4)+"...");
+				$(".nickname").append(add);
+				var grade  = $("<div class = 'grade'></div>");
+				grade.html("评"+"《"+obj.relatedObj.name+"》");
+				add.after(grade);
+
+				$(".num").html(obj.rating);
+				$(".topImgUrl").attr("src",obj.topImgUrl);
+				$(".summaryInfo").html(obj.content)
+			}
+		})
+
+		// 置顶
+		$(document).scroll(function(){
+     		var top = $(window).scrollTop();
+     		var top_one = $("#top");
+     		if(top>600){
+     			top_one.css("display","block");
+     		}else{
+     			top_one.css("display","none");
+     		}
+     	})
+		// 阴影
+     	function fun(){
+			$(".bor_shadow").css("display","block");
+			$(".bor_white").css("display","block");
+			$("html,body").css({"height":"100%","overflow":"hidden"});
+
+		}
+		function fun1(){
+			$(".bor_shadow").css("display","none");
+			$(".bor_white").css("display","none");
+			$("html,body").css({"height":"","overflow":""});
+
+		}
+
+		
+		var noShow = true;
+		function fun2(){
+			if (noShow) {
+				$(".star").attr("src","../images/3-huangxingxing.png");
+				noShow=false;
+			}else{
+				$(".star").attr("src","../images/3-collection.png");
+				noShow=true;
+			}
+}
+	</script>
+</body>
+</html>
